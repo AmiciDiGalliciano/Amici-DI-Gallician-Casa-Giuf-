@@ -82,24 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.show-on-map-btn').forEach(btn => btn.addEventListener('click', () => setTimeout(() => highlightRoute(btn.dataset.route), 250)));
 
   const geoBtn = document.getElementById('btn-geolocate');
-  let watchId = null, userMarker = null;
   geoBtn?.addEventListener('click', () => {
-    const statusEl = document.getElementById('map-status-message');
-    if (!navigator.geolocation) { if(statusEl) statusEl.textContent='Il browser non supporta la posizione. Usa GPX/KML con un’app GPS.'; return; }
-    if (watchId !== null) { navigator.geolocation.clearWatch(watchId); watchId=null; geoBtn.textContent='Usa la mia posizione'; if(statusEl) statusEl.textContent='GPS fermato. Puoi selezionare un altro percorso o scaricare GPX/KML.'; return; }
-    geoBtn.textContent = 'Ricerca posizione...'; if(statusEl) statusEl.textContent='Autorizza il GPS. Da file locale può funzionare meglio aprendo il sito da localhost o online HTTPS.';
-    watchId = navigator.geolocation.watchPosition(pos => {
-      const coords = [pos.coords.latitude, pos.coords.longitude];
-      if (!userMarker) { userMarker = L.marker(coords, {icon:userIcon()}).addTo(map).bindPopup('La tua posizione GPS').openPopup(); }
-      else userMarker.setLatLng(coords);
-      map.setView(coords, Math.max(map.getZoom(), 15));
-      geoBtn.textContent = 'Ferma posizione';
-      updateStatus(coords, pos.coords.accuracy);
-    }, err => {
-      geoBtn.textContent='Usa la mia posizione';
-      if(statusEl) statusEl.textContent='Posizione non disponibile: controlla permessi GPS, connessione o apri la mappa da HTTPS/localhost. Nel frattempo scarica GPX/KML.';
-      if(watchId!==null) navigator.geolocation.clearWatch(watchId); watchId=null;
-    }, {enableHighAccuracy:true, maximumAge:5000, timeout:10000});
+    const selected = activeRoute();
+    if (!selected) {
+      alert("Seleziona prima un percorso dalla lista o sulla mappa per avviare il navigatore!");
+      return;
+    }
+    // Google Maps: da posizione attuale (automatica) -> partenza -> arrivo
+    const start = `${selected.coordinate_start[0]},${selected.coordinate_start[1]}`;
+    const end = `${selected.coordinate_end[0]},${selected.coordinate_end[1]}`;
+    const url = `https://www.google.com/maps/dir/?api=1&waypoints=${start}&destination=${end}`;
+    window.open(url, '_blank');
   });
 
   resetMapHighlight();
