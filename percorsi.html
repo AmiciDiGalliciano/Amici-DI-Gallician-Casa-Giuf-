@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Percorsi reali GPX/KML per Gallicianò, Bova, Amendolea, Roghudi e Bova Marina: tracce scaricabili, mappa GPS locale e file compatibili con Google My Maps per Amici Di Gallicianò Casa Giufà." name="description"/>
+<title>Percorsi scaricabili Gallicianò | Amici Di Gallicianò Casa Giufà</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+    .card { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(17,16,14,0.08); border: 1px solid rgba(184,155,94,0.15); display: flex; flex-direction: column; gap: 1rem; }
+    .card h3 { font-size: 1.25rem; color: #123047; margin: 0; }
+    .card p { color: #2C2A27; font-size: 0.95rem; line-height: 1.7; flex-grow: 1; }
+    .card-meta { display: flex; align-items: center; gap: 0.75rem; }
+    .difficulty-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .difficulty-easy { background: #e8f5e9; color: #2e7d32; }
+    .difficulty-medium { background: #fff8e1; color: #f57f17; }
+    .difficulty-hard { background: #fce4ec; color: #c62828; }
+    .route-stats { font-size: 0.85rem; color: #B89B5E; font-weight: 500; }
+    </style>
+</head>
+<body class="page-percorsi">
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html">
+<img alt="Amici Di Gallicianò Casa Giufà" src="assets/img/casa giufà.png"/>
+</a>
+<button aria-label="Apri menu" class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link" href="index.html">Home</a></li>
+<li><a class="nav-link" href="camere.html">Camere</a></li>
+<li><a class="nav-link active" href="percorsi.html">Percorsi</a></li>
+<li><a class="nav-link" href="guida.html">Guida</a></li>
+<li><a class="nav-link" href="storia.html">Storia</a></li>
+<li><a class="nav-link" href="rallentare.html">Rallentare</a></li>
+<li><a class="nav-link" href="trattoria.html">Trattoria</a></li>
+<li><a class="nav-link" href="contatti.html">Contatti</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">Verifica disponibilità su WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header><nav aria-label="Percorso pagina" class="breadcrumb-nav"><div class="container breadcrumb-inner"><a href="index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">Percorsi</span></div></nav>
+<section class="hero" style="height: 50vh;">
+<img alt="Trekking nell'Aspromonte Grecanico" class="hero-bg" loading="eager" src="assets/img/Treking Gallicianò.png"/>
+<div class="hero-overlay" style="background: linear-gradient(160deg, rgba(18,48,71,0.35) 0%, rgba(17,16,14,0.60) 100%);"></div>
+<div class="hero-content">
+<span class="hero-label">Gallicianò · Area Grecanica</span>
+<h1 class="hero-title title-large">Percorsi di Gallicianò<br/><em>natura, borgo e Amendolea</em></h1>
+<p class="hero-subtitle">Tracce GPX reali, KML per Google, mappa locale con posizione GPS e istruzioni chiare: il percorso ora deve servire mentre una persona cammina, non fare arredamento digitale.</p>
+<div class="routes-hero-actions"><a class="btn btn-gold btn-large" download="" href="downloads/percorsi-galliciano-gpx.zip">Scarica GPX</a><a class="btn btn-outline-light btn-large" download="" href="downloads/percorsi-google-maps-kml.zip">KML per Google</a><a class="btn btn-outline-light btn-large" href="downloads/mappa-percorsi.html">Apri mappa GPS</a></div></div>
+</section>
+<section class="section section-cream">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Esplora il Territorio</span>
+<h2 class="title-medium">Percorsi reali, chiari, scaricabili</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 800px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0;">
+                        Qui non servono pulsanti messi per decorazione: ogni percorso ha una partenza su Maps, una traccia scaricabile, una nota di prudenza e una mappa consultabile. L’obiettivo è aiutare l’ospite a prepararsi davvero, senza fingere che queste siano escursioni ufficiali o accompagnate.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section" id="percorsi-reali">
+<div class="container">
+<div class="route-disclaimer" style="margin-bottom:2rem;">
+  <strong>Nota importante sui percorsi.</strong> Le tracce sono GPX reali fornite dall’utente e rielaborate in versioni leggere GPX/KML/GeoJSON. Servono per orientarsi, preparare la visita e seguire il proprio punto sulla mappa locale. Non sostituiscono segnaletica, prudenza, meteo, condizioni fisiche, controllo sul posto o informazioni aggiornate. Google Maps è utile per raggiungere partenza/arrivo; la traccia precisa va seguita da GPX/KML o dalla mappa locale.
+</div>
+<div class="routes-map-note route-disclaimer" style="margin-bottom:1.4rem;"><strong>Uso corretto da telefono.</strong> I pulsanti “Raggiungi partenza da dove sei” aprono Google Maps con partenza dalla posizione attuale: se sei a Reggio Calabria, ti porta prima al punto di inizio. Una volta arrivato, usa “Segui traccia locale” o il GPX/KML per controllare il percorso vero mentre cammini. Google Maps normale non segue una traccia GPX completa metro per metro.</div>
+<div class="routes-download-panel">
+  <div>
+    <span class="label-tag">Download veri</span>
+    <h2 class="title-small">Tracce pronte per telefono, Google My Maps e app GPS</h2>
+    <p>GPX per app escursionistiche/Wikiloc, KML per Google My Maps/Google Earth, GeoJSON per la mappa del sito. Niente pulsanti da museo delle illusioni.</p>
+  </div>
+  <div class="route-pack-actions">
+    <a class="btn btn-gold" href="downloads/percorsi-galliciano-gpx.zip" download>Scarica tutti i GPX</a>
+    <a class="btn btn-outline" href="downloads/percorsi-google-maps-kml.zip" download>Scarica KML per Google</a>
+    <a class="btn btn-outline" href="downloads/percorsi-galliciano-completo-gpx-kml-geojson.zip" download>Pacchetto completo</a>
+  </div>
+</div>
+<div class="card-grid routes-card-grid">
+<!-- Percorso 1 -->
+<article class="card route-card reveal" id="percorso-giro-borgo-galliciano">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-easy">Facile</span>
+    <span class="route-stats">30-45 min · 1,3 km</span>
+  </div>
+  <h3>Giro del borgo di Gallicianò</h3>
+  <p>Passeggiata breve dentro il borgo: vicoli, affacci, Fontana dell’Amore, luoghi culturali e primo orientamento per chi arriva a Casa Giufà.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Centro di Gallicianò</li>
+    <li><strong>Arrivo:</strong> Centro di Gallicianò</li>
+    <li><strong>Dislivello GPS:</strong> +21 m / -18 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> Perfetto per gli ospiti appena arrivati. Non è un trekking tecnico: serve a leggere il borgo senza perdersi tra i vicoli.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016607,15.886237&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="giro-borgo-galliciano" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=giro-borgo-galliciano">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/01-giro-borgo-galliciano.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/01-giro-borgo-galliciano.kml" download>KML Google</a>
+  </div>
+</article>
+<!-- Percorso 2 -->
+<article class="card route-card reveal" id="percorso-pna-128-galliciano-bova">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Escursionistico</span>
+    <span class="route-stats">1h45-2h15 circa · 5,4 km</span>
+  </div>
+  <h3>Sentiero PNA 128 · Gallicianò / Bova</h3>
+  <p>Traccia più pulita e utile per raccontare il collegamento escursionistico tra Gallicianò e l’area di Bova, senza gonfiare promesse da agenzia turistica improvvisata.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Gallicianò</li>
+    <li><strong>Arrivo:</strong> Direzione Bova / tracciato PNA 128</li>
+    <li><strong>Dislivello GPS:</strong> +336 m / -311 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Sentiero PNA 128 Bova Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> È il percorso da tenere in evidenza per chi vuole un cammino serio ma ancora gestibile. Il punto finale va verificato con il tracciato reale e le condizioni del sentiero.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016560,15.886718&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="pna-128-galliciano-bova" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=pna-128-galliciano-bova">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/02-pna-128-galliciano-bova.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/02-pna-128-galliciano-bova.kml" download>KML Google</a>
+  </div>
+</article>
+<!-- Percorso 3 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-wikiloc">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Medio/Impegnativo</span>
+    <span class="route-stats">3h30-5h circa · 11,9 km</span>
+  </div>
+  <h3>Gallicianò / Bova · variante Wikiloc lunga</h3>
+  <p>Variante più lunga verso Bova. Interessante per escursionisti motivati, non per chi vuole fare due foto e poi lamentarsi del sole.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Gallicianò</li>
+    <li><strong>Arrivo:</strong> Bova</li>
+    <li><strong>Dislivello GPS:</strong> +160 m / -143 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Gallicianò - Bova</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> Da proporre come percorso escursionistico vero, non come passeggiata per tutti. Va controllato il rientro.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017500,15.886605&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="galliciano-bova-wikiloc" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=galliciano-bova-wikiloc">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/03-galliciano-bova-wikiloc.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/03-galliciano-bova-wikiloc.kml" download>KML Google</a>
+  </div>
+</article>
+<!-- Percorso 4 -->
+<article class="card route-card reveal" id="percorso-galliciano-amendolea">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Escursionistico</span>
+    <span class="route-stats">2h30-3h30 circa · 7,7 km</span>
+  </div>
+  <h3>Gallicianò / Amendolea</h3>
+  <p>Discesa verso Amendolea e la sua fiumara: è uno dei collegamenti più utili per raccontare la parte aspromontana e grecanica dell’esperienza.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Gallicianò</li>
+    <li><strong>Arrivo:</strong> Amendolea</li>
+    <li><strong>Dislivello GPS:</strong> +20 m / -66 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Gallicianò - Amendolea</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> Percorso bello ma da verificare con meteo, fondo e attraversamenti. Non va venduto come servizio accompagnato.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016717,15.885992&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="galliciano-amendolea" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=galliciano-amendolea">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/04-galliciano-amendolea.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/04-galliciano-amendolea.kml" download>KML Google</a>
+  </div>
+</article>
+<!-- Percorso 5 -->
+<article class="card route-card reveal" id="percorso-galliciano-roghudi">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Escursionistico/Impegnativo</span>
+    <span class="route-stats">3h30-5h circa · 9,8 km</span>
+  </div>
+  <h3>Da Gallicianò a Roghudi</h3>
+  <p>Traccia per chi vuole spingersi verso uno dei luoghi più potenti e delicati dell’area grecanica. Bella, seria, da non banalizzare.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Gallicianò</li>
+    <li><strong>Arrivo:</strong> Roghudi</li>
+    <li><strong>Dislivello GPS:</strong> +58 m / -71 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Da Gallicianò a Roghudi</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> Da presentare come opzione per escursionisti preparati. Verificare accessi, condizioni, segnale e rientro.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017698,15.886564&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="galliciano-roghudi" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=galliciano-roghudi">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/05-galliciano-roghudi.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/05-galliciano-roghudi.kml" download>KML Google</a>
+  </div>
+</article>
+<!-- Percorso 6 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-marina">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Molto impegnativo</span>
+    <span class="route-stats">Giornata intera · 32,0 km</span>
+  </div>
+  <h3>Gallicianò / Bova Marina</h3>
+  <p>Percorso lungo verso il mare, da tenere come traccia avanzata. Non è una proposta per l’ospite medio: è materiale per camminatori veri.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Partenza:</strong> Gallicianò</li>
+    <li><strong>Arrivo:</strong> Bova Marina</li>
+    <li><strong>Dislivello GPS:</strong> +170 m / -176 m</li>
+    <li><strong>Origine file:</strong> Wikiloc - Gallicianò - Bova Marina</li>
+  </ul>
+  <p class="route-note"><strong>Uso corretto:</strong> Da mostrare in fondo, come opzione esperta. Serve pianificazione del rientro e valutazione seria delle condizioni.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016535,15.886297&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Raggiungi partenza da dove sei</a>
+    <a class="btn btn-primary show-on-map-btn" data-route="galliciano-bova-marina" href="#sezione-mappa">Vedi sulla mappa</a>
+    <a class="btn btn-outline" href="downloads/mappa-percorsi.html?route=galliciano-bova-marina">Segui traccia locale</a>
+    <a class="btn route-gpx-button" href="downloads/data/06-galliciano-bova-marina.gpx" download>GPX</a>
+    <a class="btn route-kml-button" href="downloads/data/06-galliciano-bova-marina.kml" download>KML Google</a>
+  </div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-dark">
+<div class="container reveal">
+<div style="display:flex; flex-wrap:wrap; gap:4rem; align-items:center;">
+<div style="flex:1; min-width:300px;">
+<img alt="Panorama dell'Area Grecanica da Gallicianò" src="assets/img/panoramica gallcianò.JPG" style="border-radius:8px; width:100%; object-fit:cover; height:320px;"/>
+</div>
+<div style="flex:1; min-width:280px;">
+<span class="label-tag label-tag-light">Esperienza Consigliata</span>
+<h2 class="title-medium" style="color:var(--color-bianco-caldo);">Partire da Amici Di Gallicianò Casa Giufà</h2>
+<div class="greek-divider" style="margin-left:0;"></div>
+<div class="greek-border-block">
+<p style="color:var(--color-pietra); line-height:1.8; margin-bottom:1.5rem;">I percorsi sono proposte di scoperta del territorio legate a Amici Di Gallicianò Casa Giufà. Non comunichiamo servizi da servizio turistico ufficiale: chi è interessato ci contatta, poi valutiamo insieme informazioni, disponibilità, condizioni del percorso e modalità più adatte.</p>
+<ul style="list-style:none; color:var(--color-pietra); display:flex; flex-direction:column; gap:0.75rem;">
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Informazioni pratiche da chi vive il territorio</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Punto di riferimento: Amici Di Gallicianò Casa Giufà</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Cultura grecanica raccontata con rispetto</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Natura aspromontana autentica</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Cucina tipica a pochi passi con <a href="trattoria.html">Nizio Paleò</a>: menù completo a 25 € invece di 30 € per gli ospiti Casa Giufà, previa conferma</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Indicazioni da valutare in base a persone, meteo e stagione</li>
+</ul>
+</div>
+<a class="btn btn-gold" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20pratiche%20per%20organizzare%20la%20visita%20a%20Gallician%C3%B2." style="margin-top:2rem;" target="_blank">Parla con noi prima della visita</a>
+</div>
+</div>
+</div>
+</section>
+<!-- MAPPA INTERATTIVA PERCORSI -->
+<section class="section" id="sezione-mappa">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Mappa dei percorsi</span>
+<h2 class="title-medium text-center">Mappa reale con GPS</h2>
+<div class="greek-divider"></div>
+<p class="subtitle text-center" style="max-width: 860px; margin: 0 auto;">Scegli un percorso, attiva la posizione e il sito ti mostra quanto sei vicino alla traccia. Funziona meglio da telefono, con GPS autorizzato e connessione. Per uso offline serio conviene importare il GPX in Wikiloc o in un’app escursionistica.</p>
+</div>
+<div class="map-action-row">
+<button class="btn btn-primary" id="btn-geolocate">Usa la mia posizione</button>
+<button class="btn btn-outline" id="btn-reset-map">Mostra tutti i sentieri</button>
+<a class="btn btn-gold" href="downloads/mappa-percorsi.html">Apri mappa locale completa</a>
+<a class="btn btn-outline" href="downloads/percorsi-google-maps-kml.zip" download>KML per Google</a>
+</div>
+<p class="map-status-message" id="map-status-message">Premi “Usa la mia posizione” quando sei sul posto: il browser chiederà il permesso GPS e confronterà la tua posizione con la traccia selezionata.</p>
+<div id="map" style="height: 540px; border-radius: 18px; border: 1px solid rgba(184,155,94,0.3); box-shadow: var(--shadow-md); z-index: 1;"></div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander2" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander2)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section section-cream">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Preparazione</span>
+<h2 class="title-medium">Consigli prima di partire</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 700px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0; font-size: 1.05rem;">
+                        Per vivere al meglio i percorsi consigliamo scarpe adatte, acqua, cappello nelle giornate calde, GPX scaricato prima di partire e una breve verifica delle condizioni meteo. Per i tratti più lunghi è sempre consigliato confrontarsi con Giuseppe o Elisa.
+                    </p>
+</div>
+</div>
+<div style="max-width: 800px; margin: 2rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: 0.95rem;">
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Attrezzatura consigliata</h3>
+<ul style="list-style: none; color: var(--color-nero-morbido); line-height: 1.7; padding-left: 0;">
+<li>• Scarpe da trekking con suola scolpita</li>
+<li>• Borraccia con acqua a sufficienza</li>
+<li>• Cappello e protezione solare</li>
+<li>• Abbigliamento comodo e a strati</li>
+</ul>
+</div>
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Orientamento e Sicurezza</h3>
+<p style="color: var(--color-nero-morbido); line-height: 1.6; margin: 0;">
+                        Ti consigliamo di consultare la scheda del percorso prima di partire e scrivere a Giuseppe per ricevere informazioni pratiche. Non partire senza verificare meteo, acqua, fondo del sentiero e condizioni personali.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="download-percorsi">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Download</span>
+<h2 class="title-medium">Guide e tracce pronte per l’ospite</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Strumenti finali e comprensibili: guida PDF, guida online, mappa dedicata e tracce scaricabili. Tutto deve portare a qualcosa di reale.</p>
+<p class="subtitle" style="max-width:700px; margin:1rem auto 0;">Scarica le tracce prima di partire e apri i file traccia con un’app outdoor compatibile. Le tracce aiutano a orientarsi, ma non sostituiscono verifiche reali, meteo, prudenza e informazioni aggiornate.</p>
+</div>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="btn btn-primary" download="" href="downloads/guida-luoghi-galliciano.pdf">Scarica guida PDF completa</a>
+<a class="btn btn-outline" href="downloads/guida-luoghi-galliciano.html">Leggi la guida online</a>
+<a class="btn btn-gold" href="downloads/mappa-percorsi.html">Apri mappa GPS</a>
+<a class="btn route-gpx-button" download="" href="downloads/percorsi-galliciano-gpx.zip">Scarica tutte le tracce</a>
+</div>
+</div>
+</section>
+<section class="section arrival-maps-section" id="arrivo-parcheggio">
+<div class="container reveal">
+<div class="arrival-premium-card">
+<div>
+<span class="label-tag">Arrivo consigliato</span>
+<h2 class="title-medium">Arriva al parcheggio, poi 90-100 metri a piedi</h2>
+<p>Per evitare confusione dentro il borgo, imposta il navigatore su <strong>Parcheggio, 89030 Gallicianò RC</strong>: il primo pulsante usa automaticamente la tua posizione attuale come partenza. Dopo aver lasciato l’auto, prosegui a piedi verso <strong>Via Anaghorio, 89030 Gallicianò RC</strong>: la distanza è breve, circa 90-100 metri. Non proseguire in auto fin davanti alla casa.</p>
+</div>
+<div class="arrival-premium-actions">
+<a aria-label="Apri Google Maps con indicazioni in auto dalla tua posizione attuale al parcheggio di Gallicianò (nuova scheda)" class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Apri il parcheggio da dove sei</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dal parcheggio di Gallicianò a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Dal parcheggio a Casa Giufà a piedi</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dalla tua posizione attuale a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Raggiungi Casa Giufà da dove sei</a>
+<a class="btn btn-primary" download="" href="downloads/guida-luoghi-galliciano.pdf">Scarica guida PDF</a>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Continua la visita" class="continue-visit"><div class="container continue-visit-inner"><div class="continue-visit-copy"><span>Navigazione</span><h2>Continua la visita senza perderti</h2><p>Puoi tornare indietro, rientrare alla Home o andare alla prossima pagina del percorso consigliato.</p></div><div class="continue-visit-actions"><button class="btn btn-outline back-inline" data-history-back="" type="button">Torna indietro</button><a class="btn btn-outline" href="camere.html">Camere</a><a class="btn btn-primary" href="index.html">Torna alla Home</a><a class="btn btn-gold" href="guida.html">Guida</a></div></div></section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="assets/img/casa giufà.png"/>
+<p>Ospitalità autentica, trekking culturale e vita di borgo nel cuore della Calabria Greca.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Calos Irthete · Benvenuto</p>
+</div>
+<div>
+<h4>Contatti</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa: +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio Paleò: +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Esplora</h4>
+<ul>
+<li><a href="camere.html">Le Camere</a></li>
+<li><a href="percorsi.html">I Percorsi</a></li>
+<li><a href="storia.html">La Storia</a></li>
+<li><a href="rallentare.html">Rallentare</a></li>
+<li><a href="trattoria.html">Trattoria Nizio Paleò</a></li>
+<li><a href="contatti.html">Come Arrivare</a></li>
+</ul>
+</div>
+<div>
+<h4>Seguici</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amici_di_galliciano/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amici_di_galliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/amicidigalliciano" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Contatto diretto: 65 € a persona. Booking/Airbnb: 75 € a persona con link ufficiali da inserire.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<span class="platform-button platform-disabled" aria-disabled="true">Airbnb 75 € · link ufficiale da inserire</span>
+<span class="platform-button platform-disabled" aria-disabled="true">Booking.com 75 € · link ufficiale da inserire</span>
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. Tutti i diritti riservati. | Gallicianò, Calabria Greca.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar d-md-none" id="sticky-bar">
+<a class="btn btn-primary" href="tel:+393463603118">Chiama Elisa</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%20e%20arrivo%20a%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a>
+</div>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/routes.js"></script>
+<script src="assets/js/map.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/nav-arrows.js"></script>
+</body>
+</html>

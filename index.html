@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Dormire a Gallicianò, nel cuore della Calabria Greca. Casa Giufà offre ospitalità di borgo, trekking culturale, natura aspromontana e accoglienza autentica." name="description"/>
+<title>Amici Di Gallicianò Casa Giufà | Ospitalità nella Calabria Greca</title>
+<!-- Open Graph SEO -->
+<meta content="Amici Di Gallicianò Casa Giufà" property="og:title"/>
+<meta content="Ospitalità autentica, trekking culturali e cucina locale nella Calabria Greca. Scopri Gallicianò." property="og:description"/>
+<meta content="assets/img/hero-galliciano.jpg" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="it_IT" property="og:locale"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Leaflet CSS -->
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<!-- Styles -->
+<link href="assets/css/style.css" rel="stylesheet"/>
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Amici Di Gallicianò Casa Giufà",
+      "description": "Camere autentiche, percorsi culturali e cucina locale tra Gallicianò, Bova e Amendolea nella Calabria Greca.",
+      "telephone": "+393296576114",
+      "url": "https://amicidigaliciano.github.io",
+      "image": "assets/img/hero-galliciano.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gallicianò",
+        "addressRegion": "Calabria",
+        "postalCode": "89030",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.9502,
+        "longitude": 15.8698
+      },
+      "sameAs": [
+        "https://www.instagram.com/amici_di_galliciano/",
+        "https://www.facebook.com/amicidigalliciano"
+      ]
+    }
+    </script>
+</head>
+<body class="page-index">
+<!-- Intro Logo Animation -->
+<div aria-label="Introduzione Amici Di Gallicianò Casa Giufà" class="intro-overlay intro-overlay-grand" id="intro-overlay">
+<div aria-hidden="true" class="intro-column intro-column-left"><span></span></div>
+<div aria-hidden="true" class="intro-column intro-column-right"><span></span></div>
+<div class="intro-inner">
+<img alt="Amici Di Gallicianò Casa Giufà Logo" class="intro-logo" src="assets/img/casa%20giuf%C3%A0.png"/>
+<p class="intro-title">Amici Di Gallicianò<br/><span>Casa Giufà</span></p>
+<p class="intro-tagline">Calos Irthete — Benvenuto a Gallicianò</p>
+</div>
+<button class="intro-skip" id="intro-skip">Entra nel borgo</button>
+</div>
+<!-- Header -->
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html">
+<img alt="Amici Di Gallicianò Casa Giufà" src="assets/img/casa giufà.png"/>
+</a>
+<button aria-label="Apri menu" class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link active" href="index.html">Home</a></li>
+<li><a class="nav-link" href="camere.html">Camere</a></li>
+<li><a class="nav-link" href="percorsi.html">Percorsi</a></li>
+<li><a class="nav-link" href="guida.html">Guida</a></li>
+<li><a class="nav-link" href="storia.html">Storia</a></li>
+<li><a class="nav-link" href="rallentare.html">Rallentare</a></li>
+<li><a class="nav-link" href="trattoria.html">Trattoria</a></li>
+<li><a class="nav-link" href="contatti.html">Contatti</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">Verifica disponibilità su WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="hero-slides">
+<div class="hero-slide active" style="background-image: url('assets/img/gallician%C3%B2%20paronamica.JPG');"></div>
+<div class="hero-slide" style="background-image: url('assets/img/fiume%20amendolea%20panoromica.JPG');"></div>
+<div class="hero-slide" style="background-image: url('assets/img/chiesetta-ortodossa-panaghia%20galliciano.jpg');"></div>
+<div class="hero-slide" style="background-image: url('assets/img/fontana%20del%20amore%20galliciano.jpg');"></div>
+<div class="hero-slide" style="background-image: url('assets/img/interno-museo%20gallciano.jpg');"></div>
+<div class="hero-slide" style="background-image: url('assets/img/casa%20giuf%C3%A0%20panoramica.JPG');"></div>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content" style="padding: 2rem; background: rgba(0,0,0,0.3); border-radius: 12px; backdrop-filter: blur(4px);">
+<span class="hero-label" style="font-weight: 600; letter-spacing: 2px;">Il cuore della Calabria Greca</span>
+<h1 class="hero-title title-large" style="margin-bottom: 1.5rem;">Casa Giufà<br/><em>Amici Di Gallicianò</em></h1>
+<p class="hero-subtitle" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Non affittiamo solo una camera: apriamo una porta sulla Calabria Greca, sul silenzio di Gallicianò e su una casa vissuta davvero.</p>
+<p style="font-size: 1rem; color: #fff; max-width: 600px; margin: 0 auto 2.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">2 camere su 2 piani separati • ogni camera: 1 matrimoniale + 1 singolo • max 3 ospiti per camera</p>
+<div class="hero-ctas" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+<a class="btn btn-whatsapp btn-large" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">Verifica disponibilità su WhatsApp</a>
+<a class="btn btn-primary btn-large" href="camere.html">Scopri la Casa</a>
+</div>
+<div class="hero-price-panel">
+  <p><strong>Prenotazione diretta:</strong> 65 € a persona</p>
+  <p><strong>Booking/Airbnb:</strong> 75 € a persona</p>
+  <div class="platform-button-row" aria-label="Canali di prenotazione esterni">
+    <span class="platform-button platform-disabled" aria-disabled="true">Airbnb · link ufficiale da inserire</span>
+    <span class="platform-button platform-disabled" aria-disabled="true">Booking.com · link ufficiale da inserire</span>
+  </div>
+</div>
+<p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">* Il pernottamento va prenotato almeno 2 giorni prima. Pranzo/Cena su richiesta.</p>
+</div>
+<a aria-label="Scorri verso il basso" class="hero-scroll-indicator" href="#fiducia">
+<span></span>
+</a>
+</section>
+<!-- CAMERE -->
+<section class="section section-dark home-rooms-section" id="camere">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag label-tag-light">Soggiorna a Gallicianò</span>
+<h2 class="title-medium">Casa Giufà</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">
+        Due camere su due piani separati, entrambe con entrata indipendente. Ogni camera può ospitare massimo 3 persone: 1 letto matrimoniale e 1 letto singolo. Totale massimo: 6 ospiti.
+      </p>
+</div>
+<div aria-label="Le due camere di Casa Giufà" class="home-room-cards reveal">
+<article class="home-room-card">
+<figure>
+<img alt="Camera piano terra di Casa Giufà con letto e arredi essenziali" loading="lazy" src="assets/img/camera%20da%20letto%20piano%20terra%20.png"/>
+<span>Piano terra</span>
+</figure>
+<div class="home-room-card-body">
+<h3>Camera piano terra</h3>
+<p>Camera indipendente al piano terra, pensata per massimo 3 ospiti: 1 letto matrimoniale, 1 letto singolo, ingresso pratico, bagno riservato e dettagli utili per il soggiorno.</p>
+<ul>
+<li>1 letto matrimoniale + 1 letto singolo</li>
+<li>Massimo 3 ospiti</li>
+<li>Entrata indipendente e bagno riservato</li>
+</ul>
+</div>
+</article>
+<article class="home-room-card home-room-card-featured">
+<figure>
+<img alt="Camera primo piano di Casa Giufà con letto e soffitto in legno" loading="lazy" src="assets/img/camera%20da%20letto%20primo%20piano.png"/>
+<span>Primo piano</span>
+</figure>
+<div class="home-room-card-body">
+<h3>Camera primo piano</h3>
+<p>Camera indipendente al primo piano, raccolta e luminosa, pensata per massimo 3 ospiti: 1 letto matrimoniale, 1 letto singolo, ingresso separato e bagno riservato.</p>
+<ul>
+<li>1 letto matrimoniale + 1 letto singolo</li>
+<li>Massimo 3 ospiti</li>
+<li>Entrata indipendente e bagno riservato</li>
+</ul>
+</div>
+</article>
+</div>
+<div class="home-casa-summary reveal">
+<div>
+<span class="home-casa-kicker">2 camere · 2 piani separati · fino a 6 ospiti</span>
+<h3>Una casa vera, non una stanza qualunque</h3>
+<p>Casa Giufà è composta da due camere su due piani separati: ogni camera ha entrata indipendente, 1 letto matrimoniale, 1 letto singolo e può ospitare fino a 3 persone. Giuseppe custodisce la memoria della casa dove è nato; Elisa resta il riferimento pratico per disponibilità, arrivo e organizzazione.</p>
+</div>
+<div class="camere-ctas camere-ctas-luxury">
+<a class="btn btn-gold" href="camere.html">Scopri le camere</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Verifica disponibilità</a>
+</div>
+</div>
+<div class="booking-price-card reveal">
+  <span class="home-casa-kicker">Prezzi chiari</span>
+  <h3>Prenotazione diretta o piattaforme</h3>
+  <p><strong>Contatto diretto:</strong> 65 € a persona. <strong>Booking/Airbnb:</strong> 75 € a persona, quando i link ufficiali saranno attivi.</p>
+  <div class="platform-button-row">
+    <a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20verificare%20disponibilit%C3%A0%20e%20prezzo%20diretto%20per%20Casa%20Giuf%C3%A0." target="_blank" rel="noopener noreferrer">Prenota diretto 65 €</a>
+    <span class="platform-button platform-disabled" aria-disabled="true">Airbnb 75 € · link da inserire</span>
+    <span class="platform-button platform-disabled" aria-disabled="true">Booking.com 75 € · link da inserire</span>
+  </div>
+</div>
+<div class="home-disconnect-card reveal">
+<span class="home-casa-kicker">Il tempo qui cambia passo</span>
+<h3>Qui non vieni per guardare uno schermo</h3>
+<p><strong>Casa Giufà non offre Wi-Fi e TV.</strong> Non è una mancanza nascosta: è una scelta precisa. Meno distrazioni, meno rumore, più silenzio, più sonno, più dialogo e più attenzione a ciò che Gallicianò fa sentire.</p>
+<p>Quando il cervello smette di saltare tra notifiche e stimoli continui, ricomincia a notare il luogo: il profumo della terra, il suono dei passi, la fiumara, la luce sulle pietre, i sapori semplici e il tempo umano.</p>
+<a class="btn btn-gold" href="rallentare.html">Scopri perché rallentare</a>
+</div>
+
+</div>
+</section>
+<!-- FIDUCIA E HOST -->
+<section class="section home-hosts-section" id="fiducia">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Chi ti accoglie</span>
+<h2 class="title-medium">Riferimenti chiari, prima di arrivare</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Questa sezione serve a una cosa precisa: far capire all'ospite chi contattare e per cosa, senza confondere accoglienza, disponibilità e consigli sul territorio.</p>
+</div>
+<div class="host-role-grid reveal">
+<article class="host-role-card host-role-card-giuseppe">
+<img class="host-role-photo" src="assets/img/giuseppe-zindato-ritratto.jpg" alt="Ritratto di Giuseppe Zindato, memoria e casa di Casa Giufà" loading="lazy" width="100" height="100"/>
+<span>Casa e memoria</span>
+<h3>Giuseppe</h3>
+<p>È il riferimento legato alla casa, al racconto del borgo e alla storia di Casa Giufà.</p>
+</article>
+<article class="host-role-card host-role-card-primary">
+<span>Disponibilità e arrivo</span>
+<h3>Elisa</h3>
+<p>È il contatto pratico per informazioni, disponibilità, organizzazione e chiarimenti prima dell'arrivo.</p>
+</article>
+<article class="host-role-card">
+<span>Territorio e sapori</span>
+<h3>Nizio Paleò</h3>
+<p>È un riferimento locale separato per accoglienza in presenza, cucina tradizionale e consigli pratici sul territorio.</p>
+<a class="host-role-link" href="trattoria.html">Scopri la trattoria</a>
+</article>
+</div>
+<div class="host-actions reveal">
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Scrivi a Elisa</a>
+<a class="btn btn-outline" download="" href="downloads/guida-luoghi-galliciano.pdf">Scarica la guida</a>
+</div>
+</div>
+</section>
+<!-- PERCHÉ VENIRE QUI -->
+<section class="section section-cream" id="perche">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Il Luogo</span>
+<h2 class="title-medium">Qui non vieni solo a dormire</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">
+                    Vieni a camminare dentro una Calabria antica, tra pietra, vento, lingua greca e cucina di casa. Sentieri che scendono verso l'Amendolea, borghi abbarbicati sulle rocce, silenzi che sanano. Questo non è un turismo costruito — è un posto che esiste da sempre, autentico e vivo.
+                </p>
+</div>
+<div class="features-grid">
+<div class="feature-card reveal" style="animation-delay: 0.1s;">
+<div class="feature-icon"></div>
+<h3>Casa Giufà</h3>
+<p>Due camere su due piani separati, entrambe con entrata indipendente: massimo 3 ospiti per camera, fino a 6 persone complessive.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.2s;">
+<div class="feature-icon"></div>
+<h3>Trekking Culturale</h3>
+<p>Percorsi reali verso Bova, Amendolea e la Fiumara. Sentieri millenari raccontati con rispetto da chi conosce il territorio.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.3s;">
+<div class="feature-icon"></div>
+<h3>Cucina Grecanica</h3>
+<p>Formaggi, salumi, pasta fatta in casa e secondi tradizionali. La Trattoria Nizio Paleò è a pochi passi dalla porta.</p>
+<a class="feature-link" href="trattoria.html">Vedi i piatti</a>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.4s;">
+<div class="feature-icon"></div>
+<h3>Cultura Greca</h3>
+<p>La lingua grecanica vive ancora qui. Gallicianò è uno degli ultimi borghi dove si parla ancora il greco di Calabria.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.5s;">
+<div class="feature-icon"></div>
+<h3>Natura Selvaggia</h3>
+<p>Aspromonte, fiumare, boschi e canyon. Una natura aspra e meravigliosa da esplorare a piedi o in jeep.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.6s;">
+<div class="feature-icon"></div>
+<h3>Accoglienza Vera</h3>
+<p>Giuseppe ed Elisa ti accolgono come di casa. Qui i turisti diventano ospiti e gli ospiti diventano amici.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PERCORSI TREKKING -->
+<section class="section" id="percorsi">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Esplora il Territorio</span>
+<h2 class="title-medium">Percorsi Trekking Culturali</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Scopri i sentieri millenari che collegano Gallicianò all'Amendolea, a Bova e ai borghi dell'Area Grecanica. Ogni passo è una storia.</p>
+</div>
+<div class="card-grid" id="routes-container">
+<!-- Routes will be injected via JS from routes.json -->
+</div>
+<div class="text-center reveal" style="margin-top: 3rem;">
+<a class="btn btn-primary" href="percorsi.html">Vedi tutti i percorsi</a>
+</div>
+</div>
+</section>
+<!-- AI RECOMMENDER -->
+<!-- MAPPA INTERATTIVA -->
+<section class="section" id="mappa">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Orientati</span>
+<h2 class="title-medium text-center">Esplora il Territorio</h2>
+<div class="greek-divider"></div>
+<p class="subtitle text-center" style="margin-bottom: 2rem;">Gallicianò, Bova, Amendolea e i principali punti di interesse dell'Area Grecanica.</p>
+</div>
+<div style="text-align:center; margin-bottom: 1.5rem;">
+<button class="btn btn-outline" id="btn-geolocate"> Usa la mia posizione</button>
+</div>
+<div id="map" style="max-height: 350px; max-width: 900px; margin: 0 auto; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1); overflow: hidden;"></div>
+</div>
+</section>
+<!-- NIZIO PALEO -->
+<section class="section nizio-experience" id="cucina">
+<div class="container">
+<div class="split-section reveal">
+<div class="split-content">
+<span class="label-tag">Sapori locali</span>
+<h2 class="title-medium">Trattoria Nizio Paleò</h2>
+<div class="greek-divider" style="margin-left:0;"></div>
+<p style="margin-bottom:1.2rem;color:var(--color-nero-morbido);font-size:1.05rem;line-height:1.8;">A Gallicianò il pasto non è una pausa qualunque: è il momento in cui il borgo diventa tavola, racconto e incontro. La Trattoria Nizio Paleò è il riferimento locale per chi vuole assaggiare cucina semplice, casalinga e profondamente calabrese.</p>
+<div class="nizio-price-note"><span>Per gli ospiti di Casa Giufà</span><strong>Menù completo a 25 € invece di 30 €</strong><p>Prezzo riservato a chi alloggia nella nostra struttura, da confermare al momento della prenotazione.</p></div>
+<p style="margin-bottom:1.5rem;color:var(--color-nero-morbido);font-size:1.05rem;line-height:1.8;"><strong>Punto indicato:</strong> Via Cataforio 8, Gallicianò. Prima di andare è sempre meglio verificare disponibilità, orari e prenotazione, perché i posti sono limitati e la cucina segue il ritmo reale del borgo.</p>
+<div class="card-actions route-card-actions">
+<a class="btn btn-gold" href="trattoria.html">Scopri sala e piatti</a>
+<a class="btn btn-primary" href="tel:+393465325400">Chiama Nizio</a>
+<a class="btn btn-outline" href="https://www.instagram.com/trattoria_nizio_paleo/" rel="noopener noreferrer" target="_blank">Instagram ufficiale</a>
+</div>
+<p class="nizio-source-note">Piatti e disponibilità possono cambiare in base alla stagione e all’organizzazione del giorno. Il menù completo per gli ospiti di Casa Giufà è indicato a 25 € invece di 30 €, ma va confermato in prenotazione, così evitiamo la grande tradizione umana di arrivare affamati e pretendere miracoli.</p>
+</div>
+<div class="nizio-visual-card">
+<img class="nizio-main-img" src="assets/img/trattoria/nizio-sala.webp" alt="Sala interna della Trattoria Nizio Paleò a Gallicianò" loading="lazy" width="765" height="1020"/>
+<div class="nizio-logo-badge nizio-official-logo"><img src="assets/img/trattoria/logo-nizio-paleo.webp" alt="Logo ufficiale della Trattoria Nizio Paleò" loading="lazy" width="320" height="320"/></div>
+</div>
+</div>
+<div class="nizio-home-dishes reveal" aria-label="Piatti della Trattoria Nizio Paleò">
+<article><img src="assets/img/trattoria/nizio-antipasto-salumi-formaggi.webp" alt="Antipasto con salumi e formaggi alla Trattoria Nizio Paleò" loading="lazy"/><h3>Antipasti locali</h3><p>Salumi, formaggi e sapori forti da condividere prima del pasto.</p></article>
+<article><img src="assets/img/trattoria/nizio-pasta-fatta-in-casa.webp" alt="Pasta fatta in casa servita alla Trattoria Nizio Paleò" loading="lazy"/><h3>Primi di casa</h3><p>Pasta fatta in casa, condimenti semplici e sapori del territorio.</p></article>
+<article><img src="assets/img/trattoria/nizio-capra-stracotto.webp" alt="Secondo di capra in umido alla Trattoria Nizio Paleò" loading="lazy"/><h3>Secondi tradizionali</h3><p>Piatti robusti, carne locale e cucina lenta, senza effetti speciali inutili.</p></article>
+</div>
+<div class="nizio-home-wayfinding reveal" aria-label="Come riconoscere la Trattoria Nizio Paleò">
+<div>
+<span class="label-tag">Per arrivare davvero</span>
+<h3>Riconosci la trattoria prima di perderti tra le vie</h3>
+<p>Abbiamo aggiunto foto pratiche della facciata, del cartello vicino alla chiesa e dell’incisione sulla pavimentazione. Servono quando sei sul posto e vuoi capire subito dove andare.</p>
+</div>
+<div class="nizio-home-wayfinding-images">
+<img src="assets/img/trattoria/nizio-esterno-cortile.webp" alt="Esterno della Trattoria Nizio Paleò" loading="lazy" width="1400" height="1050"/>
+<img src="assets/img/trattoria/nizio-cartello-chiesa.webp" alt="Cartello indicativo Trattoria Nizio Paleò vicino alla chiesa" loading="lazy" width="975" height="1300"/>
+<img src="assets/img/trattoria/nizio-incisione-strada.webp" alt="Incisione a terra Trattoria Nizio Paleò" loading="lazy" width="1300" height="975"/>
+</div>
+<a class="btn btn-outline" href="trattoria.html#come-trovarla">Guarda i riferimenti visivi</a>
+</div>
+</div>
+</section>
+<!-- STORIA: GIUSEPPE & CALABRIA GRECA -->
+<section class="section section-dark" id="storia">
+<div class="container">
+<div class="dual-story reveal">
+<div class="story-block story-block-with-portrait">
+<figure class="giuseppe-home-portrait">
+<img src="assets/img/giuseppe-zindato-ritratto.jpg" alt="Ritratto di Giuseppe Zindato, proprietario di Casa Giufà" loading="lazy" width="1000" height="1000"/>
+<figcaption>Giuseppe Zindato, nato in questa casa e custode della memoria di Casa Giufà.</figcaption>
+</figure>
+<span class="label-tag label-tag-light">Chi siamo</span>
+<h2 class="title-medium" style="color: var(--color-bianco-caldo);">Giuseppe: Il tuo Host Locale</h2>
+<div class="greek-divider" style="margin-left: 0;"></div>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 1.5rem;">
+                        Giuseppe Zindato è nato proprio in questa casa, quando Gallicianò si viveva con le mani, con il passo e con i sensi: la stalla sotto casa, gli animali, l'acqua del pozzo, i profumi dei formaggi, la fiumara e il mulino raggiunti da ragazzo per fare il bagno.
+                    </p>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+                        Dopo una vita costruita a Reggio Calabria come imprenditore nel commercio della frutta e allenatore di calcio, Giuseppe ha recuperato la casa del padre per restituire agli ospiti un pezzo autentico della sua Gallicianò: natura, memoria, semplicità e silenzio.
+                    </p>
+<a class="btn btn-gold" href="storia.html">Leggi la nostra storia</a>
+</div>
+<div class="story-block">
+<span class="label-tag label-tag-light">Il Territorio</span>
+<h2 class="title-medium" style="color: var(--color-bianco-caldo);">La Calabria Greca</h2>
+<div class="greek-divider" style="margin-left: 0;"></div>
+<blockquote class="story-quote">
+                        "Qui la Grecia non è un ricordo lontano. È rimasta nei nomi, nelle pietre, nei sentieri e nella lingua stessa del popolo."
+                    </blockquote>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+                        Gallicianò, Bova, Amendolea, Condofuri: luoghi dove l'antica lingua grecanica risuona ancora tra le case in pietra e la fiumara. Un'area protetta, isolata e preservata. Una delle ultime sacche di Magna Grecia sopravvissuta ai secoli.
+                    </p>
+<a class="btn btn-gold" href="storia.html#cultura-grecanica">Scopri la storia</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section-cream" id="faq">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Risposte</span>
+<h2 class="title-medium text-center">Domande Frequenti</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Come si arriva a Gallicianò?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Si arriva in auto dalla Statale 106 Jonica, prendendo l'uscita per Condofuri e poi seguendo le indicazioni per Gallicianò. La strada è una tipica strada di montagna calabrese, a curve e paesaggi spettacolari. Si consiglia un'auto con buona trazione. Da Reggio Calabria circa 1h30.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        I percorsi sono adatti a tutti?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Dipende dal percorso scelto. Il giro del borgo e la passeggiata alla pietra grecanica sono adatti a tutti, compresi i bambini. Il Sentiero dell'Inglese e la discesa verso la Fiumara Amendolea richiedono una preparazione fisica adeguata e calzature da trekking. Contattate Giuseppe per scegliere il percorso giusto.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Dove posso mangiare a Gallicianò?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Consigliamo la <strong>Trattoria Nizio Paleò</strong>, situata nel borgo stesso. È una cucina casalinga greco-calabrese autentica, con piatti a base di prodotti locali. Per chi alloggia a Casa Giufà, il menù completo convenzionato costa <strong>25 € a persona invece di 30 €</strong>. Prenotate in anticipo perché i posti sono limitati: <a href="tel:+393465325400">+39 346 532 5400</a>.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">Ci sono Wi-Fi e TV?<span class="faq-icon">+</span></button>
+<div class="faq-answer"><p>No: Casa Giufà non prevede Wi-Fi e TV. È una scelta coerente con l’esperienza proposta: meno schermi, più silenzio, borgo, relazioni, tradizioni e tempo reale. La copertura telefonica può variare in base all’operatore, quindi conviene organizzare l’arrivo prima di partire.</p></div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        C'è acqua calda nelle camere?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Sì. Casa Giufà dispone di acqua calda e di un serbatoio autonomo per garantire il servizio in ogni condizione. I bagni sono attrezzati con tutto il necessario.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Si può prenotare su Airbnb o Booking?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Il modo più diretto e conveniente è contattare Giuseppe o Elisa direttamente via telefono o WhatsApp. Avete la garanzia di parlare con chi gestisce la struttura, personalizzare il soggiorno e risparmiare le commissioni delle piattaforme.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL LINKS -->
+<section class="section section-dark social-section">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag label-tag-light">Seguici</span>
+<h2 class="title-medium text-center" style="color: var(--color-bianco-caldo);">Seguici sui Social</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="social-grid">
+<a class="social-card" href="https://www.instagram.com/amici_di_galliciano/" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Instagram</span>
+<span class="social-handle">@amici_di_galliciano</span>
+</a>
+<a class="social-card" href="https://www.facebook.com/amicidigalliciano" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Facebook</span>
+<span class="social-handle">Amici Di Gallicianò Casa Giufà</span>
+</a>
+<a class="social-card" href="https://www.instagram.com/trattoria_nizio_paleo/" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Nizio Paleò</span>
+<span class="social-handle">@trattoria_nizio_paleo</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section section-cream guide-teaser-section" id="guida-luoghi">
+<div class="container">
+<div class="section-header">
+<span class="label-tag">Guide pronte per l'ospite</span>
+<h2 class="title-medium">Guida, arrivo e percorsi senza confusione</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Qui non ci sono file tecnici messi per fare scena: solo strumenti utili per chi deve arrivare, orientarsi, scaricare la guida e raggiungere i punti reali.</p>
+</div>
+<div class="user-guide-grid">
+<a class="user-guide-card" download="" href="downloads/guida-luoghi-galliciano.pdf">
+<span>PDF</span><strong>Guida completa</strong><p>Guida finale per ospiti: arrivo, luoghi, Casa Giufà, rispetto del borgo e contatti.</p>
+</a>
+<a class="user-guide-card" href="downloads/guida-luoghi-galliciano.html">
+<span>Online</span><strong>Guida online</strong><p>Versione leggibile dal telefono, con sezioni ordinate e link pratici.</p>
+</a>
+<a class="user-guide-card" href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">
+<span>Maps</span><strong>Arriva al parcheggio</strong><p>Porta prima al parcheggio corretto, evitando di entrare in auto nel borgo.</p>
+</a>
+<a class="user-guide-card" href="percorsi.html#percorsi-reali">
+<span>Tracce</span><strong>Percorsi reali</strong><p>Apri le schede dei percorsi, scarica la traccia GPX e controlla la mappa.</p>
+</a>
+</div>
+</div></section>
+<!-- FIDUCIA E HOST -->
+<section class="section section-cream" id="fiducia">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">La nostra Accoglienza</span>
+<h2 class="title-medium text-center">Un'esperienza di Casa</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+<div class="trust-host text-center" style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+<img class="trust-host-photo" src="assets/img/giuseppe-zindato-ritratto.jpg" alt="Ritratto di Giuseppe Zindato, host di Casa Giufà" loading="lazy" width="1000" height="1000"/>
+<h3 style="margin-bottom: 1rem; color: var(--color-marrone-terra);">Il tuo Host: Giuseppe</h3>
+<p style="color: var(--color-nero-morbido); margin-bottom: 1.5rem;">"Vogliamo condividere la bellezza e la tranquillità di Gallicianò con chi sa apprezzare le cose semplici e vere. Vi aspettiamo a braccia aperte."</p>
+<a class="btn btn-whatsapp" href="https://wa.me/393296576114?text=Ciao%20Giuseppe%2C%20vorrei%20informazioni%20su%20Casa%20Giuf%C3%A0." target="_blank"> Scrivi a Giuseppe su WhatsApp</a>
+</div>
+<!-- Spazio per Recensioni (commentato finché non ci sono recensioni verificate) -->
+<!--
+                <div class="trust-reviews text-center" style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h3 style="margin-bottom: 1rem; color: var(--color-marrone-terra);">Cosa dicono di noi</h3>
+                    <p style="color: var(--color-nero-morbido); font-style: italic;">"Un'accoglienza che ti fa sentire in famiglia. La casa è perfetta e il borgo magico."</p>
+                    <span style="display: block; margin-top: 1rem; font-weight: bold; color: var(--color-oro-antico);">- Ospite Verificato</span>
+                </div>
+                -->
+<div class="trust-guide text-center" style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+<h3 style="margin-bottom: 1rem; color: var(--color-marrone-terra);">Scopri il Borgo</h3>
+<p style="color: var(--color-nero-morbido); margin-bottom: 1.5rem;">Preparati al tuo arrivo scaricando la nostra guida gratuita con i luoghi imperdibili di Gallicianò.</p>
+<a class="btn btn-primary" download="" href="downloads/guida-luoghi-galliciano.pdf"> Scarica la Guida in PDF</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA FINALE -->
+<section class="section cta-finale">
+<div class="cta-bg" style="background-image: url('assets/img/gallician%C3%B2%20paronamica.JPG');"></div>
+<div class="cta-overlay"></div>
+<div class="container cta-content reveal">
+<span class="label-tag label-tag-light">Prenota il tuo soggiorno</span>
+<h2 class="title-medium" style="color: var(--color-bianco-caldo);">Sei pronto a scoprire<br/>la Grecia di Calabria?</h2>
+<p style="color: var(--color-pietra); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem; line-height: 1.8;">
+                Scrivi a Giuseppe o Elisa per dormire nel borgo, organizzare il tuo arrivo e scegliere il percorso più adatto a te.
+            </p>
+<div class="cta-buttons"><a class="btn btn-primary btn-large" href="tel:+393463603118">Chiama Elisa</a>
+<a class="btn btn-whatsapp btn-large" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a></div>
+</div>
+</section>
+<section class="section arrival-maps-section" id="arrivo-parcheggio">
+<div class="container reveal">
+<div class="arrival-premium-card">
+<div>
+<span class="label-tag">Arrivo consigliato</span>
+<h2 class="title-medium">Arriva al parcheggio, poi 90-100 metri a piedi</h2>
+<p>Per evitare confusione dentro il borgo, imposta il navigatore su <strong>Parcheggio, 89030 Gallicianò RC</strong>: il primo pulsante usa automaticamente la tua posizione attuale come partenza. Dopo aver lasciato l’auto, prosegui a piedi verso <strong>Via Anaghorio, 89030 Gallicianò RC</strong>: la distanza è breve, circa 90-100 metri. Non proseguire in auto fin davanti alla casa.</p>
+</div>
+<div class="arrival-premium-actions">
+<a aria-label="Apri Google Maps con indicazioni in auto dalla tua posizione attuale al parcheggio di Gallicianò (nuova scheda)" class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Apri il parcheggio da dove sei</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dal parcheggio di Gallicianò a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Dal parcheggio a Casa Giufà a piedi</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dalla tua posizione attuale a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Raggiungi Casa Giufà da dove sei</a>
+<a class="btn btn-primary" download="" href="downloads/guida-luoghi-galliciano.pdf">Scarica guida PDF</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="assets/img/casa giufà.png"/>
+<p>Ospitalità autentica, trekking culturale e vita di borgo nel cuore della Calabria Greca.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Calos Irthete · Benvenuto</p>
+</div>
+<div>
+<h4>Contatti</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa (disponibilità e informazioni): +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio (Accoglienza Locale): +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Esplora</h4>
+<ul>
+<li><a href="camere.html">Le Camere</a></li>
+<li><a href="percorsi.html">I Percorsi</a></li>
+<li><a href="storia.html">La Storia</a></li>
+<li><a href="rallentare.html">Rallentare</a></li>
+<li><a href="trattoria.html">Trattoria Nizio Paleò</a></li>
+<li><a href="contatti.html">Come Arrivare</a></li>
+</ul>
+</div>
+<div>
+<h4>Seguici</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amici_di_galliciano/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amici_di_galliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/amicidigalliciano" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Contatto diretto: 65 € a persona. Booking/Airbnb: 75 € a persona con link ufficiali da inserire.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. Tutti i diritti riservati. | Gallicianò, Calabria Greca.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar" id="sticky-bar">
+<a class="btn btn-primary" href="tel:+393463603118">Chiama Elisa</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%20e%20arrivo%20a%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a>
+<a class="btn btn-gold" href="camere.html"> Camere</a>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+<div class="lightbox-content">
+<button aria-label="Chiudi" class="lightbox-close" id="lightbox-close">×</button>
+<button aria-label="Precedente" class="lightbox-arrow lightbox-prev" id="lightbox-prev">❮</button>
+<img alt="" class="lightbox-img" id="lightbox-img" src=""/>
+<button aria-label="Successivo" class="lightbox-arrow lightbox-next" id="lightbox-next">❯</button>
+<p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+</div>
+<!-- Scripts -->
+<script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/map.js"></script>
+<script src="assets/js/routes.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/nav-arrows.js"></script>
+</body>
+</html>
