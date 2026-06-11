@@ -1,4 +1,4 @@
-const CACHE_NAME = 'casa-giufa-cache-v1';
+const CACHE_NAME = 'casa-giufa-cache-v2';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -17,7 +17,8 @@ const PRECACHE_URLS = [
   '/assets/js/routes.js',
   '/assets/js/lightbox.js',
   '/assets/js/nav-arrows.js',
-  '/assets/img/casa giufà.png',
+  '/assets/img/casa-giufa-logo-192.png',
+  '/assets/img/casa-giufa-logo-512.png',
   '/manifest.json',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'

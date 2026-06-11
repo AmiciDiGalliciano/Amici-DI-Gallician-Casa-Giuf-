@@ -5,9 +5,11 @@ Versione V12: integrazione GPX reali caricati dall'utente, provenienti da Wikilo
 File principali:
 - percorsi-galliciano-gpx.zip: tutte le tracce GPX semplificate e leggere.
 - percorsi-google-maps-kml.zip: file KML compatibili con importazione in Google My Maps / Google Earth.
-- percorsi-galliciano-completo-gpx-kml-geojson.zip: GPX + KML + GeoJSON.
-- originali-wikiloc-gpx.zip: copia dei file GPX originali caricati, non modificati.
+- originali-wikiloc-gpx.zip: copia dei file GPX originali Wikiloc, non modificati (anche nella cartella originali-wikiloc/).
+- data/: tracce singole GPX + KML + GeoJSON per ogni percorso.
 - mappa-percorsi.html: mappa locale con selezione percorso e controllo GPS rispetto alla traccia.
+- istruzioni-google-maps-gpx.html: come aprire le tracce su Google Maps e app GPS.
+- guida-luoghi-galliciano.html / .pdf: guida completa per l'ospite.
 
 Uso consigliato:
 1. Aprire percorsi.html.

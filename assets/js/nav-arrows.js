@@ -6,6 +6,7 @@
     {file:'guida.html', label:'Guida'},
     {file:'storia.html', label:'Storia'},
     {file:'rallentare.html', label:'Rallentare'},
+    {file:'trattoria.html', label:'Trattoria'},
     {file:'contatti.html', label:'Contatti'}
   ];
   const current = (location.pathname.split('/').pop() || 'index.html').replace(/^$/, 'index.html');

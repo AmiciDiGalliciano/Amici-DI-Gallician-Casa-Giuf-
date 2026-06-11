@@ -18,9 +18,11 @@ if json_match:
         route_id = route['id']
         walk_url = route['maps_walk_url']
         
-        pattern = f'(<div class="card route-card" data-route="{re.escape(route_id)}">.*?<a class="btn btn-gold" href=")[^"]+(" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>)'
+        pattern = f'(<div class="card route-card[^>]* data-route="{re.escape(route_id)}".*?<a class="btn btn-gold" href=")[^"]+(" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>)'
         html_content = re.sub(pattern, r'\g<1>' + walk_url.replace('&', '&amp;') + r'\g<2>', html_content, flags=re.DOTALL)
         
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(html_content)
     print("Successfully updated percorsi.html with walk URLs")
+else:
+    print("Could not find routes JSON data.")

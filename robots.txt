@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amicidigalliciano.it/sitemap.xml

@@ -47,25 +47,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-links');
 
   if (menuBtn && navLinks) {
+    const closedHTML = menuBtn.innerHTML;
+    const openHTML = '<span class="menu-text">Chiudi</span> <span class="hamburger-icon">&times;</span>';
     menuBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('active');
-      menuBtn.innerHTML = isOpen ? '&times;' : '&#9776;';
+      menuBtn.innerHTML = isOpen ? openHTML : closedHTML;
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
 
+    const closeMenu = () => {
+      navLinks.classList.remove('active');
+      menuBtn.innerHTML = closedHTML;
+      menuBtn.setAttribute('aria-expanded', 'false');
+    };
+
     // Close on nav link click
     navLinks.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuBtn.innerHTML = '&#9776;';
-      });
+      link.addEventListener('click', closeMenu);
     });
 
     // Close on outside click
     document.addEventListener('click', (e) => {
       if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
-        navLinks.classList.remove('active');
-        menuBtn.innerHTML = '&#9776;';
+        closeMenu();
       }
     });
   }
