@@ -14,7 +14,7 @@
 <style>
 :root{--guide-blue:#26352B;--guide-gold:#A98352;--guide-cream:#FAF6EE;--guide-ink:#211D18;--guide-terracotta:#8F5E3E;}
 body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;background:#FAF6EE;color:#211D18;}
-.guide-hero{min-height:68vh;background:linear-gradient(120deg,rgba(38,53,43,.86),rgba(109,77,49,.38)),url('assets/img/panoramica gallicianò.JPG') center/cover;display:flex;align-items:center;color:white;padding:7rem 0 5rem;}
+.guide-hero{min-height:68vh;background:linear-gradient(120deg,rgba(38,53,43,.86),rgba(109,77,49,.38)),url('assets/img/panoramica-galliciano.jpg') center/cover;display:flex;align-items:center;color:white;padding:7rem 0 5rem;}
 .guide-hero .kicker{letter-spacing:.18em;text-transform:uppercase;color:#D8BC83;font-weight:700;font-size:.78rem;}
 .guide-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.8rem);line-height:.92;margin:.7rem 0 1.2rem;}
 .guide-hero p{font-size:1.14rem;line-height:1.8;max-width:760px;color:rgba(255,255,255,.92)}
@@ -35,6 +35,115 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 .fact-list span{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;background:#F1E4D0;color:#6D4D31;border-radius:999px;padding:.4rem .75rem;font-weight:700;}
 .source-note{font-size:.82rem;color:#746A5E;border-top:1px solid #eee0cc;margin-top:1rem;padding-top:1rem;}
 .guide-download-band{background:#26352B;color:white;border-radius:30px;padding:2.4rem;margin:3rem 0;background-image:radial-gradient(circle at top right,rgba(169,131,82,.35),transparent 35%)}
+
+/* === Fix finale guida: colori leggibili, blocchi distinti e prezzo evidente === */
+.guide-focus-panel{
+  background:#FFFDF8;
+  border:1px solid rgba(169,131,82,.26);
+  box-shadow:0 22px 65px rgba(38,53,43,.10);
+}
+.guide-focus-panel .label-tag{
+  background:rgba(169,131,82,.08);
+  border-color:rgba(169,131,82,.42);
+  color:#8F5E3E;
+}
+.guide-focus-panel .title-medium{color:#26352B;}
+.guide-focus-panel .guide-copy p{
+  color:#3A342B !important;
+  line-height:1.9;
+  font-size:1.08rem;
+}
+.guide-memory-band,
+.guide-slow-band,
+.guide-booking-band{
+  margin:0;
+  border:1px solid rgba(216,188,131,.24);
+  box-shadow:0 20px 55px rgba(33,29,24,.14);
+}
+.guide-memory-band{background:linear-gradient(135deg,#3A2A1E 0%,#5F402B 100%);}
+.guide-slow-band{background:linear-gradient(135deg,#26352B 0%,#496042 100%);}
+.guide-booking-band{background:linear-gradient(135deg,#211D18 0%,#3B3328 100%);}
+.guide-focus-panel .guide-download-band h3{
+  color:#FFFDF8 !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.20);
+}
+.guide-focus-panel .guide-download-band p{
+  color:#F4EBDD !important;
+}
+.guide-room-facts{
+  display:flex;
+  gap:.55rem;
+  flex-wrap:wrap;
+  margin:1.15rem 0 1.35rem;
+}
+.guide-room-facts span{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid rgba(169,131,82,.28);
+  background:#FAF6EE;
+  color:#26352B;
+  border-radius:999px;
+  padding:.48rem .8rem;
+  font-size:.82rem;
+  font-weight:800;
+}
+.guide-price-highlight{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.35rem 1rem;
+  align-items:end;
+  margin:1.25rem 0;
+  padding:1.25rem 1.35rem;
+  background:linear-gradient(135deg,#26352B 0%,#3F573B 100%);
+  border:1px solid rgba(216,188,131,.38);
+  border-radius:24px;
+  color:#FFFDF8;
+  box-shadow:0 18px 45px rgba(38,53,43,.16);
+}
+.guide-price-highlight span{
+  grid-column:1/-1;
+  color:#D8BC83;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:900;
+}
+.guide-price-highlight strong{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,7vw,5rem);
+  line-height:.82;
+  color:#FFFDF8;
+}
+.guide-price-highlight small{
+  color:#F4EBDD;
+  font-size:1.05rem;
+  font-weight:800;
+  padding-bottom:.35rem;
+}
+.guide-download-spotlight{
+  margin-top:2rem;
+  background:linear-gradient(135deg,#26352B 0%,#496042 62%,#A98352 100%);
+  color:#FFFDF8;
+  border-radius:30px;
+  padding:2rem;
+  display:grid;
+  grid-template-columns:1.2fr auto;
+  gap:1.5rem;
+  align-items:center;
+  box-shadow:0 24px 70px rgba(38,53,43,.14);
+}
+.guide-download-spotlight h2{
+  color:#FFFDF8;
+  margin:0 0 .45rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+}
+.guide-download-spotlight p{color:#F4EBDD;margin:0;line-height:1.7;}
+@media(max-width:820px){
+  .guide-download-spotlight{grid-template-columns:1fr;}
+  .guide-download-spotlight .btn{width:100%;justify-content:center;}
+}
+
 @media(max-width:820px){.arrival-grid,.place-grid{grid-template-columns:1fr}.guide-hero{padding-top:6rem}.place-card img{height:220px}}
 </style>
 </head>
@@ -100,16 +209,23 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </div>
 </div>
-</section><section class="container" style="margin-top:2rem;"><div class="guide-safety-note"><strong>Avvertenza per l'utente finale.</strong> Questa guida aiuta a orientarsi e a preparare la visita, ma non sostituisce verifiche aggiornate sul posto. Amici Di Gallicianò Casa Giufà non è responsabile di perdita di orientamento, errori di percorso, incidenti, meteo, chiusure, proprietà private, variazioni dei sentieri o informazioni cambiate dopo la pubblicazione. Prima di partire verifica sempre condizioni, disponibilità e percorsi reali.</div></section>
-<section class="container arrival-panel reveal" id="casa-giufa-giuseppe" style="margin-top:2rem;">
-<div class="arrival-grid">
+</section><section class="container" style="margin-top:2rem;"><div class="guide-safety-note"><strong>Avvertenza per l'utente finale.</strong> Questa guida aiuta a orientarsi e a preparare la visita, ma non sostituisce verifiche aggiornate sul posto. Amici Di Gallicianò Casa Giufà non è responsabile di perdita di orientamento, errori di percorso, incidenti, meteo, chiusure, proprietà private, variazioni dei sentieri o informazioni cambiate dopo la pubblicazione. Prima di partire verifica sempre condizioni, disponibilità e percorsi reali.</div>
+<div class="guide-download-spotlight" id="scarica-guida-pdf">
 <div>
+<h2>Scarica la guida completa</h2>
+<p>PDF pronto per l'ospite: arrivo, parcheggio, luoghi principali, Casa Giufà, percorsi e consigli pratici per visitare Gallicianò senza confusione.</p>
+</div>
+<a class="btn btn-gold btn-large" download href="downloads/guida-luoghi-galliciano.pdf">Scarica guida PDF</a>
+</div></section>
+<section class="container arrival-panel reveal guide-focus-panel" id="casa-giufa-giuseppe" style="margin-top:2rem;">
+<div class="arrival-grid">
+<div class="guide-copy">
 <span class="label-tag">Casa e memoria</span>
 <h2 class="title-medium">La casa di Giuseppe</h2>
 <p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Casa Giufà è la casa in cui Giuseppe Zindato è nato e cresciuto. Qui Gallicianò non era un'immagine da visitare, ma vita quotidiana: animali nella stalla, acqua del pozzo, formaggi, lavoro, fiumara, mulino e silenzi di montagna.</p>
 <p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Dopo una vita da imprenditore nel commercio della frutta a Reggio Calabria e da uomo di sport, Giuseppe ha recuperato la casa del padre per far conoscere agli ospiti la natura e l'identità del borgo.</p>
 </div>
-<div class="guide-download-band" style="margin:0;">
+<div class="guide-download-band guide-memory-band">
 <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Perché questa storia conta</h3>
 <p style="color:rgba(255,255,255,.85);line-height:1.7;">La casa non è solo un alloggio: è un pezzo di memoria restituito al borgo. Anche la scelta di non avere Wi-Fi e televisione nasce da qui: meno schermi, più tempo reale, più Gallicianò.</p>
 <a class="btn btn-gold" href="storia.html">Leggi la storia completa</a>
@@ -117,15 +233,15 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </section>
 
-<section class="container arrival-panel reveal" id="rallentare-galliciano" style="margin-top:2rem;">
+<section class="container arrival-panel reveal guide-focus-panel" id="rallentare-galliciano" style="margin-top:2rem;">
 <div class="arrival-grid">
-<div>
+<div class="guide-copy">
 <span class="label-tag">Il tempo qui cambia passo</span>
 <h2 class="title-medium">Perché rallentare fa parte dell'esperienza</h2>
 <p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Gallicianò non chiede di essere consumato in fretta. Chiede di essere ascoltato: nei passi tra le pietre, nel vento, nella fiumara, nei profumi della cucina locale e nel silenzio delle sere.</p>
 <p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">La scelta di non avere televisione e Wi-Fi aiuta l'ospite a ritrovare attenzione. Meno schermi, meno rumore, più presenza: questa è una parte concreta dell'accoglienza di Casa Giufà.</p>
 </div>
-<div class="guide-download-band" style="margin:0;">
+<div class="guide-download-band guide-slow-band">
 <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Qui il silenzio non è vuoto</h3>
 <p style="color:rgba(255,255,255,.85);line-height:1.7;">È spazio per dormire meglio, parlare davvero, camminare senza fretta e ricordare il viaggio non per quante cose hai visto, ma per quanto sei riuscito a sentirle.</p>
 <p style="color:rgba(255,255,255,.85);line-height:1.7;"><strong>Nota cucina:</strong> per gli ospiti di Casa Giufà, il menù completo alla Trattoria Nizio Paleò costa 25 € a persona invece di 30 €, da confermare al momento della prenotazione.</p>
@@ -135,18 +251,32 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </section>
 
 
-<section class="container arrival-panel reveal" id="prezzi-camere-casa-giufa" style="margin-top:2rem;">
+<section class="container arrival-panel reveal guide-focus-panel" id="prezzi-camere-casa-giufa" style="margin-top:2rem;">
 <div class="arrival-grid">
-<div>
+<div class="guide-copy">
 <span class="label-tag">Camere e prezzi</span>
 <h2 class="title-medium">Due camere, due piani separati</h2>
 <p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Casa Giufà dispone di due camere su due piani separati. Ogni camera ha entrata indipendente, 1 letto matrimoniale, 1 letto singolo e può ospitare massimo 3 persone. L'intera casa può accogliere fino a 6 ospiti.</p>
-<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;"><strong>Prenotazione diretta:</strong> 65 € a persona. <strong>Booking/Airbnb:</strong> 75 € a persona, quando i link ufficiali saranno attivi.</p>
+<div class="guide-room-facts" aria-label="Dati principali delle camere">
+<span>2 camere separate</span>
+<span>Massimo 3 ospiti per camera</span>
+<span>Fino a 6 ospiti totali</span>
+<span>Entrata indipendente</span>
 </div>
-<div class="guide-download-band" style="margin:0;">
+<div class="guide-price-highlight" aria-label="Prezzo prenotazione diretta">
+<span>Prenotazione diretta</span>
+<strong>65 €</strong>
+<small>a camera</small>
+</div>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;"><strong>Booking/Airbnb:</strong> 75 € a camera sui canali ufficiali. Per il prezzo diretto e la disponibilità reale, scrivi prima a Elisa.</p>
+</div>
+<div class="guide-download-band guide-booking-band">
 <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Prima di prenotare</h3>
-<p style="color:rgba(255,255,255,.85);line-height:1.7;">Scrivi a Elisa per confermare disponibilità, piano desiderato, numero ospiti, arrivo e eventuale menù alla Trattoria Nizio Paleò.</p>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;"><strong>Prezzo diretto: 65 € a camera.</strong> Scrivi a Elisa per confermare disponibilità, piano desiderato, numero ospiti, arrivo e eventuale menù alla Trattoria Nizio Paleò.</p>
 <a class="btn btn-gold" href="camere.html">Vedi le camere</a>
+<a class="btn btn-outline-light" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20verificare%20disponibilit%C3%A0%20e%20prezzo%20diretto%20di%2065%20euro%20a%20camera%20per%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Chiedi disponibilità a Elisa</a>
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb 75 € · prenota</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com 75 € · prenota</a>
 </div>
 </div>
 </section>
@@ -160,7 +290,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 <div class="place-grid">
 <article class="place-card reveal" id="borgo-galliciano">
-<img alt="Il borgo di Gallicianò - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/panoramica gallicianò.JPG"/>
+<img alt="Il borgo di Gallicianò - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/panoramica-galliciano.jpg"/>
 <div class="place-card-body">
 <h3>Il borgo di Gallicianò</h3>
 <div class="subtitle">L’acropoli grecanica sospesa sulla valle dell’Amendolea</div>
@@ -171,7 +301,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="fontana-amore">
-<img alt="Fontana dell’Amore - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/fontana del amore galliciano.jpg"/>
+<img alt="Fontana dell’Amore - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/fontana-amore-galliciano.jpg"/>
 <div class="place-card-body">
 <h3>Fontana dell’Amore</h3>
 <div class="subtitle">Cannalo tis Agapi, il luogo dell’incontro</div>
@@ -182,7 +312,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="chiesa-ortodossa">
-<img alt="Chiesa Ortodossa della Madonna dei Greci - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/chiesetta-ortodossa-panaghia galliciano.jpg"/>
+<img alt="Chiesa Ortodossa della Madonna dei Greci - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/chiesa-ortodossa-panaghia-galliciano.jpg"/>
 <div class="place-card-body">
 <h3>Chiesa Ortodossa della Madonna dei Greci</h3>
 <div class="subtitle">Panaghìa tis Elladas, il segno spirituale grecanico</div>
@@ -193,7 +323,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="teatro">
-<img alt="Anfiteatro Patriarca Bartolomeo I - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/Anfiteatro_Patriarca_Bartolomeo_A_-_Gallicianò_-_Condofuri_(Reggio_Calabria)_-_Italy_-_17_Jan._2015_-_(2).jpg"/>
+<img alt="Anfiteatro Patriarca Bartolomeo I - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/anfiteatro-patriarca-bartolomeo-galliciano.jpg"/>
 <div class="place-card-body">
 <h3>Anfiteatro Patriarca Bartolomeo I</h3>
 <div class="subtitle">Una scena aperta sulla valle</div>
@@ -204,7 +334,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="museo-etnografico">
-<img alt="Museo Etnografico Anzel Bogasari Merianù - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/interno-museo gallciano.jpg"/>
+<img alt="Museo Etnografico Anzel Bogasari Merianù - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/museo-galliciano-interno.jpg"/>
 <div class="place-card-body">
 <h3>Museo Etnografico Anzel Bogasari Merianù</h3>
 <div class="subtitle">Gli oggetti della vita quotidiana diventano memoria</div>
@@ -215,7 +345,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="san-giovanni">
-<img alt="Chiesa di San Giovanni Battista e Piazza Alimos - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/san giovanni battista.jpg"/>
+<img alt="Chiesa di San Giovanni Battista e Piazza Alimos - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/san-giovanni-battista.jpg"/>
 <div class="place-card-body">
 <h3>Chiesa di San Giovanni Battista e Piazza Alimos</h3>
 <div class="subtitle">Il cuore civile e religioso del borgo</div>
@@ -226,7 +356,7 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </article>
 <article class="place-card reveal" id="amendolea">
-<img alt="Fiumara Amendolea e Castello di Amendolea - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/RC-CONDOFURI-CASTELLO-DELL'AMENDOLEA[Regione-Calabria].jpg"/>
+<img alt="Fiumara Amendolea e Castello di Amendolea - Amici Di Gallicianò Casa Giufà" loading="lazy" src="assets/img/castello-amendolea.jpg"/>
 <div class="place-card-body">
 <h3>Fiumara Amendolea e Castello di Amendolea</h3>
 <div class="subtitle">La valle che spiega il paesaggio di Gallicianò</div>
@@ -290,13 +420,13 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 <h4>Seguici</h4>
 <ul>
 <li>
-<a href="https://www.instagram.com/amici_di_galliciano/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<a href="https://www.instagram.com/amicidigallicianocasagiufa/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
-                                @amici_di_galliciano
+                                @amicidigallicianocasagiufa
                             </a>
 </li>
 <li>
-<a href="https://www.facebook.com/amicidigalliciano" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<a href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
 <svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
                                 amicidigalliciano
                             </a>
@@ -312,10 +442,10 @@ body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont,
 </div>
 </div>
 <div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
-<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Contatto diretto: 65 € a persona. Booking/Airbnb: 75 € a persona con link ufficiali da inserire.</p>
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Contatto diretto: 65 € a camera. Booking/Airbnb: 75 € a camera sui canali ufficiali.</p>
 <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-<span class="platform-button platform-disabled" aria-disabled="true">Airbnb 75 € · link ufficiale da inserire</span>
-<span class="platform-button platform-disabled" aria-disabled="true">Booking.com 75 € · link ufficiale da inserire</span>
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb 75 € · prenota</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com 75 € · prenota</a>
 </div>
 </div>
 <div class="footer-bottom">

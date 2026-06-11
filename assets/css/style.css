@@ -3379,7 +3379,7 @@ body { background: #FAF6EE; color: #211D18; }
   padding: clamp(5rem, 8vw, 7.5rem) 0 clamp(3rem, 5vw, 4.5rem);
   background:
     linear-gradient(135deg, rgba(250,246,238,.94) 0%, rgba(250,246,238,.78) 44%, rgba(38,53,43,.58) 100%),
-    url('../img/vista casa giufa .JPG') center/cover no-repeat;
+    url('../img/vista-casa-giufa.jpg') center/cover no-repeat;
   border-bottom: 1px solid rgba(169,131,82,.2);
 }
 .contact-hero-grid {
@@ -4382,4 +4382,376 @@ body { background: #FAF6EE; color: #211D18; }
         display: inline-block;
         margin-bottom: 1rem;
     }
+}
+
+
+/* === V4 FIX: prezzo visibile nelle card camere homepage e pagina camere === */
+.home-room-price-box{
+  display:grid;
+  grid-template-columns:auto auto;
+  align-items:end;
+  justify-content:space-between;
+  gap:.35rem .8rem;
+  margin:0 0 1.05rem;
+  padding:1rem 1.1rem;
+  border-radius:22px;
+  background:linear-gradient(135deg,#26352B 0%,#3F563B 100%);
+  color:#FFFDF8;
+  border:1px solid rgba(216,188,131,.42);
+  box-shadow:0 14px 34px rgba(38,53,43,.18);
+}
+.home-room-price-box span{
+  grid-column:1/-1;
+  color:#D8BC83;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.home-room-price-box strong{
+  font-family:var(--font-serif);
+  font-size:clamp(2.35rem,4vw,3.35rem);
+  line-height:.86;
+  color:#FFFDF8;
+}
+.home-room-price-box small{
+  color:#F4EBDD;
+  font-size:1rem;
+  font-weight:800;
+  padding-bottom:.2rem;
+}
+.home-room-card-body h3{
+  line-height:1.14;
+}
+.home-room-card-body p strong{
+  color:#26352B;
+  font-weight:900;
+}
+.room-price-badge{
+  position:static !important;
+  display:inline-grid !important;
+  grid-template-columns:auto auto;
+  align-items:end;
+  gap:.2rem .55rem;
+  margin:0 0 1rem;
+  padding:.85rem 1rem !important;
+  min-width:190px;
+  border-radius:20px !important;
+  background:linear-gradient(135deg,#26352B 0%,#8F6A3E 100%) !important;
+  color:#FFFDF8 !important;
+  box-shadow:0 16px 40px rgba(38,53,43,.16) !important;
+}
+.room-price-badge span{
+  grid-column:1/-1;
+  color:#F4D28E;
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.room-price-badge strong{
+  font-family:var(--font-serif);
+  font-size:2.35rem;
+  line-height:.85;
+  color:#FFFDF8;
+}
+.room-price-badge small{
+  color:#FFFDF8;
+  font-size:.9rem;
+  font-weight:800;
+  padding-bottom:.18rem;
+}
+@media(max-width:720px){
+  .home-room-price-box{padding:.9rem 1rem;}
+  .home-room-price-box strong{font-size:2.5rem;}
+}
+
+
+/* === V5: sezione informativa prima dell'arrivo sotto camere === */
+.stay-advice-card {
+  margin: clamp(2rem, 4vw, 3.2rem) auto 0;
+  padding: clamp(1.35rem, 3vw, 2.4rem);
+  max-width: 1120px;
+  border-radius: 34px;
+  background: linear-gradient(135deg, #FFFDF8 0%, #F4E8D6 58%, #E9D6B7 100%);
+  color: #26352B;
+  border: 1px solid rgba(169, 131, 82, .34);
+  box-shadow: 0 28px 80px rgba(20, 31, 24, .18);
+}
+.section-dark .stay-advice-card {
+  background: linear-gradient(135deg, #FFFDF8 0%, #F6EBDC 55%, #E6CFAB 100%);
+  box-shadow: 0 28px 90px rgba(0,0,0,.28);
+}
+.stay-advice-head {
+  max-width: 860px;
+  margin-bottom: 1.6rem;
+}
+.stay-advice-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-bottom: .75rem;
+  padding: .42rem .8rem;
+  border-radius: 999px;
+  color: #8A5F2F;
+  background: rgba(255,253,248,.78);
+  border: 1px solid rgba(169,131,82,.38);
+  font-size: .74rem;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.stay-advice-head h3 {
+  margin: 0 0 .8rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.02;
+  color: #26352B;
+}
+.stay-advice-head p,
+.stay-advice-item p,
+.stay-advice-footer p {
+  color: #604932;
+  line-height: 1.72;
+}
+.stay-advice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.stay-advice-item {
+  position: relative;
+  min-height: 245px;
+  padding: 1.25rem;
+  border-radius: 26px;
+  background: rgba(255,253,248,.72);
+  border: 1px solid rgba(169, 131, 82, .22);
+  box-shadow: 0 16px 44px rgba(38,53,43,.08);
+}
+.stay-advice-item-highlight {
+  background: linear-gradient(145deg, #26352B 0%, #3D5139 100%);
+  border-color: rgba(216,188,131,.48);
+  box-shadow: 0 22px 58px rgba(38,53,43,.22);
+}
+.stay-advice-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: .95rem;
+  border-radius: 999px;
+  background: #D8BC83;
+  color: #211D18;
+  font-size: .82rem;
+  font-weight: 950;
+  letter-spacing: .08em;
+}
+.stay-advice-item h4 {
+  margin: 0 0 .65rem;
+  color: #26352B;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+.stay-advice-item-highlight h4,
+.stay-advice-item-highlight p {
+  color: #FFFDF8;
+}
+.stay-advice-item-highlight p {
+  opacity: .9;
+}
+.stay-advice-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 24px;
+  background: rgba(255,253,248,.7);
+  border: 1px solid rgba(169,131,82,.24);
+}
+.stay-advice-footer p {
+  margin: 0;
+}
+.stay-advice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  justify-content: flex-end;
+}
+@media (max-width: 960px) {
+  .stay-advice-grid { grid-template-columns: 1fr; }
+  .stay-advice-item { min-height: auto; }
+  .stay-advice-footer { grid-template-columns: 1fr; }
+  .stay-advice-actions { justify-content: flex-start; }
+}
+@media (max-width: 620px) {
+  .stay-advice-card { border-radius: 24px; padding: 1.05rem; }
+  .stay-advice-head h3 { font-size: 2rem; }
+  .stay-advice-item { border-radius: 20px; padding: 1rem; }
+  .stay-advice-footer { border-radius: 20px; padding: 1rem; }
+  .stay-advice-actions .btn { width: 100%; justify-content: center; }
+}
+
+
+/* === V6: prezzo a camera + fix CSS sezioni Home troppo strozzate === */
+.home-room-price-box small,
+.room-price-badge small,
+.guide-price-highlight small {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 950;
+}
+
+/* Percorsi in Home: le card non devono sembrare francobolli schiacciati */
+#percorsi .routes-card-grid {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: clamp(1.05rem, 2vw, 1.45rem);
+  align-items: stretch;
+}
+#percorsi .route-card {
+  overflow: visible;
+  padding: clamp(1.05rem, 2vw, 1.35rem);
+  min-height: 210px;
+  border-radius: 24px;
+  background: rgba(255,253,248,.96);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#percorsi .route-card .card-meta {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  flex-wrap: wrap;
+  margin: 0 0 .7rem;
+  line-height: 1.2;
+}
+#percorsi .difficulty-badge,
+#percorsi .route-stats {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+#percorsi .difficulty-badge {
+  padding: .38rem .72rem;
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .04em;
+}
+#percorsi .route-stats {
+  color: #6E5139;
+  font-size: .82rem;
+  font-weight: 850;
+}
+#percorsi .route-card h3 {
+  margin: 0 0 .42rem;
+  line-height: 1.14;
+}
+#percorsi .route-card p {
+  margin: 0 0 .85rem;
+  line-height: 1.55;
+  color: #332f28;
+}
+#percorsi .route-card-actions {
+  margin-top: auto;
+}
+#percorsi .route-card-actions .btn {
+  min-height: 40px;
+  padding: .62rem .9rem;
+}
+#percorsi .route-disclaimer {
+  max-width: 860px !important;
+  padding: 1.15rem 1.4rem;
+  line-height: 1.65;
+}
+
+/* Mappa/Orientati: sezione più ariosa e non tagliata */
+#mappa {
+  padding-top: clamp(2.2rem, 5vw, 4rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  background: linear-gradient(180deg, #FFFDF8 0%, #F6EFE4 100%);
+}
+#mappa .section-header {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map.home-map-panel,
+#mappa #map {
+  width: min(100%, 960px);
+  height: clamp(330px, 42vw, 500px);
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 1px solid rgba(169,131,82,.28);
+  overflow: hidden;
+  box-shadow: 0 22px 65px rgba(38,53,43,.13);
+  background: #F4E8D6;
+}
+
+/* Consigli pratici: più integrata sotto camere, meno mattone appoggiato lì */
+.stay-advice-card {
+  margin-top: clamp(1.35rem, 3vw, 2.25rem);
+}
+.section-dark .stay-advice-card {
+  border-color: rgba(216,188,131,.42);
+}
+
+@media (max-width: 980px) {
+  #percorsi .routes-card-grid {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+  #percorsi .route-card {
+    min-height: auto;
+  }
+}
+@media (max-width: 620px) {
+  #percorsi .route-card {
+    padding: 1rem;
+  }
+  #percorsi .route-card-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  #map.home-map-panel,
+  #mappa #map {
+    height: 360px;
+    border-radius: 18px;
+  }
+}
+
+
+/* === V7: link ufficiali Booking, Airbnb e social Casa Giufà === */
+.platform-airbnb-link,
+.platform-booking-link {
+  border: 1px solid rgba(169,131,82,.56);
+  background: #FFFDF8;
+  color: #26352B;
+  box-shadow: 0 12px 28px rgba(38,53,43,.10);
+}
+.platform-airbnb-link:hover,
+.platform-booking-link:hover {
+  background: #26352B;
+  color: #FFFDF8;
+  border-color: #A98352;
+  transform: translateY(-2px);
+}
+.hero-price-panel .platform-airbnb-link,
+.hero-price-panel .platform-booking-link {
+  background: rgba(255,253,248,.94);
+  color: #211D18;
+}
+.hero-price-panel .platform-airbnb-link:hover,
+.hero-price-panel .platform-booking-link:hover {
+  background: #A98352;
+  color: #211D18;
 }

@@ -94,8 +94,8 @@ Per chi ascolta musica classica, legge, scrive, fotografa, cerca ispirazione, am
 - Ogni camera può ospitare massimo 3 persone.
 - Ogni camera ha entrata indipendente.
 - Totale struttura: 2 letti matrimoniali e 2 letti singoli.
-- Prezzo diretto: 65 € a persona.
-- Prezzo tramite Booking o Airbnb: 75 € a persona.
+- Prezzo diretto: 65 € a camera.
+- Prezzo tramite Booking o Airbnb: 75 € a camera.
 - Contatto pratico per informazioni, arrivo e disponibilità.
 - Indicazioni per parcheggio e arrivo a piedi.
 - Guide scaricabili.
