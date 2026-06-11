@@ -81,18 +81,53 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-reset-map')?.addEventListener('click', resetMapHighlight);
   document.querySelectorAll('.show-on-map-btn').forEach(btn => btn.addEventListener('click', () => setTimeout(() => highlightRoute(btn.dataset.route), 250)));
 
+  let watchId = null;
+  let userMarker = null;
+
   const geoBtn = document.getElementById('btn-geolocate');
   geoBtn?.addEventListener('click', () => {
-    const selected = activeRoute();
-    if (!selected) {
-      alert("Seleziona prima un percorso dalla lista o sulla mappa per avviare il navigatore!");
+    if (watchId !== null) {
+      navigator.geolocation.clearWatch(watchId);
+      watchId = null;
+      geoBtn.textContent = 'Avvia navigazione offline';
+      geoBtn.classList.remove('btn-danger');
+      geoBtn.classList.add('btn-gold');
+      const statusEl = document.getElementById('map-status-message');
+      if (statusEl) statusEl.innerHTML = '';
+      if (userMarker) {
+        map.removeLayer(userMarker);
+        userMarker = null;
+      }
       return;
     }
-    // Google Maps: da posizione attuale (automatica) -> partenza -> arrivo
-    const start = `${selected.coordinate_start[0]},${selected.coordinate_start[1]}`;
-    const end = `${selected.coordinate_end[0]},${selected.coordinate_end[1]}`;
-    const url = `https://www.google.com/maps/dir/?api=1&waypoints=${start}&destination=${end}`;
-    window.open(url, '_blank');
+
+    if (!('geolocation' in navigator)) {
+      alert("La geolocalizzazione non è supportata dal tuo browser.");
+      return;
+    }
+
+    geoBtn.textContent = 'Interrompi navigazione';
+    geoBtn.classList.remove('btn-gold');
+    geoBtn.classList.add('btn-danger');
+
+    watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        const { latitude, longitude, accuracy } = position.coords;
+        const pt = [latitude, longitude];
+        if (!userMarker) {
+          userMarker = L.marker(pt, { icon: userIcon() }).addTo(map).bindPopup('La tua posizione');
+          map.setView(pt, 15);
+        } else {
+          userMarker.setLatLng(pt);
+        }
+        updateStatus(pt, accuracy);
+      },
+      (error) => {
+        alert("Errore GPS: " + error.message);
+        geoBtn.click(); // toggle off
+      },
+      { enableHighAccuracy: true, maximumAge: 0 }
+    );
   });
 
   resetMapHighlight();

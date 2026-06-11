@@ -1,0 +1,21 @@
+{
+  "name": "Amici di Galliciano Casa Giufà",
+  "short_name": "Casa Giufà",
+  "description": "B&B Casa Giufà a Gallicianò",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#B89B5E",
+  "icons": [
+    {
+      "src": "assets/img/casa giufà.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/casa giufà.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
