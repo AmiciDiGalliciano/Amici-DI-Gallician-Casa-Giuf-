@@ -243,5 +243,37 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/animations.js"></script>
 <script src="assets/js/nav-arrows.js"></script>
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-chat-widget" id="wa-widget">
+  <div class="wa-chat-panel">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar wa-brand-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" class="wa-logo-svg"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+      </div>
+      <div>
+        <div class="wa-chat-name">Elisa - Casa Giufà</div>
+        <div class="wa-chat-status">Risponde di solito in 10 min</div>
+      </div>
+      <button class="wa-chat-close" aria-label="Chiudi chat" onclick="document.getElementById('wa-widget').classList.remove('open')">&times;</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-message">
+        Ciao! 👋 Sono Elisa. Se hai bisogno di info sulle camere o vuoi prenotare, scrivimi pure qui.
+      </div>
+    </div>
+    <div class="wa-chat-footer">
+      <a href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20Casa%20Giuf%C3%A0." target="_blank" class="wa-chat-btn">
+        <span>Avvia Chat su WhatsApp</span>
+      </a>
+    </div>
+  </div>
+  <button class="wa-chat-toggle" aria-label="Chatta con noi" onclick="document.getElementById('wa-widget').classList.toggle('open')">
+    <div class="wa-chat-icon wa-brand-logo">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+    </div>
+    <span class="wa-chat-label">Chatta con noi</span>
+  </button>
+</div>
 </body>
 </html>
