@@ -4858,50 +4858,16 @@ body { background: #FAF6EE; color: #211D18; }
 }
 
 /* === FIX STORIA CARD COLORS === */
-.page-storia .slow-psychology-card h3,
+.page-storia .slow-story-card {
+    background: #FFFDF8 !important; /* Make card ivory */
+    border: 1px solid rgba(169, 131, 82, 0.4) !important;
+}
 .page-storia .slow-story-card h3 {
-    color: #FFFDF8 !important;
+    color: #26352B !important; /* Dark green text */
 }
-.page-storia .slow-psychology-card p,
 .page-storia .slow-story-card p {
-    color: rgba(255, 253, 248, 0.9) !important;
+    color: #3A3028 !important; /* Dark text */
 }
-.page-storia .slow-psychology-card span,
 .page-storia .slow-story-card span {
-    color: #D8BC83 !important;
-}
-
-/* === DESKTOP HEADER CENTERED === */
-@media (min-width: 901px) {
-    .nav-container {
-        flex-direction: column !important;
-        justify-content: center !important;
-        gap: 1.2rem !important;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-    .logo {
-        margin: 0 auto;
-    }
-    .lang-switcher {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        margin: 0 !important;
-    }
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
-/* === EXTRA MOBILE FIX FOR VERY NARROW SCREENS === */
-@media (max-width: 380px) {
-    .menu-text {
-        display: none !important; /* Hide the word "MENU" to save space, keep only the icon */
-    }
-    .logo {
-        max-width: 55%;
-    }
+    color: #A98352 !important; /* Gold tag */
 }
