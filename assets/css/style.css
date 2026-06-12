@@ -4791,3 +4791,40 @@ body { background: #FAF6EE; color: #211D18; }
     .nav-links.active li:nth-child(7) { transition-delay: 0.5s; }
     .nav-links.active li:nth-child(8) { transition-delay: 0.55s; }
 }
+
+/* === HEADER LAYOUT FIXES === */
+@media (max-width: 900px) {
+    .nav-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    .logo {
+        flex: 1 1 auto;
+    }
+    
+    .mobile-menu-btn {
+        flex: 0 0 auto;
+        order: 2;
+    }
+    
+    .mobile-quick-links {
+        order: 3;
+        flex: 1 1 100%;
+        margin-top: 0.8rem;
+        justify-content: space-around !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 0.95rem !important; /* Slightly smaller on very small phones */
+        letter-spacing: 0;
+    }
+    .mobile-quick-links a {
+        font-size: 0.65rem !important;
+        padding-right: 0.3rem !important;
+    }
+}
