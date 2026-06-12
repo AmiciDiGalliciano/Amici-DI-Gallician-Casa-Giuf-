@@ -4847,3 +4847,17 @@ body { background: #FAF6EE; color: #211D18; }
         max-width: 100% !important;
     }
 }
+
+/* === FIX STORIA CARD COLORS === */
+.page-storia .slow-psychology-card h3,
+.page-storia .slow-story-card h3 {
+    color: #FFFDF8 !important;
+}
+.page-storia .slow-psychology-card p,
+.page-storia .slow-story-card p {
+    color: rgba(255, 253, 248, 0.9) !important;
+}
+.page-storia .slow-psychology-card span,
+.page-storia .slow-story-card span {
+    color: #D8BC83 !important;
+}
