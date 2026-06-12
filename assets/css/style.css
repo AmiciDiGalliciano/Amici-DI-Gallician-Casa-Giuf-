@@ -4839,3 +4839,11 @@ body { background: #FAF6EE; color: #211D18; }
         text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
     }
 }
+
+/* === MAKE MOBILE MENU FULL SCREEN === */
+@media (max-width: 900px) {
+    .nav-links {
+        width: 100vw !important;
+        max-width: 100% !important;
+    }
+}
