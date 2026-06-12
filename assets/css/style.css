@@ -4828,3 +4828,14 @@ body { background: #FAF6EE; color: #211D18; }
         padding-right: 0.3rem !important;
     }
 }
+
+/* === ENFORCE WHITE TEXT IN MOBILE MENU === */
+@media (max-width: 900px) {
+    .header .nav-links .nav-link,
+    .header .nav-links .nav-link.active,
+    .header.scrolled .nav-links .nav-link,
+    .header.scrolled .nav-links .nav-link.active {
+        color: #FFFFFF !important;
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+    }
+}
