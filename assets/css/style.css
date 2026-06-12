@@ -4755,3 +4755,39 @@ body { background: #FAF6EE; color: #211D18; }
   background: #A98352;
   color: #211D18;
 }
+
+/* === MOBILE CSS FIXES & ANIMATIONS === */
+@media (max-width: 768px) {
+    /* Fix header overlapping content */
+    .hero:not(.hero-subpage), 
+    .hero-subpage,
+    .contact-hero-final,
+    body > main:first-of-type { 
+        padding-top: 140px !important; 
+    }
+
+    /* Enhanced Mobile Menu Animations */
+    .nav-links {
+        transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1) !important;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .nav-links.active li:nth-child(1) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.25s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
+    .nav-links.active li:nth-child(4) { transition-delay: 0.35s; }
+    .nav-links.active li:nth-child(5) { transition-delay: 0.4s; }
+    .nav-links.active li:nth-child(6) { transition-delay: 0.45s; }
+    .nav-links.active li:nth-child(7) { transition-delay: 0.5s; }
+    .nav-links.active li:nth-child(8) { transition-delay: 0.55s; }
+}
