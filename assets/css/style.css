@@ -4895,3 +4895,13 @@ body { background: #FAF6EE; color: #211D18; }
         flex-wrap: wrap;
     }
 }
+
+/* === EXTRA MOBILE FIX FOR VERY NARROW SCREENS === */
+@media (max-width: 380px) {
+    .menu-text {
+        display: none !important; /* Hide the word "MENU" to save space, keep only the icon */
+    }
+    .logo {
+        max-width: 55%;
+    }
+}
