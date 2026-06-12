@@ -4877,3 +4877,13 @@ body { background: #FAF6EE; color: #211D18; }
         background-position: center center !important;
     }
 }
+
+/* === DESKTOP HERO FIX FOR NEW HEADER HEIGHT === */
+@media (min-width: 901px) {
+    .hero, .hero-subpage, .contact-hero-final, body > main:first-of-type {
+        padding-top: 190px !important; /* Push content down below the new taller stacked header */
+    }
+    .page-storia .hero-small {
+        min-height: 70vh !important; /* Give the panorama more vertical space on desktop so it's not cut off */
+    }
+}
