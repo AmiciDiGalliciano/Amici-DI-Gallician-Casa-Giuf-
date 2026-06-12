@@ -4871,3 +4871,9 @@ body { background: #FAF6EE; color: #211D18; }
 .page-storia .slow-story-card span {
     color: #A98352 !important; /* Gold tag */
 }
+@media (max-width: 768px) {
+    .page-storia .hero-small {
+        min-height: 65vh !important;
+        background-position: center center !important;
+    }
+}
