@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="manifest" href="../manifest.json">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Sleeping in Gallicianò, Grecanic village near Reggio Calabria: Casa Giufà offers authentic hospitality, simple rooms, trails and trekking towards Bova and Amendolea, nature, silence, and a downloadable guide to visit the territory." name="description"/>
+<title>Amici Di Gallicianò Casa Giufà | Authentic hospitality in Gallicianò, Grecanic Calabria</title>
+<!-- Open Graph SEO -->
+<meta content="Amici Di Gallicianò Casa Giufà | Authentic hospitality in Gallicianò" property="og:title"/>
+<meta content="Authentic house in the Grecanic village of Gallicianò, in Calabria: rooms, trails, trekking, nature, silence, and a downloadable guide of the territory." property="og:description"/>
+<meta content="https://amicidigalliciano.it/assets/img/casa-giufa-logo-512.png" property="og:image"/>
+<meta content="https://amicidigalliciano.it/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="en_US" property="og:locale"/>
+<link href="https://amicidigalliciano.it/" rel="canonical"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Leaflet CSS -->
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<!-- Styles -->
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Amici Di Gallicianò Casa Giufà",
+      "description": "Authentic rooms, cultural trails, and local cuisine between Gallicianò, Bova, and Amendolea in Grecanic Calabria.",
+      "telephone": "+393296576114",
+      "url": "https://amicidigalliciano.it",
+      "image": "https://amicidigalliciano.it/assets/img/hero-galliciano.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gallicianò",
+        "addressRegion": "Calabria",
+        "postalCode": "89030",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.0166,
+        "longitude": 15.8864
+      },
+      "priceRange": "starting from 65 €",
+      "numberOfRooms": 2,
+      "containedInPlace": {
+        "@type": "Place",
+        "name": "Gallicianò, Grecanic village of Condofuri",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Condofuri",
+          "addressRegion": "Calabria",
+          "addressCountry": "IT"
+        }
+      },
+      "sameAs": [
+        "https://www.instagram.com/amicidigallicianocasagiufa/",
+        "https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr",
+        "https://www.airbnb.it/rooms/1667956458214678228",
+        "https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html"
+      ]
+    }
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Amici Di Gallicianò Casa Giufà",
+      "alternateName": "Casa Giufà Gallicianò",
+      "url": "https://amicidigalliciano.it/",
+      "inLanguage": "en",
+      "description": "Authentic hospitality, trails, trekking, and guide of the territory in Gallicianò, Grecanic village in Calabria."
+    }
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Amici Di Gallicianò Casa Giufà located?",
+          "acceptedAnswer": {"@type": "Answer", "text": "In Gallicianò, a Grecanic village in the municipality of Condofuri, province of Reggio Calabria, Calabria. You can arrive by car up to the parking lot (Parcheggio, 89030 Gallicianò RC on Google Maps) and continue on foot for about 90-100 meters towards Via Anaghorio."}
+        },
+        {
+          "@type": "Question",
+          "name": "How do you get to Gallicianò?",
+          "acceptedAnswer": {"@type": "Answer", "text": "By car from the Statale 106 Jonica, Condofuri exit, following the signs for Gallicianò. The road is a typical Calabrian mountain road. From Reggio Calabria it takes about 1 hour and 30 minutes."}
+        },
+        {
+          "@type": "Question",
+          "name": "Are there trails and trekking near Gallicianò?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. From the village, trails depart towards Bova, Amendolea, Roghudi, and Bova Marina, in addition to the village tour suitable for everyone. GPX and KML tracks are downloadable from the website: they are indicative and must be verified on site with weather and real conditions."}
+        },
+        {
+          "@type": "Question",
+          "name": "Are the trails suitable for everyone?",
+          "acceptedAnswer": {"@type": "Answer", "text": "It depends on the trail: the village tour is suitable for everyone, while the connections to Bova, Amendolea, and Roghudi require adequate physical preparation and trekking shoes."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a downloadable guide available?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes: a free PDF guide with places to see, arrival, parking, trails, Grecanic culture, and contacts, also available in an online version readable from mobile phones."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer guided tours?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No, we do not offer guided tours or official tourist guide services. We offer hospitality, practical information, local orientation, and advice on the territory before arrival."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book on Airbnb or Booking?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, Casa Giufà is on Airbnb and Booking.com. The price starts from 65 € per room."}
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I eat in Gallicianò?",
+          "acceptedAnswer": {"@type": "Answer", "text": "At Trattoria Nizio Paleò, in the village: home-style Greco-Calabrian cuisine with local products. For Casa Giufà guests, the discounted complete menu costs 25 € per person instead of 30 €, upon reservation."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is there Wi-Fi and TV?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No: Casa Giufà does not have Wi-Fi and TV by choice, consistent with a slow stay made of silence, nature, and real time. Phone coverage may vary depending on the operator."}
+        },
+        {
+          "@type": "Question",
+          "name": "Is there hot water in the rooms?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes, Casa Giufà has hot water with an independent tank and equipped bathrooms."}
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="page-index">
+<!-- Intro Logo Animation -->
+<div aria-label="Introduction Amici Di Gallicianò Casa Giufà" class="intro-overlay intro-overlay-grand" id="intro-overlay">
+<div aria-hidden="true" class="intro-column intro-column-left"><span></span></div>
+<div aria-hidden="true" class="intro-column intro-column-right"><span></span></div>
+<div class="intro-inner">
+<img alt="Amici Di Gallicianò Casa Giufà Logo" class="intro-logo" src="../assets/img/casa-giufa-logo-512.png"/>
+<p class="intro-title">Amici Di Gallicianò<br/><span>Casa Giufà</span></p>
+<p class="intro-tagline">Calos Irthete — Welcome to Gallicianò</p>
+</div>
+<button class="intro-skip" id="intro-skip">Enter the village</button>
+</div>
+<!-- Header -->
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+<img alt="Amici Di Gallicianò Casa Giufà" src="../assets/img/casa-giufa-logo-192.png" style="height: 46px;"/>
+<span class="logo-text" style="font-weight: 800; font-size: 1.1rem; color: #26352B; letter-spacing: 0.05em; font-family: 'Cinzel', serif; text-transform: uppercase;">Amici Di Gallicianò</span>
+
+<div class="lang-switcher" style="display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; margin-left: 1rem;">
+    <a href="../index.html" style="text-decoration:none; color:inherit;">IT</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="index.html" style="text-decoration:none; color:inherit; border-bottom:2px solid var(--color-oro);">EN</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="../el/index.html" style="text-decoration:none; color:inherit;">EL</a>
+</div>
+</a>
+<div class="mobile-quick-links">
+    <a href="index.html">Home</a>
+    <a href="camere.html">Rooms</a>
+    <a href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information" target="_blank">Book</a>
+    <a href="percorsi.html">Trails</a>
+</div>
+<button aria-label="Open menu" class="mobile-menu-btn" id="mobile-menu-btn"><span class="menu-text">Menu</span> <span class="hamburger-icon">☰</span></button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link active" href="index.html">Home</a></li>
+<li><a class="nav-link" href="camere.html">Rooms</a></li>
+<li><a class="nav-link" href="percorsi.html">Trails</a></li>
+<li><a class="nav-link" href="guida.html">Guide</a></li>
+<li><a class="nav-link" href="storia.html">History</a></li>
+<li><a class="nav-link" href="rallentare.html">Slow Down</a></li>
+<li><a class="nav-link" href="trattoria.html">Trattoria</a></li>
+<li><a class="nav-link" href="contatti.html">Contacts</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%2C%20and%20staying%20at%20Casa%20Giuf%C3%A0." target="_blank">Check availability on WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="hero-slides">
+<div class="hero-slide active" style="background-image: url('../assets/img/galliciano-panoramica.jpg');"></div>
+<div class="hero-slide" style="background-image: url('../assets/img/fiumara-amendolea-panoramica.jpg');"></div>
+<div class="hero-slide" style="background-image: url('../assets/img/chiesa-ortodossa-panaghia-galliciano.jpg');"></div>
+<div class="hero-slide" style="background-image: url('../assets/img/fontana-amore-galliciano.jpg');"></div>
+<div class="hero-slide" style="background-image: url('../assets/img/museo-galliciano-interno.jpg');"></div>
+<div class="hero-slide" style="background-image: url('../assets/img/casa-giufa-panoramica.jpg');"></div>
+</div>
+<div class="hero-overlay"></div>
+<div class="hero-content" style="padding: 2rem; background: rgba(0,0,0,0.3); border-radius: 12px; backdrop-filter: blur(4px);">
+<span class="hero-label" style="font-weight: 600; letter-spacing: 2px;">The heart of Grecanic Calabria</span>
+<h1 class="hero-title title-large" style="margin-bottom: 1.5rem;">Casa Giufà<br/><em>Amici Di Gallicianò</em></h1>
+<p class="hero-subtitle" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">We don't just rent a room: we open a door to Grecanic Calabria, the silence of Gallicianò, and a truly lived-in house.</p>
+<p style="font-size: 1rem; color: #fff; max-width: 600px; margin: 0 auto 2.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">2 rooms on 2 separate floors • each room: 1 double + 1 single bed • max 3 guests per room</p>
+<div class="hero-ctas" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+<a class="btn btn-whatsapp btn-large" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%2C%20and%20staying%20at%20Casa%20Giuf%C3%A0." target="_blank">Check availability on WhatsApp</a>
+<a class="btn btn-primary btn-large" href="camere.html">Discover the House</a>
+<a class="btn btn-gold btn-large" download href="../downloads/guida-luoghi-galliciano.pdf">Download PDF guide</a>
+</div>
+<div class="hero-price-panel">
+  <p><strong>Direct booking:</strong> starting from 65 € per room</p>
+  <p><strong>Room booking:</strong> starting from 65 €</p>
+  <div class="platform-button-row" aria-label="External booking channels">
+    <a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · book</a>
+    <a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · book</a>
+  </div>
+</div>
+<p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">* The overnight stay must be booked at least 2 days in advance. Lunch/Dinner on request.</p>
+</div>
+<a aria-label="Scroll down" class="hero-scroll-indicator" href="#fiducia">
+<span></span>
+</a>
+</section>
+<!-- CAMERE -->
+<section class="section section-dark home-rooms-section" id="camere">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag label-tag-light">Stay in Gallicianò</span>
+<h2 class="title-medium">Casa Giufà</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">
+        Two rooms on two separate floors, both with independent entrances. Each room can accommodate up to 3 people: 1 double bed and 1 single bed. Total maximum: 6 guests.
+      </p>
+</div>
+<div aria-label="The two rooms of Casa Giufà" class="home-room-cards reveal">
+<article class="home-room-card">
+<figure>
+<img alt="Ground floor room of Casa Giufà with bed and essential furnishings" loading="lazy" src="../assets/img/camera-piano-terra-letto.jpg"/>
+<span>Ground floor</span>
+</figure>
+<div class="home-room-card-body">
+<div class="home-room-price-box" aria-label="Direct price ground floor">
+  <span>Direct booking</span>
+  <strong>starting from 65 €</strong>
+  <small>per room</small>
+</div>
+<h3>Ground Floor · Independent room up to 3 guests</h3>
+<p>Independent ground floor with 1 double bed, 1 single bed, practical entrance, and private bathroom. Booking: <strong>starting from 65 € per room</strong>.</p>
+<ul>
+<li>1 double bed + 1 single bed</li>
+<li>Maximum 3 guests</li>
+<li>Independent entrance and private bathroom</li>
+</ul>
+</div>
+</article>
+<article class="home-room-card home-room-card-featured">
+<figure>
+<img alt="First floor room of Casa Giufà with bed and wooden ceiling" loading="lazy" src="../assets/img/camera-primo-piano-letto.jpg"/>
+<span>First floor</span>
+</figure>
+<div class="home-room-card-body">
+<div class="home-room-price-box" aria-label="Direct price first floor">
+  <span>Direct booking</span>
+  <strong>starting from 65 €</strong>
+  <small>per room</small>
+</div>
+<h3>First Floor · Independent room up to 3 guests</h3>
+<p>Independent, cozy, and bright first floor with 1 double bed, 1 single bed, separate entrance, and private bathroom. Booking: <strong>starting from 65 € per room</strong>.</p>
+<ul>
+<li>1 double bed + 1 single bed</li>
+<li>Maximum 3 guests</li>
+<li>Independent entrance and private bathroom</li>
+</ul>
+</div>
+</article>
+</div>
+<div class="home-casa-summary reveal">
+<div>
+<span class="home-casa-kicker">2 rooms · 2 separate floors · up to 6 guests</span>
+<h3>A real house, not just any room</h3>
+<p>Casa Giufà consists of two rooms on two separate floors: each room has an independent entrance, 1 double bed, 1 single bed, and can accommodate up to 3 people. Giuseppe preserves the memory of the house where he was born; Elisa remains the practical reference for availability, arrival, and organization.</p>
+</div>
+<div class="camere-ctas camere-ctas-luxury">
+<a class="btn btn-gold" href="camere.html">Discover the rooms</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%2C%20and%20staying%20at%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Check availability</a>
+</div>
+</div>
+<div class="booking-price-card reveal">
+  <span class="home-casa-kicker">Clear prices</span>
+  <h3>Direct booking or platforms</h3>
+  <p><strong>Direct contact:</strong> starting from 65 € per room. <strong>Room booking:</strong> starting from 65 € on official channels.</p>
+  <div class="platform-button-row">
+    <a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20to%20check%20availability%20and%20direct%20price%20for%20Casa%20Giuf%C3%A0." target="_blank" rel="noopener noreferrer">Book direct starting from 65 €</a>
+    <a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · book</a>
+    <a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · book</a>
+  </div>
+</div>
+
+<div class="stay-advice-card reveal" id="consigli-prima-arrivo" aria-labelledby="consigli-prima-arrivo-title">
+  <div class="stay-advice-head">
+    <span class="stay-advice-kicker">Practical advice before arrival</span>
+    <h3 id="consigli-prima-arrivo-title">Arrive prepared, experience a better stay</h3>
+    <p>Casa Giufà is located in the village of Gallicianò: an authentic, quiet place, far from services always at hand. A minimum of organization before coming up makes the stay simpler and more peaceful.</p>
+  </div>
+  <div class="stay-advice-grid">
+    <article class="stay-advice-item">
+      <span class="stay-advice-number">01</span>
+      <h4>Stop at the supermarket first</h4>
+      <p>Before arriving in Gallicianò, we recommend purchasing water, snacks, personal products, any medicines, and what might be needed for children, the elderly, or guests with special needs.</p>
+    </article>
+    <article class="stay-advice-item stay-advice-item-highlight">
+      <span class="stay-advice-number">02</span>
+      <h4>Communicate allergies and needs to Elisa</h4>
+      <p>In case of allergies, food intolerances, specific requests, or special needs, notify Elisa before arrival. She will be able to collect useful information and communicate it to Trattoria Nizio Paleò, when necessary.</p>
+    </article>
+    <article class="stay-advice-item">
+      <span class="stay-advice-number">03</span>
+      <h4>Bring what makes you feel good</h4>
+      <p>A sweatshirt for the evening, comfortable shoes, a water bottle, and small personal products help to better experience the village, the trails, and the slow pace of Gallicianò.</p>
+    </article>
+  </div>
+  <div class="stay-advice-footer">
+    <p><strong>Simple goal:</strong> allow every guest to have a good stay, without useless surprises and with the right information before departure.</p>
+    <div class="stay-advice-actions">
+      <a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20to%20communicate%20any%20allergies%2C%20intolerances%2C%20or%20special%20needs%20for%20my%20stay%20at%20Casa%20Giuf%C3%A0." target="_blank" rel="noopener noreferrer">Communicate needs to Elisa</a>
+      <a class="btn btn-outline" href="trattoria.html">See Trattoria Nizio Paleò</a>
+    </div>
+  </div>
+</div>
+
+<div class="home-disconnect-card reveal">
+<span class="home-casa-kicker">Time changes pace here</span>
+<h3>You don't come here to look at a screen</h3>
+<p><strong>Casa Giufà does not offer Wi-Fi and TV.</strong> It's not a hidden flaw: it's a precise choice. Fewer distractions, less noise, more silence, more sleep, more dialogue, and more attention to what Gallicianò makes you feel.</p>
+<p>When the brain stops jumping between notifications and continuous stimuli, it begins to notice the place again: the scent of the earth, the sound of footsteps, the fiumara, the light on the stones, the simple flavors, and human time.</p>
+<a class="btn btn-gold" href="rallentare.html">Discover why to slow down</a>
+</div>
+
+</div>
+</section>
+<!-- FIDUCIA E HOST -->
+<section class="section home-hosts-section" id="fiducia">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Who welcomes you</span>
+<h2 class="title-medium">Clear references, before arriving</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">This section serves a precise purpose: to let the guest understand who to contact and for what, without confusing hospitality, availability, and advice on the territory.</p>
+</div>
+<div class="host-role-grid reveal">
+<article class="host-role-card host-role-card-giuseppe">
+<img class="host-role-photo" src="../assets/img/giuseppe-zindato-ritratto.jpg" alt="Portrait of Giuseppe Zindato, memory and house of Casa Giufà" loading="lazy" width="100" height="100"/>
+<span>House and memory</span>
+<h3>Giuseppe</h3>
+<p>He is the reference related to the house, the story of the village, and the history of Casa Giufà.</p>
+</article>
+<article class="host-role-card host-role-card-primary">
+<span>Availability and arrival</span>
+<h3>Elisa</h3>
+<p>She is the practical contact for information, availability, organization, and clarifications before arrival.</p>
+</article>
+<article class="host-role-card">
+<span>Territory and flavors</span>
+<h3>Nizio Paleò</h3>
+<p>He is a separate local reference for in-person hospitality, traditional cuisine, and practical advice on the territory.</p>
+<a class="host-role-link" href="trattoria.html">Discover the trattoria</a>
+</article>
+</div>
+<div class="host-actions reveal">
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%2C%20and%20staying%20at%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Write to Elisa</a>
+<a class="btn btn-outline" download="" href="../downloads/guida-luoghi-galliciano.pdf">Download the guide</a>
+</div>
+</div>
+</section>
+<!-- PERCHÉ VENIRE QUI -->
+<section class="section section-cream" id="perche">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">The Place</span>
+<h2 class="title-medium">You don't come here just to sleep</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">
+                    Come walk inside an ancient Calabria, among stone, wind, Greek language, and home cooking. Trails that descend towards the Amendolea, villages clinging to the rocks, silences that heal. This is not built tourism — it's a place that has always existed, authentic and alive.
+                </p>
+</div>
+<div class="features-grid">
+<div class="feature-card reveal" style="animation-delay: 0.1s;">
+<div class="feature-icon"></div>
+<h3>Casa Giufà</h3>
+<p>Two rooms on two separate floors, both with an independent entrance: maximum 3 guests per room, up to 6 people in total.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.2s;">
+<div class="feature-icon"></div>
+<h3>Cultural Trekking</h3>
+<p>Real trails towards Bova, Amendolea, and the Fiumara. Millenary paths told with respect by those who know the territory.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.3s;">
+<div class="feature-icon"></div>
+<h3>Grecanic Cuisine</h3>
+<p>Cheeses, cured meats, homemade pasta, and traditional main courses. Trattoria Nizio Paleò is just a few steps from the door.</p>
+<a class="feature-link" href="trattoria.html">See the dishes</a>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.4s;">
+<div class="feature-icon"></div>
+<h3>Greek Culture</h3>
+<p>The Grecanic language still lives here. Gallicianò is one of the last villages where the Greek of Calabria is still spoken.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.5s;">
+<div class="feature-icon"></div>
+<h3>Wild Nature</h3>
+<p>Aspromonte, fiumare, woods, and canyons. A harsh and wonderful nature to explore on foot or by jeep.</p>
+</div>
+<div class="feature-card reveal" style="animation-delay: 0.6s;">
+<div class="feature-icon"></div>
+<h3>True Hospitality</h3>
+<p>Giuseppe and Elisa welcome you like family. Here tourists become guests and guests become friends.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PERCORSI TREKKING -->
+<section class="section" id="percorsi">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Explore the Territory</span>
+<h2 class="title-medium">Cultural Trekking Trails</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Discover the millenary trails that connect Gallicianò to Amendolea, Bova, and the villages of the Grecanic Area. Every step is a story.</p>
+</div>
+<div class="card-grid routes-card-grid" id="routes-container">
+<article class="card route-card reveal">
+<div class="card-meta">
+<span class="difficulty-badge difficulty-easy">Easy</span>
+<span class="route-stats">30-45 min · 1.3 km</span>
+</div>
+<h3>Tour of the village of Gallicianò</h3>
+<p>Short walk among alleys, viewpoints, and the Fountain of Love: the simplest way to get oriented as soon as you arrive at Casa Giufà.</p>
+<div class="card-actions route-card-actions">
+<a class="btn route-gpx-button" download="" href="../downloads/data/01-giro-borgo-galliciano.gpx">Download GPX</a>
+<a class="btn btn-outline" href="percorsi.html#percorso-giro-borgo-galliciano">Details</a>
+</div>
+</article>
+<article class="card route-card reveal">
+<div class="card-meta">
+<span class="difficulty-badge difficulty-medium">Hiking</span>
+<span class="route-stats">approx 1h45-2h15 · 5.4 km</span>
+</div>
+<h3>Trail PNA 128 · Gallicianò / Bova</h3>
+<p>The clearest hiking connection between Gallicianò and the Bova area: a serious but manageable walk, to be verified on site.</p>
+<div class="card-actions route-card-actions">
+<a class="btn route-gpx-button" download="" href="../downloads/data/02-pna-128-galliciano-bova.gpx">Download GPX</a>
+<a class="btn btn-outline" href="percorsi.html#percorso-pna-128-galliciano-bova">Details</a>
+</div>
+</article>
+<article class="card route-card reveal">
+<div class="card-meta">
+<span class="difficulty-badge difficulty-medium">Hiking</span>
+<span class="route-stats">approx 2h30-3h30 · 7.7 km</span>
+</div>
+<h3>Gallicianò / Amendolea</h3>
+<p>Descent towards the Amendolea fiumara: Aspromonte landscape, olive groves, and the valley that explains the territory of the village.</p>
+<div class="card-actions route-card-actions">
+<a class="btn route-gpx-button" download="" href="../downloads/data/04-galliciano-amendolea.gpx">Download GPX</a>
+<a class="btn btn-outline" href="percorsi.html#percorso-galliciano-amendolea">Details</a>
+</div>
+</article>
+</div>
+<p class="route-disclaimer" style="max-width:800px;margin:1.5rem auto 0;">Indicative tracks to be verified on site. Before setting off, check conditions, weather, accessibility, and signs.</p>
+<div class="text-center reveal" style="margin-top: 3rem;">
+<a class="btn btn-primary" href="percorsi.html">See all trails</a>
+</div>
+</div>
+</section>
+<!-- AI RECOMMENDER -->
+<!-- MAPPA INTERATTIVA -->
+<section class="section" id="mappa">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Get Oriented</span>
+<h2 class="title-medium text-center">Explore the Territory</h2>
+<div class="greek-divider"></div>
+<p class="subtitle text-center" style="margin-bottom: 2rem;">Gallicianò, Bova, Amendolea, and the main points of interest in the Grecanic Area.</p>
+</div>
+<div style="text-align:center; margin-bottom: 1.5rem;">
+<a href="percorsi.html" class="btn btn-outline">Go to the Trail Map for Navigation</a>
+</div>
+<div id="map" class="home-map-panel"></div>
+</div>
+</section>
+<!-- NIZIO PALEO -->
+<section class="section nizio-experience" id="cucina">
+<div class="container">
+<div class="split-section reveal">
+<div class="split-content">
+<span class="label-tag">Local flavors</span>
+<h2 class="title-medium">Trattoria Nizio Paleò</h2>
+<div class="greek-divider" style="margin-left:0;"></div>
+<p style="margin-bottom:1.2rem;color:var(--color-nero-morbido);font-size:1.05rem;line-height:1.8;">In Gallicianò, a meal is not just any break: it's the moment when the village becomes a table, a story, and a meeting. Trattoria Nizio Paleò is the local reference for those who want to taste simple, home-style, and deeply Calabrian cuisine.</p>
+<div class="nizio-price-note"><span>For Casa Giufà guests</span><strong>Complete menu for 25 € instead of 30 €</strong><p>Reserved price for those staying in our facility, to be confirmed at the time of booking.</p></div>
+<p style="margin-bottom:1.5rem;color:var(--color-nero-morbido);font-size:1.05rem;line-height:1.8;"><strong>Indicated spot:</strong> Via Cataforio 8, Gallicianò. Before going it is always better to check availability, hours, and book, because places are limited and the kitchen follows the real rhythm of the village.</p>
+<div class="card-actions route-card-actions">
+<a class="btn btn-gold" href="trattoria.html">Discover room and dishes</a>
+<a class="btn btn-primary" href="tel:+393465325400">Call Nizio</a>
+<a class="btn btn-outline" href="https://www.instagram.com/trattoria_nizio_paleo/" rel="noopener noreferrer" target="_blank">Official Instagram</a>
+</div>
+<p class="nizio-source-note">Dishes and availability may change based on the season and the organization of the day. The complete menu for Casa Giufà guests is indicated at 25 € instead of 30 €, but must be confirmed upon booking, so we avoid the great human tradition of arriving hungry and expecting miracles.</p>
+</div>
+<div class="nizio-visual-card">
+<img class="nizio-main-img" src="../assets/img/trattoria/nizio-sala.webp" alt="Internal room of Trattoria Nizio Paleò in Gallicianò" loading="lazy" width="765" height="1020"/>
+<div class="nizio-logo-badge nizio-official-logo"><img src="../assets/img/trattoria/logo-nizio-paleo.webp" alt="Official logo of Trattoria Nizio Paleò" loading="lazy" width="320" height="320"/></div>
+</div>
+</div>
+<div class="nizio-home-dishes reveal" aria-label="Dishes of Trattoria Nizio Paleò">
+<article><img src="../assets/img/trattoria/nizio-antipasto-salumi-formaggi.webp" alt="Appetizer with cured meats and cheeses at Trattoria Nizio Paleò" loading="lazy"/><h3>Local appetizers</h3><p>Cured meats, cheeses, and strong flavors to share before the meal.</p></article>
+<article><img src="../assets/img/trattoria/nizio-pasta-fatta-in-casa.webp" alt="Homemade pasta served at Trattoria Nizio Paleò" loading="lazy"/><h3>Home first courses</h3><p>Homemade pasta, simple condiments, and flavors of the territory.</p></article>
+<article><img src="../assets/img/trattoria/nizio-capra-stracotto.webp" alt="Stewed goat second course at Trattoria Nizio Paleò" loading="lazy"/><h3>Traditional second courses</h3><p>Robust dishes, local meat, and slow cooking, without useless special effects.</p></article>
+</div>
+<div class="nizio-home-wayfinding reveal" aria-label="How to recognize Trattoria Nizio Paleò">
+<div>
+<span class="label-tag">To really arrive</span>
+<h3>Recognize the trattoria before getting lost in the streets</h3>
+<p>We have added practical photos of the facade, the sign near the church, and the engraving on the pavement. They are useful when you are on site and want to understand immediately where to go.</p>
+</div>
+<div class="nizio-home-wayfinding-images">
+<img src="../assets/img/trattoria/nizio-esterno-cortile.webp" alt="Exterior of Trattoria Nizio Paleò" loading="lazy" width="1400" height="1050"/>
+<img src="../assets/img/trattoria/nizio-cartello-chiesa.webp" alt="Trattoria Nizio Paleò sign near the church" loading="lazy" width="975" height="1300"/>
+<img src="../assets/img/trattoria/nizio-incisione-strada.webp" alt="Ground engraving Trattoria Nizio Paleò" loading="lazy" width="1300" height="975"/>
+</div>
+<a class="btn btn-outline" href="trattoria.html#come-trovarla">Look at the visual references</a>
+</div>
+</div>
+</section>
+<!-- STORIA: GIUSEPPE & CALABRIA GRECA -->
+<section class="section section-dark" id="storia">
+<div class="container">
+<div class="dual-story reveal">
+<div class="story-block story-block-with-portrait">
+<figure class="giuseppe-home-portrait">
+<img src="../assets/img/giuseppe-zindato-ritratto.jpg" alt="Portrait of Giuseppe Zindato, owner of Casa Giufà" loading="lazy" width="1000" height="1000"/>
+<figcaption>Giuseppe Zindato, born in this house and keeper of the memory of Casa Giufà.</figcaption>
+</figure>
+<span class="label-tag label-tag-light">Who we are</span>
+<h2 class="title-medium" style="color: var(--color-bianco-caldo);">Giuseppe: Your Local Host</h2>
+<div class="greek-divider" style="margin-left: 0;"></div>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 1.5rem;">
+                        Giuseppe Zindato was born right in this house, when Gallicianò was lived with hands, steps, and senses: the stable under the house, the animals, the well water, the scents of cheeses, the fiumara and the mill reached as a boy to bathe.
+                    </p>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+                        After a life built in Reggio Calabria as an entrepreneur in the fruit trade and a football coach, Giuseppe recovered his father's house to give back to guests an authentic piece of his Gallicianò: nature, memory, simplicity, and silence.
+                    </p>
+<a class="btn btn-gold" href="storia.html">Read our story</a>
+</div>
+<div class="story-block">
+<span class="label-tag label-tag-light">The Territory</span>
+<h2 class="title-medium" style="color: var(--color-bianco-caldo);">Grecanic Calabria</h2>
+<div class="greek-divider" style="margin-left: 0;"></div>
+<blockquote class="story-quote">
+                        "Here Greece is not a distant memory. It has remained in the names, in the stones, in the paths, and in the language itself of the people."
+                    </blockquote>
+<p style="color: var(--color-pietra); line-height: 1.9; font-size: 1.05rem; margin-bottom: 2rem;">
+                        Gallicianò, Bova, Amendolea, Condofuri: places where the ancient Grecanic language still resonates among the stone houses and the fiumara. A protected, isolated, and preserved area. One of the last pockets of Magna Graecia to survive through the centuries.
+                    </p>
+<a class="btn btn-gold" href="storia.html#cultura-grecanica">Discover the history</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="section section-cream" id="faq">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Answers</span>
+<h2 class="title-medium text-center">Frequently Asked Questions</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        How do you get to Gallicianò?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>You arrive by car from the Statale 106 Jonica, taking the Condofuri exit and then following the signs for Gallicianò. The road is a typical Calabrian mountain road, with curves and spectacular landscapes. A car with good traction is recommended. From Reggio Calabria about 1h30.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Are the trails suitable for everyone?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>It depends on the chosen trail. The tour of the village and the walk to the Grecanic stone are suitable for everyone, including children. The Englishman's Trail and the descent towards the Amendolea Fiumara require adequate physical preparation and trekking shoes. Contact Giuseppe to choose the right path.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Where can I eat in Gallicianò?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>We recommend <strong>Trattoria Nizio Paleò</strong>, located in the village itself. It is an authentic home-style Greco-Calabrian cuisine, with dishes based on local products. For those staying at Casa Giufà, the discounted complete menu costs <strong>25 € per person instead of 30 €</strong>. Book in advance because places are limited: <a href="tel:+393465325400">+39 346 532 5400</a>.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">Is there Wi-Fi and TV?<span class="faq-icon">+</span></button>
+<div class="faq-answer"><p>No: Casa Giufà does not have Wi-Fi and TV. It is a choice consistent with the proposed experience: fewer screens, more silence, village, relationships, traditions, and real time. Phone coverage may vary depending on the operator, so it is better to organize the arrival before leaving.</p></div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Is there hot water in the rooms?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Yes. Casa Giufà has hot water and an independent tank to guarantee the service in all conditions. The bathrooms are equipped with everything necessary.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Can I book on Airbnb or Booking?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Yes: Casa Giufà is on <a href="https://www.airbnb.it/rooms/1667956458214678228" rel="noopener noreferrer" target="_blank">Airbnb</a> and <a href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" rel="noopener noreferrer" target="_blank">Booking.com</a> and we recommend direct contact with Elisa via WhatsApp or phone (starting from 65 €), with the possibility to customize the stay by talking to the people who really manage the house.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Where is Amici Di Gallicianò Casa Giufà located?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>In Gallicianò, a Grecanic village in the municipality of Condofuri, province of Reggio Calabria. The house is inside the village: you arrive by car up to the parking lot (<strong>Parcheggio, 89030 Gallicianò RC</strong> on Google Maps) and continue on foot for about 90-100 meters towards Via Anaghorio.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Are there trails and trekking near Gallicianò?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Yes. From the village, trails depart towards Bova, Amendolea, Roghudi, and Bova Marina, in addition to the village tour suitable for everyone. On the <a href="percorsi.html">Trails page</a> you can find downloadable GPX and KML tracks, the map with GPS, and caution notes: these are indicative tracks, to be verified on site with weather and real conditions.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Is there a downloadable guide available?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>Yes: the <a download="" href="../downloads/guida-luoghi-galliciano.pdf">free PDF guide</a> collects places to see, arrival, parking, trails, Grecanic culture, and contacts. There is also the <a href="../downloads/guida-luoghi-galliciano.html">online version</a> readable from mobile phones.</p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-expanded="false" class="faq-question">
+                        Do you offer guided tours?
+                        <span class="faq-icon">+</span>
+</button>
+<div class="faq-answer">
+<p>No, we do not offer guided tours or official tourist guide services. We offer hospitality, practical information, local orientation, and advice on the territory: before arrival you can write to Elisa to better organize the visit.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL LINKS -->
+<section class="section section-dark social-section">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag label-tag-light">Follow us</span>
+<h2 class="title-medium text-center" style="color: var(--color-bianco-caldo);">Follow us on Socials</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="social-grid">
+<a class="social-card" href="https://www.instagram.com/amicidigallicianocasagiufa/" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Instagram</span>
+<span class="social-handle">@amicidigallicianocasagiufa</span>
+</a>
+<a class="social-card" href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Facebook</span>
+<span class="social-handle">Amici Di Gallicianò Casa Giufà</span>
+</a>
+<a class="social-card" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">
+<span class="social-icon"></span>
+<span class="social-name">Airbnb</span>
+<span class="social-handle">Book Casa Giufà</span>
+</a>
+<a class="social-card" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">
+<span class="social-icon"></span>
+<span class="social-name">Booking.com</span>
+<span class="social-handle">Book Casa Giufà</span>
+</a>
+<a class="social-card" href="https://www.instagram.com/trattoria_nizio_paleo/" target="_blank">
+<span class="social-icon"></span>
+<span class="social-name">Nizio Paleò</span>
+<span class="social-handle">@trattoria_nizio_paleo</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section section-cream guide-teaser-section" id="guida-luoghi">
+<div class="container">
+<div class="section-header">
+<span class="label-tag">Guides ready for the guest</span>
+<h2 class="title-medium">Download the guide and arrive without confusion</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Here there are no technical files put on just for show: only useful tools for those who have to arrive, get oriented, download the guide, and reach the real points.</p>
+</div>
+<div class="user-guide-grid">
+<a class="user-guide-card" download="" href="../downloads/guida-luoghi-galliciano.pdf">
+<span>PDF</span><strong>Complete guide</strong><p>Final guide for guests: arrival, places, Casa Giufà, respect for the village, and contacts.</p>
+</a>
+<a class="user-guide-card" href="../downloads/guida-luoghi-galliciano.html">
+<span>Online</span><strong>Online guide</strong><p>Version readable from mobile phones, with ordered sections and practical links.</p>
+</a>
+<a class="user-guide-card" href="https://www.google.com/maps/dir/?api=1&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">
+<span>Maps</span><strong>Arrive at the parking lot</strong><p>It leads to the correct parking lot first, avoiding entering the village by car.</p>
+</a>
+<a class="user-guide-card" href="percorsi.html#percorsi-reali">
+<span>Tracks</span><strong>Real trails</strong><p>Open the trail sheets, download the GPX track, and check the map.</p>
+</a>
+</div>
+</div></section>
+<!-- FIDUCIA E HOST -->
+<section class="section section-cream" id="accoglienza">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Our Hospitality</span>
+<h2 class="title-medium text-center">An experience of Home</h2>
+<div class="greek-divider"></div>
+</div>
+<div class="trust-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+<div class="trust-host text-center" style="background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+<img class="trust-host-photo" src="../assets/img/giuseppe-zindato-ritratto.jpg" alt="Portrait of Giuseppe Zindato, host of Casa Giufà" loading="lazy" width="1000" height="1000"/>
+<h3 style="margin-bottom: 1rem; color: var(--color-marrone-terra);">Your Host: Giuseppe</h3>
+<p style="color: var(--color-nero-morbido); margin-bottom: 1.5rem;">"We want to share the beauty and tranquility of Gallicianò with those who can appreciate essential things."</p>
+<div style="font-size: 0.9rem; color: var(--color-pietra);">
+<p>✓ Authentic hospitality</p>
+<p>✓ Support for trails</p>
+<p>✓ Welcome in the village</p>
+</div>
+</div>
+<div class="trust-features" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+<div class="trust-feature" style="display: flex; gap: 1rem; align-items: flex-start;">
+<div style="background: var(--color-oro); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold;">1</div>
+<div>
+<h4 style="margin-bottom: 0.5rem;">Book with peace of mind</h4>
+<p style="font-size: 0.95rem; color: var(--color-pietra);">You can book securely on Airbnb and Booking.com, or contact us directly on WhatsApp.</p>
+</div>
+</div>
+<div class="trust-feature" style="display: flex; gap: 1rem; align-items: flex-start;">
+<div style="background: var(--color-oro); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold;">2</div>
+<div>
+<h4 style="margin-bottom: 0.5rem;">Assistance before arrival</h4>
+<p style="font-size: 0.95rem; color: var(--color-pietra);">Elisa will provide you with all useful information on the road, parking, and trails.</p>
+</div>
+</div>
+<div class="trust-feature" style="display: flex; gap: 1rem; align-items: flex-start;">
+<div style="background: var(--color-oro); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold;">3</div>
+<div>
+<h4 style="margin-bottom: 0.5rem;">Cleanliness and care</h4>
+<p style="font-size: 0.95rem; color: var(--color-pietra);">We personally take care of preparing the rooms, clean and ready for your rest.</p>
+</div>
+</div>
+<div style="margin-top: 1rem;">
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%2C%20and%20staying%20at%20Casa%20Giuf%C3%A0." target="_blank">Contact us on WhatsApp</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="../assets/img/casa-giufa-logo-192.png"/>
+<p>Authentic hospitality, cultural trekking, and village life in the heart of Grecanic Calabria.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Calos Irthete · Welcome</p>
+</div>
+<div>
+<h4>Contacts</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa (availability and info): +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio (Local Hospitality): +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Explore</h4>
+<ul>
+<li><a href="camere.html">The Rooms</a></li>
+<li><a href="percorsi.html">The Trails</a></li>
+<li><a href="storia.html">The History</a></li>
+<li><a href="rallentare.html">Slow Down</a></li>
+<li><a href="trattoria.html">Trattoria Nizio Paleò</a></li>
+<li><a href="contatti.html">How to Arrive</a></li>
+</ul>
+</div>
+<div>
+<h4>Follow us</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amicidigallicianocasagiufa/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amicidigallicianocasagiufa
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Room booking: starting from 65 €.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · book</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · book</a>
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. All rights reserved. | Gallicianò, Grecanic Calabria.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar" id="sticky-bar">
+<a class="btn btn-primary" href="tel:+393463603118">Call Elisa</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hello%20Elisa%2C%20I%20would%20like%20information%20on%20availability%20and%20arrival%20at%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a>
+<a class="btn btn-gold" href="camere.html"> Rooms</a>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+<div class="lightbox-content">
+<button aria-label="Close" class="lightbox-close" id="lightbox-close">×</button>
+<button aria-label="Previous" class="lightbox-arrow lightbox-prev" id="lightbox-prev">❮</button>
+<img alt="" class="lightbox-img" id="lightbox-img"/>
+<button aria-label="Next" class="lightbox-arrow lightbox-next" id="lightbox-next">❯</button>
+<p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+</div>
+<!-- Scripts -->
+<script crossorigin="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="../assets/js/routes.js"></script>
+<script src="../assets/js/lightbox.js"></script>
+<script src="../assets/js/nav-arrows.js"></script>
+
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-chat-widget" id="wa-widget">
+  <div class="wa-chat-panel">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar wa-brand-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" class="wa-logo-svg"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+      </div>
+      <div>
+        <div class="wa-chat-name">Elisa and Giuseppe</div>
+        <div class="wa-chat-status">We usually reply in a few minutes</div>
+      </div>
+      <button class="wa-chat-close" aria-label="Close chat" onclick="document.getElementById('wa-widget').classList.remove('open')">&times;</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-message">
+        Hello! 👋 We are Elisa and Giuseppe. If you need info about the rooms or want to book, feel free to write to us here.
+      </div>
+    </div>
+    <div class="wa-chat-footer" style="display: flex; flex-direction: column; gap: 0.6rem;">
+      <a href="https://wa.me/393463603118?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20room.%20When%20would%20it%20be%20available%3F" target="_blank" class="wa-chat-btn">
+        <span>Chat with Elisa</span>
+      </a>
+      <a href="https://wa.me/393296576114?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20room.%20When%20would%20it%20be%20available%3F" target="_blank" class="wa-chat-btn" style="background: #128C7E;">
+        <span>Chat with Giuseppe</span>
+      </a>
+    </div>
+  </div>
+  <button class="wa-chat-toggle" aria-label="Chat with us" onclick="document.getElementById('wa-widget').classList.toggle('open')">
+    <div class="wa-chat-icon wa-brand-logo">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+    </div>
+    <span class="wa-chat-label">Chat with us</span>
+  </button>
+</div>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<link rel="manifest" href="../manifest.json">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Τι να δείτε στο Gallicianò: Fontana dell'Amore, Ορθόδοξη Εκκλησία, Εθνογραφικό Μουσείο, Αμφιθέατρο και Fiumara Amendolea. Κατεβάσιμος οδηγός με πληροφορίες άφιξης, πάρκινγκ και διαδρομές, από τους Amici Di Gallicianò Casa Giufà." name="description"/>
+<meta content="https://amicidigalliciano.it/assets/img/casa-giufa-logo-512.png" property="og:image"/>
+<title>Οδηγός στο Gallicianò: τι να δείτε στο ελληνόφωνο χωριό | Amici Di Gallicianò Casa Giufà</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+:root{--guide-blue:#26352B;--guide-gold:#A98352;--guide-cream:#FAF6EE;--guide-ink:#211D18;--guide-terracotta:#8F5E3E;}
+body.guide-body{font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;background:#FAF6EE;color:#211D18;}
+.guide-hero{min-height:68vh;background:linear-gradient(120deg,rgba(38,53,43,.86),rgba(109,77,49,.38)),url('../assets/img/panoramica-galliciano.jpg') center/cover;display:flex;align-items:center;color:white;padding:7rem 0 5rem;}
+.guide-hero .kicker{letter-spacing:.18em;text-transform:uppercase;color:#D8BC83;font-weight:700;font-size:.78rem;}
+.guide-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.8rem);line-height:.92;margin:.7rem 0 1.2rem;}
+.guide-hero p{font-size:1.14rem;line-height:1.8;max-width:760px;color:rgba(255,255,255,.92)}
+.guide-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
+.arrival-panel{background:#fff;border:1px solid rgba(169,131,82,.28);box-shadow:0 22px 60px rgba(38,53,43,.13);border-radius:28px;padding:2rem;margin-top:-3.5rem;position:relative;z-index:4;}
+.arrival-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;}
+.arrival-steps{counter-reset:step;display:grid;gap:1rem;}
+.arrival-step{counter-increment:step;display:flex;gap:1rem;align-items:flex-start;background:#FFF9EF;border-radius:18px;padding:1rem;border:1px solid rgba(169,131,82,.16)}
+.arrival-step:before{content:counter(step);flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#26352B;color:#fff;display:grid;place-items:center;font-weight:800;}
+.place-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-top:2rem;}
+.place-card{background:#fff;border-radius:28px;overflow:hidden;border:1px solid rgba(169,131,82,.2);box-shadow:0 18px 55px rgba(38,53,43,.10);}
+.place-card img{width:100%;height:280px;object-fit:cover;display:block;background:#E7DCCB;}
+.place-card-body{padding:1.6rem;}
+.place-card h3{font-family:'Cormorant Garamond',serif;color:#26352B;font-size:2rem;line-height:1.05;margin:0 0 .5rem;}
+.place-card .subtitle{color:#8F5E3E;font-weight:700;margin-bottom:1rem;}
+.place-card p{line-height:1.78;color:#3A342B;}
+.fact-list{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0;}
+.fact-list span{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;background:#F1E4D0;color:#6D4D31;border-radius:999px;padding:.4rem .75rem;font-weight:700;}
+.source-note{font-size:.82rem;color:#746A5E;border-top:1px solid #eee0cc;margin-top:1rem;padding-top:1rem;}
+.guide-download-band{background:#26352B;color:white;border-radius:30px;padding:2.4rem;margin:3rem 0;background-image:radial-gradient(circle at top right,rgba(169,131,82,.35),transparent 35%)}
+
+/* === Fix finale guida: colori leggibili, blocchi distinti e prezzo evidente === */
+.guide-focus-panel{
+  background:#FFFDF8;
+  border:1px solid rgba(169,131,82,.26);
+  box-shadow:0 22px 65px rgba(38,53,43,.10);
+}
+.guide-focus-panel .label-tag{
+  background:rgba(169,131,82,.08);
+  border-color:rgba(169,131,82,.42);
+  color:#8F5E3E;
+}
+.guide-focus-panel .title-medium{color:#26352B;}
+.guide-focus-panel .guide-copy p{
+  color:#3A342B !important;
+  line-height:1.9;
+  font-size:1.08rem;
+}
+.guide-memory-band,
+.guide-slow-band,
+.guide-booking-band{
+  margin:0;
+  border:1px solid rgba(216,188,131,.24);
+  box-shadow:0 20px 55px rgba(33,29,24,.14);
+}
+.guide-memory-band{background:linear-gradient(135deg,#3A2A1E 0%,#5F402B 100%);}
+.guide-slow-band{background:linear-gradient(135deg,#26352B 0%,#496042 100%);}
+.guide-booking-band{background:linear-gradient(135deg,#211D18 0%,#3B3328 100%);}
+.guide-focus-panel .guide-download-band h3{
+  color:#FFFDF8 !important;
+  text-shadow:0 2px 12px rgba(0,0,0,.20);
+}
+.guide-focus-panel .guide-download-band p{
+  color:#F4EBDD !important;
+}
+.guide-room-facts{
+  display:flex;
+  gap:.55rem;
+  flex-wrap:wrap;
+  margin:1.15rem 0 1.35rem;
+}
+.guide-room-facts span{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid rgba(169,131,82,.28);
+  background:#FAF6EE;
+  color:#26352B;
+  border-radius:999px;
+  padding:.48rem .8rem;
+  font-size:.82rem;
+  font-weight:800;
+}
+.guide-price-highlight{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.35rem 1rem;
+  align-items:end;
+  margin:1.25rem 0;
+  padding:1.25rem 1.35rem;
+  background:linear-gradient(135deg,#26352B 0%,#3F573B 100%);
+  border:1px solid rgba(216,188,131,.38);
+  border-radius:24px;
+  color:#FFFDF8;
+  box-shadow:0 18px 45px rgba(38,53,43,.16);
+}
+.guide-price-highlight span{
+  grid-column:1/-1;
+  color:#D8BC83;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:900;
+}
+.guide-price-highlight strong{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,7vw,5rem);
+  line-height:.82;
+  color:#FFFDF8;
+}
+.guide-price-highlight small{
+  color:#F4EBDD;
+  font-size:1.05rem;
+  font-weight:800;
+  padding-bottom:.35rem;
+}
+.guide-download-spotlight{
+  margin-top:2rem;
+  background:linear-gradient(135deg,#26352B 0%,#496042 62%,#A98352 100%);
+  color:#FFFDF8;
+  border-radius:30px;
+  padding:2rem;
+  display:grid;
+  grid-template-columns:1.2fr auto;
+  gap:1.5rem;
+  align-items:center;
+  box-shadow:0 24px 70px rgba(38,53,43,.14);
+}
+.guide-download-spotlight h2{
+  color:#FFFDF8;
+  margin:0 0 .45rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3.2rem);
+}
+.guide-download-spotlight p{color:#F4EBDD;margin:0;line-height:1.7;}
+@media(max-width:820px){
+  .guide-download-spotlight{grid-template-columns:1fr;}
+  .guide-download-spotlight .btn{width:100%;justify-content:center;}
+}
+
+@media(max-width:820px){.arrival-grid,.place-grid{grid-template-columns:1fr}.guide-hero{padding-top:6rem}.place-card img{height:220px}}
+</style>
+<link href="https://amicidigalliciano.it/guida.html" rel="canonical"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://amicidigalliciano.it/"},{"@type":"ListItem","position":2,"name":"Guida","item":"https://amicidigalliciano.it/guida.html"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  "name": "Γκαλιτσιανό",
+  "alternateName": "Gallicianò di Condofuri",
+  "description": "Ελληνόφωνο χωριό στην περιοχή Condofuri (Reggio Calabria), στην Καλαβρία: ελληνοκαλαβρική κουλτούρα, Fontana dell'Amore, ορθόδοξη εκκλησία Παναγίας των Ελλήνων, εθνογραφικό μουσείο και μονοπάτια προς Bova, Amendolea και Fiumara Amendolea.",
+  "url": "https://amicidigalliciano.it/guida.html",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Condofuri",
+    "addressRegion": "Calabria",
+    "postalCode": "89030",
+    "addressCountry": "IT"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 38.0166, "longitude": 15.8864},
+  "touristType": ["Αργός τουρισμός", "Πεζοπορία", "Ελληνόφωνη κουλτούρα", "Φύση"],
+  "includesAttraction": [
+    {"@type": "TouristAttraction", "name": "Fontana dell'Amore (Cannalo tis Agapi)"},
+    {"@type": "TouristAttraction", "name": "Chiesa Ortodossa della Madonna dei Greci"},
+    {"@type": "TouristAttraction", "name": "Chiesa di San Giovanni Battista e Piazza Alimos"},
+    {"@type": "TouristAttraction", "name": "Museo Etnografico Anzel Bogasari Merianù"},
+    {"@type": "TouristAttraction", "name": "Anfiteatro Patriarca Bartolomeo I"},
+    {"@type": "TouristAttraction", "name": "Casa della Musica e Biblioteca Grecofona"},
+    {"@type": "TouristAttraction", "name": "Fiumara Amendolea e Castello di Amendolea"}
+  ]
+}
+</script>
+</head>
+<body class="guide-body page-guida">
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+<img alt="Amici Di Gallicianò Casa Giufà" src="../assets/img/casa-giufa-logo-192.png" style="height: 46px;"/>
+<span class="logo-text" style="font-weight: 800; font-size: 1.1rem; color: #26352B; letter-spacing: 0.05em; font-family: 'Cinzel', serif; text-transform: uppercase;">Amici Di Gallicianò</span>
+
+<div class="lang-switcher" style="display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; margin-left: 1rem;">
+    <a href="../guida.html" style="text-decoration:none; color:inherit;">IT</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="../en/guida.html" style="text-decoration:none; color:inherit;">EN</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="guida.html" style="text-decoration:none; color:inherit; border-bottom:2px solid var(--color-oro);">EL</a>
+</div>
+</a>
+<div class="mobile-quick-links">
+    <a href="index.html">Αρχική</a>
+    <a href="camere.html">Δωμάτια</a>
+    <a href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni" target="_blank">Κράτηση</a>
+    <a href="percorsi.html">Διαδρομές</a>
+</div>
+<button aria-label="Apri menu" class="mobile-menu-btn" id="mobile-menu-btn"><span class="menu-text">Μενού</span> <span class="hamburger-icon">☰</span></button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link" href="index.html">Αρχική</a></li>
+<li><a class="nav-link" href="camere.html">Δωμάτια</a></li>
+<li><a class="nav-link" href="percorsi.html">Διαδρομές</a></li>
+<li><a class="nav-link active" href="guida.html">Οδηγός</a></li>
+<li><a class="nav-link" href="storia.html">Ιστορία</a></li>
+<li><a class="nav-link" href="rallentare.html">Επιβράδυνση</a></li>
+<li><a class="nav-link" href="trattoria.html">Εστιατόριο</a></li>
+<li><a class="nav-link" href="contatti.html">Επικοινωνία</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">Ελέγξτε τη διαθεσιμότητα στο WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header><nav aria-label="Percorso pagina" class="breadcrumb-nav"><div class="container breadcrumb-inner"><a href="index.html">Αρχική</a><span aria-hidden="true">›</span><span aria-current="page">Οδηγός</span></div></nav>
+<section class="guide-hero">
+<div class="container">
+<span class="kicker">Οδηγός της περιοχής</span>
+<h1>Gallicianò,<br/>ζωντανή πέτρα</h1>
+<p>Ένας αφηγηματικός και πρακτικός οδηγός για να φτάσετε στο χωριό, να προσανατολιστείτε από το πάρκινγκ, να ανακαλύψετε τα κύρια αξιοθέατα και να "διαβάσετε" το Gallicianò σε βάθος: όχι μια λίστα για κατανάλωση, αλλά μια πρόσκληση να περπατήσετε με σεβασμό.</p>
+<div class="guide-actions">
+<a class="btn btn-gold" download="" href="../downloads/guida-luoghi-galliciano.pdf">Κατεβάστε τον πλήρη οδηγό σε PDF</a>
+<a class="btn btn-outline-light" href="../downloads/guida-luoghi-galliciano.html">Διαβάστε τον οδηγό online</a>
+<a aria-label="Apri Google Maps con indicazioni in auto dalla tua posizione attuale al parcheggio di Gallicianò (nuova scheda)" class="btn btn-whatsapp" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Ανοίξτε το πάρκινγκ από εκεί που βρίσκεστε</a>
+</div>
+</div>
+</section>
+<main>
+<section class="container arrival-panel reveal">
+<div class="arrival-grid">
+<div>
+<span class="label-tag">Σωστή άφιξη</span>
+<h2 class="title-medium">Πρώτα το πάρκινγκ, μετά 90-100 μέτρα με τα πόδια</h2>
+<div class="arrival-steps">
+<div class="arrival-step"><div><strong>Ρυθμίστε το GPS στο πάρκινγκ.</strong><br/>Προτεινόμενος προορισμός: <em>Parcheggio, 89030 Gallicianò RC</em>.</div></div>
+<div class="arrival-step"><div><strong>Αφήστε το αυτοκίνητο και συνεχίστε με τα πόδια.</strong><br/>Από εκεί η δομή/περιοχή άφιξης προσεγγίζεται σε περίπου 90-100 μέτρα.</div></div>
+<div class="arrival-step"><div><strong>Σημείο αναφοράς με τα πόδια.</strong><br/>Ακολουθήστε τις πινακίδες προς <em>Via Anaghorio, 89030 Gallicianò RC</em>.</div></div>
+</div>
+</div>
+<div class="guide-download-band" style="margin:0;">
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Γρήγοροι σύνδεσμοι Maps</h3>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;">Αυτά τα κουμπιά χρησιμεύουν για να οδηγήσουν τον επισκέπτη πρώτα στο πάρκινγκ, αποφεύγοντας τη σύγχυση μέσα στο χωριό.</p>
+<div class="guide-actions">
+<a aria-label="Apri Google Maps con indicazioni in auto dalla tua posizione attuale al parcheggio di Gallicianò (nuova scheda)" class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Ανοίξτε το πάρκινγκ από εκεί που βρίσκεστε</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dal parcheggio di Gallicianò a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline-light" href="https://www.google.com/maps/dir/?api=1&amp;origin=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Από το πάρκινγκ στο Casa Giufà με τα πόδια</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dalla tua posizione attuale a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline-light" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Φτάστε στο Casa Giufà από εκεί που βρίσκεστε</a>
+</div>
+</div>
+</div>
+</section><section class="container" style="margin-top:2rem;"><div class="guide-safety-note"><strong>Προειδοποίηση για τον τελικό χρήστη.</strong> Αυτός ο οδηγός βοηθά στον προσανατολισμό και στην προετοιμασία της επίσκεψης, αλλά δεν υποκαθιστά τους ενημερωμένους ελέγχους επιτόπου. Οι Amici Di Gallicianò Casa Giufà δεν ευθύνονται για απώλεια προσανατολισμού, λάθη διαδρομής, ατυχήματα, καιρικές συνθήκες, κλεισίματα, ιδιωτικές ιδιοκτησίες, αλλαγές μονοπατιών ή πληροφορίες που άλλαξαν μετά τη δημοσίευση. Πριν ξεκινήσετε, να ελέγχετε πάντα τις συνθήκες, τη διαθεσιμότητα και τις πραγματικές διαδρομές.</div>
+<div class="guide-download-spotlight" id="scarica-guida-pdf">
+<div>
+<h2>Κατεβάστε τον πλήρη οδηγό</h2>
+<p>PDF έτοιμο για τον επισκέπτη: άφιξη, πάρκινγκ, κύρια αξιοθέατα, Casa Giufà, διαδρομές και πρακτικές συμβουλές για να επισκεφθείτε το Gallicianò χωρίς σύγχυση.</p>
+</div>
+<a class="btn btn-gold btn-large" download href="../downloads/guida-luoghi-galliciano.pdf">Κατεβάστε τον οδηγό PDF</a>
+</div></section>
+<section class="container arrival-panel reveal guide-focus-panel" id="casa-giufa-giuseppe" style="margin-top:2rem;">
+<div class="arrival-grid">
+<div class="guide-copy">
+<span class="label-tag">Σπίτι και μνήμη</span>
+<h2 class="title-medium">Το σπίτι του Giuseppe</h2>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Το Casa Giufà είναι το σπίτι όπου γεννήθηκε και μεγάλωσε ο Giuseppe Zindato. Εδώ το Gallicianò δεν ήταν μια εικόνα για να επισκεφθείτε, αλλά καθημερινή ζωή: ζώα στον στάβλο, νερό από το πηγάδι, τυριά, δουλειά, ποτάμι, μύλος και σιωπές του βουνού.</p>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Μετά από μια ζωή ως επιχειρηματίας στο εμπόριο φρούτων στο Reggio Calabria και ως άνθρωπος του αθλητισμού, ο Giuseppe ανακαίνισε το σπίτι του πατέρα του για να κάνει γνωστή στους επισκέπτες τη φύση και την ταυτότητα του χωριού.</p>
+</div>
+<div class="guide-download-band guide-memory-band">
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Γιατί αυτή η ιστορία έχει σημασία</h3>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;">Το σπίτι δεν είναι μόνο ένα κατάλυμα: είναι ένα κομμάτι μνήμης που επιστρέφεται στο χωριό. Ακόμη και η επιλογή να μην υπάρχει Wi-Fi και τηλεόραση πηγάζει από εδώ: λιγότερες οθόνες, περισσότερος πραγματικός χρόνος, περισσότερο Gallicianò.</p>
+<a class="btn btn-gold" href="storia.html">Διαβάστε την πλήρη ιστορία</a>
+</div>
+</div>
+</section>
+
+<section class="container arrival-panel reveal guide-focus-panel" id="rallentare-galliciano" style="margin-top:2rem;">
+<div class="arrival-grid">
+<div class="guide-copy">
+<span class="label-tag">Ο χρόνος εδώ αλλάζει ρυθμό</span>
+<h2 class="title-medium">Γιατί η επιβράδυνση είναι μέρος της εμπειρίας</h2>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Το Gallicianò δεν ζητά να καταναλωθεί βιαστικά. Ζητά να εισακουστεί: στα βήματα ανάμεσα στις πέτρες, στον άνεμο, στο ποτάμι, στα αρώματα της τοπικής κουζίνας και στη σιωπή των βραδιών.</p>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Η επιλογή να μην υπάρχει τηλεόραση και Wi-Fi βοηθά τον επισκέπτη να ανακτήσει την προσοχή του. Λιγότερες οθόνες, λιγότερος θόρυβος, περισσότερη παρουσία: αυτό είναι ένα συγκεκριμένο μέρος της φιλοξενίας του Casa Giufà.</p>
+</div>
+<div class="guide-download-band guide-slow-band">
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Εδώ η σιωπή δεν είναι άδεια</h3>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;">Είναι χώρος για να κοιμηθείτε καλύτερα, να μιλήσετε πραγματικά, να περπατήσετε χωρίς βιασύνη και να θυμάστε το ταξίδι όχι για τα πράγματα που είδατε, αλλά για το πόσα καταφέρατε να νιώσετε.</p>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;"><strong>Σημείωση κουζίνας:</strong> για τους επισκέπτες του Casa Giufà, το πλήρες μενού στην Trattoria Nizio Paleò κοστίζει 25 € ανά άτομο αντί για 30 €, με επιβεβαίωση κατά την κράτηση.</p>
+<a class="btn btn-gold" href="rallentare.html">Ανακαλύψτε το νόημα της επιβράδυνσης</a>
+</div>
+</div>
+</section>
+
+
+<section class="container arrival-panel reveal guide-focus-panel" id="prezzi-camere-casa-giufa" style="margin-top:2rem;">
+<div class="arrival-grid">
+<div class="guide-copy">
+<span class="label-tag">Δωμάτια και τιμές</span>
+<h2 class="title-medium">Δύο δωμάτια, δύο ξεχωριστοί όροφοι</h2>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;">Το Casa Giufà διαθέτει δύο δωμάτια σε δύο ξεχωριστούς ορόφους. Κάθε δωμάτιο έχει ανεξάρτητη είσοδο, 1 διπλό κρεβάτι, 1 μονό κρεβάτι και μπορεί να φιλοξενήσει το πολύ 3 άτομα. Ολόκληρο το σπίτι μπορεί να φιλοξενήσει έως και 6 επισκέπτες.</p>
+<div class="guide-room-facts" aria-label="Dati principali delle camere">
+<span>2 ξεχωριστά δωμάτια</span>
+<span>Έως 3 επισκέπτες ανά δωμάτιο</span>
+<span>Έως 6 επισκέπτες συνολικά</span>
+<span>Ανεξάρτητη είσοδος</span>
+</div>
+<div class="guide-price-highlight" aria-label="Prezzo prenotazione diretta">
+<span>Απευθείας κράτηση</span>
+<strong>από 65 €</strong>
+<small>ανά δωμάτιο</small>
+</div>
+<p style="color:var(--color-pietra);line-height:1.9;font-size:1.08rem;"><strong>Κράτηση:</strong> από 65 € ανά δωμάτιο. Για να ελέγξετε την πραγματική διαθεσιμότητα, γράψτε στην Elisa.</p>
+</div>
+<div class="guide-download-band guide-booking-band">
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:2.1rem;margin-top:0;">Πριν κάνετε κράτηση</h3>
+<p style="color:rgba(255,255,255,.85);line-height:1.7;"><strong>Απευθείας κράτηση: από 65 € ανά δωμάτιο.</strong> Γράψτε στην Elisa για να επιβεβαιώσετε τη διαθεσιμότητα, τον επιθυμητό όροφο, τον αριθμό των επισκεπτών, την άφιξη και το πιθανό μενού στην Trattoria Nizio Paleò.</p>
+<a class="btn btn-gold" href="camere.html">Δείτε τα δωμάτια</a>
+<a class="btn btn-outline-light" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20verificare%20disponibilit%C3%A0%20e%20prezzo%20diretto%20di%2065%20euro%20a%20camera%20per%20Casa%20Giuf%C3%A0." rel="noopener noreferrer" target="_blank">Ζητήστε διαθεσιμότητα από την Elisa</a>
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · κάντε κράτηση</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · κάντε κράτηση</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Μέρη για να διηγηθείτε</span>
+<h2 class="title-medium">Ο βασικός οδηγός</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Ένας οδηγός σχεδιασμένος για όσους φτάνουν πραγματικά: τι να δείτε, πώς να κινηθείτε, πού να παρκάρετε, τι να σεβαστείτε και πώς να συνδέσετε το Casa Giufà με το χωριό.</p>
+</div>
+<div class="place-grid">
+<article class="place-card reveal" id="borgo-galliciano">
+<img alt="Il borgo di Gallicianò - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/panoramica-galliciano.jpg"/>
+<div class="place-card-body">
+<h3>Το χωριό Gallicianò</h3>
+<div class="subtitle">Η ελληνόφωνη ακρόπολη που αιωρείται πάνω από την κοιλάδα του Amendolea</div>
+<div class="fact-list"><span>Περίπου 621 μ. υψόμετρο</span><span>Οικισμός του Condofuri</span><span>Καρδιά της Ελληνικής Καλαβρίας</span></div>
+<p>Το Gallicianò είναι ένα από τα μέρη με τη μεγαλύτερη ταυτότητα στην ελληνόφωνη περιοχή της Καλαβρίας: ένα μαζεμένο, πέτρινο χωριό, με θέα στον ποταμό Amendolea (Fiumara Amendolea) και συνδεδεμένο με τη μνήμη της ελληνικής γλώσσας της Καλαβρίας. Οι δημόσιες πηγές το περιγράφουν ως ένα κέντρο ύψιστης πολιτιστικής αξίας, που συχνά αποκαλείται η ακρόπολη της Ελληνικής Καλαβρίας.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Επισκεφθείτε το αργά: μπείτε από το πάρκινγκ, ανεβείτε με τα πόδια στο χωριό, κοιτάξτε τα πέτρινα σπίτια, σταματήστε στα πανοραμικά σημεία και χρησιμοποιήστε τον οδηγό ως αφηγηματικό ίχνος, όχι ως υποχρεωτική διαδρομή. Η καλύτερη επίσκεψη είναι σύντομη, με σεβασμό και σιωπηλή: Το Gallicianò δεν καταναλώνεται, εισακούεται.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Εθνικό Πάρκο Aspromonte, Calabria Straordinaria, Wikipedia</div>
+</div>
+</article>
+<article class="place-card reveal" id="fontana-amore">
+<img alt="Fontana dell’Amore - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/fontana-amore-galliciano.jpg"/>
+<div class="place-card-body">
+<h3>Fontana dell’Amore (Πηγή της Αγάπης)</h3>
+<div class="subtitle">Κάνναλο της Αγάπης, ο τόπος συνάντησης</div>
+<div class="fact-list"><span>Συμβολικό μέρος του χωριού</span><span>Παράδοση του φλερτ</span><span>Τέλειο σημείο για στάση</span></div>
+<p>Η Fontana dell’Amore, που ονομάζεται επίσης Κάνναλο της Αγάπης, είναι ένα από τα πιο υποβλητικά σύμβολα του Gallicianò. Οι πηγές λένε ότι εδώ, κάποτε, τα κορίτσια πήγαιναν να πάρουν νερό και οι νέοι έβρισκαν την ευκαιρία να τα συναντήσουν. Η παράδοση του 'ccippu', που αναφέρεται από την τουριστική πύλη του Reggio Calabria, αφηγείται μια τελετουργία υπόσχεσης και οικογενειακής αποδοχής που συνδέεται με το φλερτ.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Φτάστε εκεί με τα πόδια από το κέντρο του χωριού. Μην την αντιμετωπίζετε ως ένα απλό φωτογραφικό φόντο: είναι ένα μέρος για να διηγηθείτε, γιατί μετατρέπει μια βρύση σε ζωντανή μνήμη. Συμπεριλάβετέ την στη σύντομη επίσκεψη του χωριού μαζί με το θέατρο, το μουσείο και την εκκλησία.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Τουρισμός Reggio Calabria, Εθνικό Πάρκο Aspromonte, Calabria nell’Anima</div>
+</div>
+</article>
+<article class="place-card reveal" id="chiesa-ortodossa">
+<img alt="Chiesa Ortodossa della Madonna dei Greci - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/chiesa-ortodossa-panaghia-galliciano.jpg"/>
+<div class="place-card-body">
+<h3>Ορθόδοξη Εκκλησία της Παναγίας των Ελλήνων</h3>
+<div class="subtitle">Παναγία της Ελλάδας, το ελληνόφωνο πνευματικό σημάδι</div>
+<div class="fact-list"><span>Ορθόδοξη εκκλησία</span><span>Εικόνες και βυζαντινή μνήμη</span><span>Ελληνόφωνη ταυτότητα</span></div>
+<p>Η μικρή ορθόδοξη εκκλησία της Παναγίας των Ελλήνων είναι ένα από τα μέρη που κάνουν το Gallicianò διαφορετικό από ένα συνηθισμένο ορεινό χωριό. Οι τοπικές και περιφερειακές πηγές την αναφέρουν μεταξύ των κύριων σημείων επίσκεψης, συνδέοντάς την με την ελληνόφωνη πολιτιστική συνέχεια και τη θρησκευτική μνήμη της βυζαντινής περιοχής.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Πρέπει να παρουσιάζεται με σεβασμό: όχι ως αξιοθέατο για να διαγράψετε από τη λίστα, αλλά ως τόπος ταυτότητας. Συμπεριλάβετέ την στον οδηγό αφού έχετε διηγηθεί για την ελληνόφωνη γλώσσα, ώστε ο επισκέπτης να καταλάβει γιατί μια μικρή εκκλησία μπορεί να αφηγηθεί έναν ολόκληρο πολιτισμό.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Εθνικό Πάρκο Aspromonte, Calabria Straordinaria, Calabria Greca</div>
+</div>
+</article>
+<article class="place-card reveal" id="teatro">
+<img alt="Anfiteatro Patriarca Bartolomeo I - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/anfiteatro-patriarca-bartolomeo-galliciano.jpg"/>
+<div class="place-card-body">
+<h3>Αμφιθέατρο του Πατριάρχη Βαρθολομαίου Α'</h3>
+<div class="subtitle">Μια ανοιχτή σκηνή στην κοιλάδα</div>
+<div class="fact-list"><span>Πανοραμικό θέατρο</span><span>Θέα στην κοιλάδα</span><span>Δυνατό φωτογραφικό σημείο</span></div>
+<p>Δίπλα στην εκκλησία της Παναγίας χτίστηκε ένα μικρό πανοραμικό θέατρο αφιερωμένο στον Πατριάρχη Βαρθολομαίο Α'. Οι ημικυκλικές κερκίδες βλέπουν προς την κοιλάδα: εδώ το τοπίο γίνεται φυσικό σκηνικό, χωρίς την ανάγκη υπερβολικής δόμησης, κάτι που πού και πού η ανθρωπότητα καταφέρνει ακόμα να καταλάβει.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Προτείνετέ το ως σημείο στάσης και αφήγησης. Είναι ιδανικό για να εξηγήσετε την ισορροπία μεταξύ πέτρας, τοπίου και ελληνόφωνης μνήμης. Από εδώ μπορείτε να κάνετε κάποιον να αντιληφθεί αμέσως γιατί το Gallicianò δεν είναι απλώς ένα μέρος για να δείτε, αλλά ένα μέρος για να νιώσετε.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Wikipedia, Calabria nell’Anima, τοπικές τουριστικές πηγές</div>
+</div>
+</article>
+<article class="place-card reveal" id="museo-etnografico">
+<img alt="Museo Etnografico Anzel Bogasari Merianù - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/museo-galliciano-interno.jpg"/>
+<div class="place-card-body">
+<h3>Εθνογραφικό Μουσείο Anzel Bogasari Merianù</h3>
+<div class="subtitle">Τα αντικείμενα της καθημερινής ζωής γίνονται μνήμη</div>
+<div class="fact-list"><span>Παραδοσιακά εργαλεία</span><span>Μνήμη του χωριού</span><span>Υλικός πολιτισμός</span></div>
+<p>Το Εθνογραφικό Μουσείο συγκεντρώνει εργαλεία, οικιακά αντικείμενα και όργανα της τοπικής παράδοσης. Η Calabria Greca υπενθυμίζει ότι το μουσείο είναι αφιερωμένο στην Angela Bogasari Merianoù, μια Ελληνίδα φιλόσοφο που έφτασε στο Gallicianò τη δεκαετία του '70, γοητευμένη από την κοινότητα και τις ρίζες της. Είναι το μέρος όπου η ιστορία παύει να είναι αφηρημένη και γίνεται ξύλο, ύφασμα, σίδερο, κουζίνα, δουλειά.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Συμπεριλάβετέ το στον οδηγό ως σημείο κατανόησης, όχι ως κάτι για να γεμίσετε τον χρόνο. Πρώτα παρατηρείτε το χωριό, μετά μπαίνετε στη μνήμη των αντικειμένων. Αν δεν είναι ανοιχτό, θα πρέπει να περιγραφεί απ' έξω και να αναφερθεί ως μέρος που πρέπει να ελεγχθεί πριν από την επίσκεψη.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Calabria Greca, Εθνικό Πάρκο Aspromonte, Calabria nell’Anima</div>
+</div>
+</article>
+<article class="place-card reveal" id="san-giovanni">
+<img alt="Chiesa di San Giovanni Battista e Piazza Alimos - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/san-giovanni-battista.jpg"/>
+<div class="place-card-body">
+<h3>Εκκλησία του Αγίου Ιωάννη του Βαπτιστή και Πλατεία Alimos</h3>
+<div class="subtitle">Η πολιτική και θρησκευτική καρδιά του χωριού</div>
+<div class="fact-list"><span>Κέντρο του χωριού</span><span>Κεντρική πλατεία</span><span>Σημείο προσανατολισμού</span></div>
+<p>Η εκκλησία του Αγίου Ιωάννη του Βαπτιστή και η περιοχή της Πλατείας Alimos αντιπροσωπεύουν το αναγνωρίσιμο κέντρο του χωριού. Οι πηγές περιγράφουν το Gallicianò ως ένα χωριό που αρθρώνεται γύρω από την πλατεία και την εκκλησία: εδώ συγκεντρώνεται η πιο ξεκάθαρη αντίληψη της κοινοτικής ζωής.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Χρησιμοποιήστε την ως σημείο προσανατολισμού: από το πάρκινγκ ανεβαίνετε στο χωριό, φτάνετε στο κέντρο και από εκεί χτίζετε τη βόλτα. Είναι επίσης το καλύτερο μέρος για να εξηγήσετε πώς το Gallicianò είναι μικρό, αλλά γεμάτο πολιτισμική πυκνότητα.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Wikipedia, Avvenire di Calabria, τοπικές πηγές</div>
+</div>
+</article>
+<article class="place-card reveal" id="amendolea">
+<img alt="Fiumara Amendolea e Castello di Amendolea - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/castello-amendolea.jpg"/>
+<div class="place-card-body">
+<h3>Fiumara Amendolea και Κάστρο της Amendolea</h3>
+<div class="subtitle">Η κοιλάδα που εξηγεί το τοπίο του Gallicianò</div>
+<div class="fact-list"><span>Ποτάμι και κοιλάδα</span><span>Σημείο αναφοράς για πεζοπορία</span><span>Κάστρο και τοπίο</span></div>
+<p>Ο ποταμός Amendolea δεν είναι απλώς ένα φυσικό στοιχείο: είναι η κοιλάδα που δίνει βάθος στην αφήγηση του Gallicianò. Οι διαδρομές προς την Amendolea, τη Bova και το Gallicianò διασχίζουν ένα τοπίο από νερό, πέτρα, ξηρές πλαγιές, αγροτική μνήμη και ιστορικούς οικισμούς. Το Κάστρο της Amendolea ολοκληρώνει αυτή την αφήγηση με μια ισχυρή παρουσία στο τοπίο.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Πρέπει να παρουσιάζεται ως προέκταση της εμπειρίας, όχι ως μια ελαφριά υπόσχεση. Εδώ χρειάζονται κατάλληλα παπούτσια, καλός καιρός και έλεγχος της ροής του ποταμού. Στον ιστότοπο θα πρέπει να συνδέεται με τον χάρτη, τις διαδρομές που μπορούν να ληφθούν και τις σημειώσεις ασφαλείας.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Εθνικό Πάρκο Aspromonte, Calabria Greca, Wikiloc</div>
+</div>
+</article>
+<article class="place-card reveal" id="casa-musica-biblioteca">
+<img alt="Casa della Musica e Biblioteca Grecofona - Amici Di Gallicianò Casa Giufà" loading="lazy" src="../assets/img/galliciano-borghi-2.jpg"/>
+<div class="place-card-body">
+<h3>Σπίτι της Μουσικής και Ελληνόφωνη Βιβλιοθήκη</h3>
+<div class="subtitle">Γλώσσα, ήχος και ελληνική μνήμη της Καλαβρίας</div>
+<div class="fact-list"><span>Ελληνόφωνη κουλτούρα</span><span>Παραδοσιακά όργανα</span><span>Γλωσσική μνήμη</span></div>
+<p>Ανάμεσα στα μέρη που αναφέρονται από περιφερειακές πηγές είναι επίσης το Σπίτι της Μουσικής και η Ελληνόφωνη Βιβλιοθήκη. Είναι σημαντικά σημεία γιατί αφηγούνται αυτό που συχνά δεν φαίνεται αμέσως: τη γλώσσα, τον ήχο, τη γνώση που μεταδίδεται, τα όργανα, τα κείμενα και την ευθραυστότητα ενός πολιτισμού που κινδυνεύει να εξαφανιστεί αν γίνει μόνο ένα σκηνικό.</p>
+<p><strong>Πώς να το επισκεφθείτε:</strong> Συμπεριλάβετέ τα ως μέρη που πρέπει να ελέγξετε πριν από την επίσκεψη. Δεν είναι πάντα εφικτό για τον επισκέπτη να μπει, αλλά το να γνωρίζει ότι υπάρχουν αλλάζει τον τρόπο με τον οποίο διασχίζει το χωριό: δεν βλέπει μόνο σπίτια, βλέπει μια πολιτισμική κοινότητα.</p>
+<div class="source-note"><strong>Αναφορές:</strong> Calabria Straordinaria, Wikipedia</div>
+</div>
+</article></div>
+</div>
+</section>
+<section class="section section-dark">
+<div class="container reveal" style="text-align:center;max-width:860px;">
+<span class="label-tag label-tag-light">Σημαντική σημείωση</span>
+<h2 class="title-medium" style="color:white;">Πληροφορίες, όχι επίσημη τουριστική υπηρεσία</h2>
+<p style="color:var(--color-pietra);line-height:1.9;">Οι Amici Di Gallicianò Casa Giufà προσφέρουν φιλοξενία, πρακτικές πληροφορίες και τοπική υποστήριξη στους επισκέπτες. Οι επισκέψεις, οι διαδρομές και οι μετακινήσεις πρέπει να αξιολογούνται με βάση τον καιρό, την εποχή, τις φυσικές συνθήκες και τη διαθεσιμότητα των εμπλεκόμενων ατόμων.</p>
+
+</div>
+</section>
+</main>
+<section aria-label="Continua la visita" class="continue-visit"><div class="container continue-visit-inner"><div class="continue-visit-copy"><span>Πλοήγηση</span><h2>Συνεχίστε την επίσκεψη χωρίς να χαθείτε</h2><p>Μπορείτε να πάτε πίσω, να επιστρέψετε στην Αρχική ή να πάτε στην επόμενη σελίδα της προτεινόμενης διαδρομής.</p></div><div class="continue-visit-actions"><button class="btn btn-outline back-inline" data-history-back="" type="button">Επιστροφή</button><a class="btn btn-outline" href="percorsi.html">Διαδρομές</a><a class="btn btn-primary" href="index.html">Επιστροφή στην Αρχική</a><a class="btn btn-gold" href="storia.html">Ιστορία</a></div></div></section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="../assets/img/casa-giufa-logo-192.png"/>
+<p>Αυθεντική φιλοξενία, πολιτιστική πεζοπορία και ζωή στο χωριό στην καρδιά της Ελληνικής Καλαβρίας.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Καλώς ήρθατε · Benvenuto</p>
+</div>
+<div>
+<h4>Επικοινωνία</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa: +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio Paleò: +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Εξερευνήστε</h4>
+<ul>
+<li><a href="camere.html">Τα Δωμάτια</a></li>
+<li><a href="percorsi.html">Οι Διαδρομές</a></li>
+<li><a href="storia.html">Η Ιστορία</a></li>
+<li><a href="rallentare.html">Επιβράδυνση</a></li>
+<li><a href="trattoria.html">Trattoria Nizio Paleò</a></li>
+<li><a href="contatti.html">Πώς να φτάσετε</a></li>
+</ul>
+</div>
+<div>
+<h4>Ακολουθήστε μας</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amicidigallicianocasagiufa/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amicidigallicianocasagiufa
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Πολιτική Απορρήτου</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Κράτηση δωματίων: από 65 €.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · κάντε κράτηση</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · κάντε κράτηση</a>
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. Με την επιφύλαξη παντός δικαιώματος. | Gallicianò, Ελληνική Καλαβρία.
+            </div>
+</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/nav-arrows.js"></script>
+
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-chat-widget" id="wa-widget">
+  <div class="wa-chat-panel">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar wa-brand-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" class="wa-logo-svg"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+      </div>
+      <div>
+        <div class="wa-chat-name">Elisa e Giuseppe</div>
+        <div class="wa-chat-status">Συνήθως απαντάμε σε λίγα λεπτά</div>
+      </div>
+      <button class="wa-chat-close" aria-label="Chiudi chat" onclick="document.getElementById('wa-widget').classList.remove('open')">&times;</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-message">
+        Γεια σας! 👋 Είμαστε η Elisa και ο Giuseppe. Αν χρειάζεστε πληροφορίες για τα δωμάτια ή θέλετε να κάνετε κράτηση, γράψτε μας εδώ.
+      </div>
+    </div>
+    <div class="wa-chat-footer" style="display: flex; flex-direction: column; gap: 0.6rem;">
+      <a href="https://wa.me/393463603118?text=Ciao%2C%20sono%20interessato%20a%20prenotare%20una%20camera.%20Quando%20sarebbe%20disponibile%3F" target="_blank" class="wa-chat-btn">
+        <span>Συνομιλήστε με την Elisa</span>
+      </a>
+      <a href="https://wa.me/393296576114?text=Ciao%2C%20sono%20interessato%20a%20prenotare%20una%20camera.%20Quando%20sarebbe%20disponibile%3F" target="_blank" class="wa-chat-btn" style="background: #128C7E;">
+        <span>Συνομιλήστε με τον Giuseppe</span>
+      </a>
+    </div>
+  </div>
+  <button class="wa-chat-toggle" aria-label="Chatta con noi" onclick="document.getElementById('wa-widget').classList.toggle('open')">
+    <div class="wa-chat-icon wa-brand-logo">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+    </div>
+    <span class="wa-chat-label">Συνομιλήστε μαζί μας</span>
+  </button>
+</div>
+</body></html>

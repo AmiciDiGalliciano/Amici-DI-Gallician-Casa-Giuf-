@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="manifest" href="../manifest.json">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Trekking and trails in the Grecanic Calabria: real and downloadable GPX and KML tracks between Gallicianò, Bova, Amendolea, Roghudi and Bova Marina, with local GPS map and practical advice from Amici Di Gallicianò Casa Giufà." name="description"/>
+<meta content="https://amicidigalliciano.it/assets/img/casa-giufa-logo-512.png" property="og:image"/>
+<title>Trails and trekking in Gallicianò, Bova and Amendolea | Amici Di Gallicianò Casa Giufà</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .card { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(17,16,14,0.08); border: 1px solid rgba(184,155,94,0.15); display: flex; flex-direction: column; gap: 1rem; }
+    .card h3 { font-size: 1.25rem; color: #123047; margin: 0; }
+    .card p { color: #2C2A27; font-size: 0.95rem; line-height: 1.7; flex-grow: 1; }
+    .card-meta { display: flex; align-items: center; gap: 0.75rem; }
+    .difficulty-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .difficulty-easy { background: #e8f5e9; color: #2e7d32; }
+    .difficulty-medium { background: #fff8e1; color: #f57f17; }
+    .difficulty-hard { background: #fce4ec; color: #c62828; }
+    .route-stats { font-size: 0.85rem; color: #B89B5E; font-weight: 500; }
+    </style>
+<link href="https://amicidigalliciano.it/percorsi.html" rel="canonical"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://amicidigalliciano.it/"},{"@type":"ListItem","position":2,"name":"Trails","item":"https://amicidigalliciano.it/en/percorsi.html"}]}
+</script>
+</head>
+<body class="page-percorsi">
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+<img alt="Amici Di Gallicianò Casa Giufà" src="../assets/img/casa-giufa-logo-192.png" style="height: 46px;"/>
+<span class="logo-text" style="font-weight: 800; font-size: 1.1rem; color: #26352B; letter-spacing: 0.05em; font-family: 'Cinzel', serif; text-transform: uppercase;">Amici Di Gallicianò</span>
+
+<div class="lang-switcher" style="display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; margin-left: 1rem;">
+    <a href="../percorsi.html" style="text-decoration:none; color:inherit;">IT</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="percorsi.html" style="text-decoration:none; color:inherit; border-bottom:2px solid var(--color-oro);">EN</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="../el/percorsi.html" style="text-decoration:none; color:inherit;">EL</a>
+</div>
+</a>
+<div class="mobile-quick-links">
+    <a href="index.html">Home</a>
+    <a href="camere.html">Rooms</a>
+    <a href="https://wa.me/393463603118?text=Hi%20Elisa%2C%20I%20would%20like%20information" target="_blank">Book</a>
+    <a href="percorsi.html">Trails</a>
+</div>
+<button aria-label="Open menu" class="mobile-menu-btn" id="mobile-menu-btn"><span class="menu-text">Menu</span> <span class="hamburger-icon">☰</span></button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link" href="index.html">Home</a></li>
+<li><a class="nav-link" href="camere.html">Rooms</a></li>
+<li><a class="nav-link active" href="percorsi.html">Trails</a></li>
+<li><a class="nav-link" href="guida.html">Guide</a></li>
+<li><a class="nav-link" href="storia.html">History</a></li>
+<li><a class="nav-link" href="rallentare.html">Slow Down</a></li>
+<li><a class="nav-link" href="trattoria.html">Trattoria</a></li>
+<li><a class="nav-link" href="contatti.html">Contacts</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Hi%20Elisa%2C%20I%20would%20like%20information%20on%20availability%2C%20arrival%20and%20stay%20at%20Casa%20Giuf%C3%A0." target="_blank">Check availability on WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header><nav aria-label="Breadcrumb" class="breadcrumb-nav"><div class="container breadcrumb-inner"><a href="index.html">Home</a><span aria-hidden="true">›</span><span aria-current="page">Trails</span></div></nav>
+<section class="hero" style="height: 50vh;">
+<img alt="Trekking in the Grecanic Aspromonte" class="hero-bg" loading="eager" src="../assets/img/panoramica-galliciano-ampia.jpg"/>
+<div class="hero-overlay" style="background: linear-gradient(160deg, rgba(18,48,71,0.35) 0%, rgba(17,16,14,0.60) 100%);"></div>
+<div class="hero-content">
+<span class="hero-label">Gallicianò · Grecanic Area</span>
+<h1 class="hero-title title-large">Gallicianò Trails<br/><em>nature, village and Amendolea</em></h1>
+<p class="hero-subtitle">Real GPX tracks, KML for Google, local map with GPS position and clear instructions: the trail must now serve while a person walks, not act as digital decoration.</p>
+<div class="routes-hero-actions"><a class="btn btn-gold btn-large" href="https://it.wikiloc.com/percorsi/escursionismo/italia/calabria/galliciano" target="_blank">Search on Wikiloc</a></div></div>
+</section>
+<section class="section section-cream">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Explore the Territory</span>
+<h2 class="title-medium">Real, clear, downloadable trails</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 800px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0;">
+                        Here you don’t need buttons placed for decoration: every trail has a start on Maps, a downloadable track, a safety note, and a readable map. The goal is to truly help the guest prepare, without pretending these are official or guided excursions.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section" id="percorsi-reali">
+<div class="container">
+<div class="route-disclaimer" style="margin-bottom:2rem;">
+  <strong>Important note on the trails.</strong> The tracks are real GPX provided by users and reworked into lightweight GPX/KML/GeoJSON versions. They serve to orient yourself, prepare the visit, and follow your own point on the local map. They do not replace signage, caution, weather, physical conditions, on-site checks, or updated information. Google Maps is useful for reaching the start/finish; the precise track must be followed via GPX/KML or the local map.
+</div>
+<div class="routes-map-note route-disclaimer" style="margin-bottom:1.4rem;"><strong>Note:</strong> In case of orientation problems or signal loss, we highly recommend consulting the <strong>Wikiloc</strong> app to find local tracks of Gallicianò.</div>
+<div class="card-grid routes-card-grid">
+<!-- Percorso 1 -->
+<article class="card route-card reveal" id="percorso-giro-borgo-galliciano">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-easy">Easy</span>
+    <span class="route-stats">30-45 min · 1.3 km</span>
+  </div>
+  <h3>Gallicianò village tour</h3>
+  <p>Short walk inside the village: alleys, viewpoints, Fountain of Love, cultural sites, and first orientation for those arriving at Casa Giufà.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Center of Gallicianò</li>
+    <li><strong>Finish:</strong> Center of Gallicianò</li>
+    <li><strong>GPS Elevation:</strong> +21 m / -18 m</li>
+    <li><strong>File origin:</strong> Wikiloc - Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> Perfect for newly arrived guests. It’s not a technical trek: it helps read the village without getting lost in the alleys.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016607,15.886237&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/01-giro-borgo-galliciano.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/01-giro-borgo-galliciano.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="giro-borgo-galliciano" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+<!-- Percorso 2 -->
+<article class="card route-card reveal" id="percorso-pna-128-galliciano-bova">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Hiking</span>
+    <span class="route-stats">About 1h45-2h15 · 5.4 km</span>
+  </div>
+  <h3>PNA 128 Trail · Gallicianò / Bova</h3>
+  <p>Cleanest and most useful track to narrate the hiking connection between Gallicianò and the Bova area, without inflating promises like an improvised tourist agency.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Gallicianò</li>
+    <li><strong>Finish:</strong> Direction Bova / PNA 128 track</li>
+    <li><strong>GPS Elevation:</strong> +336 m / -311 m</li>
+    <li><strong>File origin:</strong> Wikiloc - PNA 128 Trail Bova Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> It is the trail to highlight for those who want a serious but manageable walk. The final point must be verified with the real track and trail conditions.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016560,15.886718&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/02-pna-128-galliciano-bova.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/02-pna-128-galliciano-bova.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="pna-128-galliciano-bova" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+<!-- Percorso 3 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-wikiloc">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Medium/Challenging</span>
+    <span class="route-stats">About 3h30-5h · 11.9 km</span>
+  </div>
+  <h3>Gallicianò / Bova · long Wikiloc variant</h3>
+  <p>Longer variant towards Bova. Interesting for motivated hikers, not for those who want to take two photos and then complain about the sun.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Gallicianò</li>
+    <li><strong>Finish:</strong> Bova</li>
+    <li><strong>GPS Elevation:</strong> +160 m / -143 m</li>
+    <li><strong>File origin:</strong> Wikiloc - Gallicianò - Bova</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> To be proposed as a real hiking trail, not as a walk for everyone. The return must be checked.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017500,15.886605&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/03-galliciano-bova-wikiloc.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/03-galliciano-bova-wikiloc.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-bova-wikiloc" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+<!-- Percorso 4 -->
+<article class="card route-card reveal" id="percorso-galliciano-amendolea">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Hiking</span>
+    <span class="route-stats">About 2h30-3h30 · 7.7 km</span>
+  </div>
+  <h3>Gallicianò / Amendolea</h3>
+  <p>Descent towards Amendolea and its fiumara: it is one of the most useful connections to narrate the Aspromonte and Grecanic part of the experience.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Gallicianò</li>
+    <li><strong>Finish:</strong> Amendolea</li>
+    <li><strong>GPS Elevation:</strong> +20 m / -66 m</li>
+    <li><strong>File origin:</strong> Wikiloc - Gallicianò - Amendolea</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> Beautiful trail but to be verified with weather, terrain, and crossings. It should not be sold as a guided service.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016717,15.885992&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/04-galliciano-amendolea.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/04-galliciano-amendolea.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-amendolea" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+<!-- Percorso 5 -->
+<article class="card route-card reveal" id="percorso-galliciano-roghudi">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Hiking/Challenging</span>
+    <span class="route-stats">About 3h30-5h · 9.8 km</span>
+  </div>
+  <h3>From Gallicianò to Roghudi</h3>
+  <p>Track for those who want to push towards one of the most powerful and delicate places in the Grecanic area. Beautiful, serious, not to be trivialized.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Gallicianò</li>
+    <li><strong>Finish:</strong> Roghudi</li>
+    <li><strong>GPS Elevation:</strong> +58 m / -71 m</li>
+    <li><strong>File origin:</strong> Wikiloc - Da Gallicianò a Roghudi</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> To be presented as an option for prepared hikers. Verify accesses, conditions, signal, and return.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017698,15.886564&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/05-galliciano-roghudi.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/05-galliciano-roghudi.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-roghudi" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+<!-- Percorso 6 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-marina">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Very challenging</span>
+    <span class="route-stats">Full day · 32.0 km</span>
+  </div>
+  <h3>Gallicianò / Bova Marina</h3>
+  <p>Long path towards the sea, to be kept as an advanced track. It is not a proposal for the average guest: it is material for true walkers.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Start:</strong> Gallicianò</li>
+    <li><strong>Finish:</strong> Bova Marina</li>
+    <li><strong>GPS Elevation:</strong> +170 m / -176 m</li>
+    <li><strong>File origin:</strong> Wikiloc - Gallicianò - Bova Marina</li>
+  </ul>
+  <p class="route-note"><strong>Correct use:</strong> To show at the bottom, as an expert option. Requires return planning and a serious evaluation of conditions.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016535,15.886297&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/06-galliciano-bova-marina.gpx">Download GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/06-galliciano-bova-marina.kml">KML for Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-bova-marina" href="#sezione-mappa">See on map</a>
+  </div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-dark">
+<div class="container reveal">
+<div style="display:flex; flex-wrap:wrap; gap:4rem; align-items:center;">
+<div style="flex:1; min-width:300px;">
+<img alt="Panorama of the Grecanic Area from Gallicianò" src="../assets/img/panoramica-galliciano-ampia.jpg" style="border-radius:8px; width:100%; object-fit:cover; height:320px;"/>
+</div>
+<div style="flex:1; min-width:280px;">
+<span class="label-tag label-tag-light">Recommended Experience</span>
+<h2 class="title-medium" style="color:var(--color-bianco-caldo);">Starting from Amici Di Gallicianò Casa Giufà</h2>
+<div class="greek-divider" style="margin-left:0;"></div>
+<div class="greek-border-block">
+<p style="color:var(--color-pietra); line-height:1.8; margin-bottom:1.5rem;">The trails are proposals for discovering the territory linked to Amici Di Gallicianò Casa Giufà. We do not communicate official tourist services: those interested contact us, then we evaluate together information, availability, trail conditions, and the most suitable methods.</p>
+<ul style="list-style:none; color:var(--color-pietra); display:flex; flex-direction:column; gap:0.75rem;">
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Practical information from those who live in the territory</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Reference point: Amici Di Gallicianò Casa Giufà</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Grecanic culture told with respect</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Authentic Aspromonte nature</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Typical cuisine a few steps away with <a href="trattoria.html">Nizio Paleò</a>: full menu at 25 € instead of 30 € for Casa Giufà guests, subject to confirmation</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Indications to be evaluated based on people, weather, and season</li>
+</ul>
+</div>
+<a class="btn btn-gold" data-contact="elisa" href="https://wa.me/393463603118?text=Hi%20Elisa%2C%20I%20would%20like%20practical%20information%20to%20organize%20the%20visit%20to%20Gallician%C3%B2." style="margin-top:2rem;" target="_blank">Talk to us before the visit</a>
+</div>
+</div>
+</div>
+</section>
+<!-- MAPPA INTERATTIVA PERCORSI -->
+<section class="section" id="sezione-mappa">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Trails map</span>
+<h2 class="title-medium text-center">Real map with GPS</h2>
+<div class="greek-divider"></div>
+<p class="subtitle text-center" style="max-width: 860px; margin: 0 auto;">Choose a trail, activate your location and the site shows you how close you are to the track. Works best on mobile, with authorized GPS and connection. For serious offline use, it is better to import the GPX into Wikiloc or a hiking app.</p>
+</div>
+
+
+<div style="text-align: center; margin-bottom: 1rem;"><button id="btn-geolocate" class="btn btn-gold">Start offline navigation</button></div><div id="map-status-message" style="text-align: center; margin-bottom: 1rem; color: #B89B5E; font-size: 0.95rem;"></div>
+<div id="map" style="height: 540px; border-radius: 18px; border: 1px solid rgba(184,155,94,0.3); box-shadow: var(--shadow-md); z-index: 1;"></div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander2" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander2)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section section-cream">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Preparation</span>
+<h2 class="title-medium">Advice before leaving</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 700px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0; font-size: 1.05rem;">
+                        To best experience the trails we recommend suitable shoes, water, a hat on hot days, downloaded GPX before leaving, and a brief check of weather conditions. For longer stretches, it is always recommended to check with Giuseppe or Elisa.
+                    </p>
+</div>
+</div>
+<div style="max-width: 800px; margin: 2rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: 0.95rem;">
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Recommended equipment</h3>
+<ul style="list-style: none; color: var(--color-nero-morbido); line-height: 1.7; padding-left: 0;">
+<li>• Trekking shoes with treaded soles</li>
+<li>• Flask with enough water</li>
+<li>• Hat and sun protection</li>
+<li>• Comfortable and layered clothing</li>
+</ul>
+</div>
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Orientation and Safety</h3>
+<p style="color: var(--color-nero-morbido); line-height: 1.6; margin: 0;">
+                        We advise you to consult the trail description before leaving and write to Giuseppe to receive practical information. Do not leave without checking weather, water, trail terrain, and personal conditions.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="download-percorsi">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Download</span>
+<h2 class="title-medium">Guides and tracks ready for the guest</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Final and understandable tools: PDF guide, online guide, dedicated map, and downloadable tracks. Everything must lead to something real.</p>
+<p class="subtitle" style="max-width:700px; margin:1rem auto 0;">Download the tracks before leaving and open the track files with a compatible outdoor app. Tracks help orient yourself, but do not replace real checks, weather, caution, and updated information.</p>
+</div>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="btn btn-primary" download="" href="../downloads/guida-luoghi-galliciano.pdf">Download complete PDF guide</a>
+<a class="btn btn-outline" href="../downloads/guida-luoghi-galliciano.html">Read the online guide</a>
+<a class="btn btn-gold" href="../downloads/mappa-percorsi.html">Open GPS map</a>
+<a class="btn route-gpx-button" download="" href="../downloads/percorsi-galliciano-gpx.zip">Download all GPX tracks</a>
+<a class="btn route-kml-button" download="" href="../downloads/percorsi-google-maps-kml.zip">Download KML for Google</a>
+<a class="btn btn-outline" href="../downloads/istruzioni-google-maps-gpx.html">How to open tracks on Maps and GPS apps</a>
+</div>
+</div>
+</section>
+<section class="section arrival-maps-section" id="arrivo-parcheggio">
+<div class="container reveal">
+<div class="arrival-premium-card">
+<div>
+<span class="label-tag">Recommended arrival</span>
+<h2 class="title-medium">Arrive at the parking lot, then 90-100 meters on foot</h2>
+<p>To avoid confusion inside the village, set your navigator to <strong>Parcheggio, 89030 Gallicianò RC</strong>: the first button automatically uses your current position as the start. After leaving the car, continue on foot towards <strong>Via Anaghorio, 89030 Gallicianò RC</strong>: the distance is short, about 90-100 meters. Do not drive all the way to the front of the house.</p>
+</div>
+<div class="arrival-premium-actions">
+<a aria-label="Apri Google Maps con indicazioni in auto dalla tua posizione attuale al parcheggio di Gallicianò (nuova scheda)" class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Open parking from where you are</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dal parcheggio di Gallicianò a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">From parking to Casa Giufà on foot</a>
+<a aria-label="Apri Google Maps con il percorso a piedi dalla tua posizione attuale a Casa Giufà in Via Anaghorio (nuova scheda)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Reach Casa Giufà from where you are</a>
+<a class="btn btn-primary" download="" href="../downloads/guida-luoghi-galliciano.pdf">Download PDF guide</a>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Continua la visita" class="continue-visit"><div class="container continue-visit-inner"><div class="continue-visit-copy"><span>Navigation</span><h2>Continue the visit without getting lost</h2><p>You can go back, return to the Home, or go to the next page of the recommended path.</p></div><div class="continue-visit-actions"><button class="btn btn-outline back-inline" data-history-back="" type="button">Go back</button><a class="btn btn-outline" href="camere.html">Rooms</a><a class="btn btn-primary" href="index.html">Return to Home</a><a class="btn btn-gold" href="guida.html">Guide</a></div></div></section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="../assets/img/casa-giufa-logo-192.png"/>
+<p>Authentic hospitality, cultural trekking and village life in the heart of Grecanic Calabria.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Calos Irthete · Welcome</p>
+</div>
+<div>
+<h4>Contacts</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa: +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio Paleò: +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Explore</h4>
+<ul>
+<li><a href="camere.html">The Rooms</a></li>
+<li><a href="percorsi.html">The Trails</a></li>
+<li><a href="storia.html">The History</a></li>
+<li><a href="rallentare.html">Slow Down</a></li>
+<li><a href="trattoria.html">Trattoria</a></li>
+<li><a href="contatti.html">How to Get Here</a></li>
+</ul>
+</div>
+<div>
+<h4>Follow us</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amicidigallicianocasagiufa/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amicidigallicianocasagiufa
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Room reservation: starting from 65 €.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · book</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · book</a>
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. All rights reserved. | Gallicianò, Grecanic Calabria.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar d-md-none" id="sticky-bar">
+<a class="btn btn-primary" href="tel:+393463603118">Call Elisa</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Hi%20Elisa%2C%20I%20would%20like%20information%20on%20availability%20and%20arrival%20at%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a>
+</div>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../assets/js/routes.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/nav-arrows.js"></script>
+
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-chat-widget" id="wa-widget">
+  <div class="wa-chat-panel">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar wa-brand-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" class="wa-logo-svg"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+      </div>
+      <div>
+        <div class="wa-chat-name">Elisa e Giuseppe</div>
+        <div class="wa-chat-status">We usually reply in a few minutes</div>
+      </div>
+      <button class="wa-chat-close" aria-label="Close chat" onclick="document.getElementById('wa-widget').classList.remove('open')">&times;</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-message">
+        Hi! 👋 We are Elisa and Giuseppe. If you need info on rooms or want to book, feel free to write us here.
+      </div>
+    </div>
+    <div class="wa-chat-footer" style="display: flex; flex-direction: column; gap: 0.6rem;">
+      <a href="https://wa.me/393463603118?text=Hi%2C%20I%20am%20interested%20in%20booking%20a%20room.%20When%20would%20it%20be%20available%3F" target="_blank" class="wa-chat-btn">
+        <span>Chat with Elisa</span>
+      </a>
+      <a href="https://wa.me/393296576114?text=Hi%2C%20I%20am%20interested%20in%20booking%20a%20room.%20When%20would%20it%20be%20available%3F" target="_blank" class="wa-chat-btn" style="background: #128C7E;">
+        <span>Chat with Giuseppe</span>
+      </a>
+    </div>
+  </div>
+  <button class="wa-chat-toggle" aria-label="Chat with us" onclick="document.getElementById('wa-widget').classList.toggle('open')">
+    <div class="wa-chat-icon wa-brand-logo">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+    </div>
+    <span class="wa-chat-label">Chat with us</span>
+  </button>
+</div>
+</body>
+</html>

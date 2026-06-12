@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="el">
+<head>
+<meta charset="utf-8"/>
+<link rel="manifest" href="../manifest.json">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Πεζοπορία και διαδρομές στην ελληνόφωνη Καλαβρία: πραγματικά ίχνη GPX και KML, διαθέσιμα για λήψη, ανάμεσα σε Γκαλλιτσιανό, Μπόβα, Αμεντολέα, Ροχούτι και Μπόβα Μαρίνα, με τοπικό χάρτη GPS και πρακτικές συμβουλές από τους Amici Di Gallicianò Casa Giufà." name="description"/>
+<meta content="https://amicidigalliciano.it/assets/img/casa-giufa-logo-512.png" property="og:image"/>
+<title>Διαδρομές και πεζοπορία σε Γκαλλιτσιανό, Μπόβα και Αμεντολέα | Amici Di Gallicianò Casa Giufà</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<link href="../assets/css/style.css" rel="stylesheet"/>
+<style>
+    .card { background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(17,16,14,0.08); border: 1px solid rgba(184,155,94,0.15); display: flex; flex-direction: column; gap: 1rem; }
+    .card h3 { font-size: 1.25rem; color: #123047; margin: 0; }
+    .card p { color: #2C2A27; font-size: 0.95rem; line-height: 1.7; flex-grow: 1; }
+    .card-meta { display: flex; align-items: center; gap: 0.75rem; }
+    .difficulty-badge { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .difficulty-easy { background: #e8f5e9; color: #2e7d32; }
+    .difficulty-medium { background: #fff8e1; color: #f57f17; }
+    .difficulty-hard { background: #fce4ec; color: #c62828; }
+    .route-stats { font-size: 0.85rem; color: #B89B5E; font-weight: 500; }
+    </style>
+<link href="https://amicidigalliciano.it/el/percorsi.html" rel="canonical"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Αρχική","item":"https://amicidigalliciano.it/el/"},{"@type":"ListItem","position":2,"name":"Διαδρομές","item":"https://amicidigalliciano.it/el/percorsi.html"}]}
+</script>
+</head>
+<body class="page-percorsi">
+<header class="header" id="main-header">
+<div class="container nav-container">
+<a class="logo" href="index.html" style="display: flex; align-items: center; gap: 0.8rem; text-decoration: none;">
+<img alt="Amici Di Gallicianò Casa Giufà" src="../assets/img/casa-giufa-logo-192.png" style="height: 46px;"/>
+<span class="logo-text" style="font-weight: 800; font-size: 1.1rem; color: #26352B; letter-spacing: 0.05em; font-family: 'Cinzel', serif; text-transform: uppercase;">Amici Di Gallicianò</span>
+
+<div class="lang-switcher" style="display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; margin-left: 1rem;">
+    <a href="../percorsi.html" style="text-decoration:none; color:inherit;">IT</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="../en/percorsi.html" style="text-decoration:none; color:inherit;">EN</a>
+    <span style="opacity:0.5;">|</span>
+    <a href="percorsi.html" style="text-decoration:none; color:inherit; border-bottom:2px solid var(--color-oro);">EL</a>
+</div>
+</a>
+<div class="mobile-quick-links">
+    <a href="index.html">Αρχική</a>
+    <a href="camere.html">Δωμάτια</a>
+    <a href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni" target="_blank">Κράτηση</a>
+    <a href="percorsi.html">Διαδρομές</a>
+</div>
+<button aria-label="Άνοιγμα μενού" class="mobile-menu-btn" id="mobile-menu-btn"><span class="menu-text">Μενού</span> <span class="hamburger-icon">☰</span></button>
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a class="nav-link" href="index.html">Αρχική</a></li>
+<li><a class="nav-link" href="camere.html">Δωμάτια</a></li>
+<li><a class="nav-link active" href="percorsi.html">Διαδρομές</a></li>
+<li><a class="nav-link" href="guida.html">Οδηγός</a></li>
+<li><a class="nav-link" href="storia.html">Ιστορία</a></li>
+<li><a class="nav-link" href="rallentare.html">Επιβράδυνση</a></li>
+<li><a class="nav-link" href="trattoria.html">Ταβέρνα</a></li>
+<li><a class="nav-link" href="contatti.html">Επικοινωνία</a></li>
+<li class="nav-cta"><a class="btn btn-whatsapp nav-wa" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%2C%20arrivo%20e%20soggiorno%20a%20Casa%20Giuf%C3%A0." target="_blank">Έλεγχος διαθεσιμότητας στο WhatsApp</a></li>
+</ul>
+</nav>
+</div>
+</header><nav aria-label="Διαδρομή σελίδας" class="breadcrumb-nav"><div class="container breadcrumb-inner"><a href="index.html">Αρχική</a><span aria-hidden="true">›</span><span aria-current="page">Διαδρομές</span></div></nav>
+<section class="hero" style="height: 50vh;">
+<img alt="Πεζοπορία στον Ελληνόφωνο Ασπρομόντε" class="hero-bg" loading="eager" src="../assets/img/panoramica-galliciano-ampia.jpg"/>
+<div class="hero-overlay" style="background: linear-gradient(160deg, rgba(18,48,71,0.35) 0%, rgba(17,16,14,0.60) 100%);"></div>
+<div class="hero-content">
+<span class="hero-label">Γκαλλιτσιανό · Ελληνόφωνη Περιοχή</span>
+<h1 class="hero-title title-large">Διαδρομές του Γκαλλιτσιανό<br/><em>φύση, χωριό και Αμεντολέα</em></h1>
+<p class="hero-subtitle">Πραγματικά ίχνη GPX, KML για Google, τοπικός χάρτης με θέση GPS και σαφείς οδηγίες: η διαδρομή πρέπει τώρα να εξυπηρετεί ενώ κάποιος περπατά, όχι να είναι απλώς ψηφιακή διακόσμηση.</p>
+<div class="routes-hero-actions"><a class="btn btn-gold btn-large" href="https://it.wikiloc.com/percorsi/escursionismo/italia/calabria/galliciano" target="_blank">Αναζήτηση στο Wikiloc</a></div></div>
+</section>
+<section class="section section-cream">
+<div class="container">
+<div class="section-header reveal">
+<span class="label-tag">Εξερευνήστε την Περιοχή</span>
+<h2 class="title-medium">Πραγματικές, σαφείς διαδρομές, διαθέσιμες για λήψη</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 800px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0;">
+                        Εδώ δεν χρειάζονται κουμπιά διακόσμησης: κάθε διαδρομή έχει σημείο εκκίνησης στους Χάρτες, ίχνος για λήψη, σημείωση προσοχής και διαθέσιμο χάρτη. Στόχος είναι να βοηθήσουμε τον επισκέπτη να προετοιμαστεί σωστά, χωρίς να υποκρινόμαστε ότι πρόκειται για επίσημες ή συνοδευόμενες εκδρομές.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section" id="percorsi-reali">
+<div class="container">
+<div class="route-disclaimer" style="margin-bottom:2rem;">
+  <strong>Σημαντική σημείωση για τις διαδρομές.</strong> Τα ίχνη είναι πραγματικά GPX που παρέχονται από τον χρήστη και έχουν επεξεργαστεί σε ελαφριές εκδόσεις GPX/KML/GeoJSON. Χρησιμεύουν για προσανατολισμό, προετοιμασία της επίσκεψης και παρακολούθηση της θέσης σας στον τοπικό χάρτη. Δεν αντικαθιστούν τη σήμανση, την προσοχή, τις καιρικές συνθήκες, τη φυσική κατάσταση, τον έλεγχο επί τόπου ή τις ενημερωμένες πληροφορίες. Οι Χάρτες Google είναι χρήσιμοι για την προσέγγιση της εκκίνησης/άφιξης· το ακριβές ίχνος πρέπει να ακολουθείται από GPX/KML ή τον τοπικό χάρτη.
+</div>
+<div class="routes-map-note route-disclaimer" style="margin-bottom:1.4rem;"><strong>Σημείωση:</strong> Σε περίπτωση προβλημάτων προσανατολισμού ή απώλειας σήματος, συνιστούμε ανεπιφύλακτα να συμβουλευτείτε την εφαρμογή <strong>Wikiloc</strong> για να βρείτε τα τοπικά ίχνη του Γκαλλιτσιανό.</div>
+<div class="card-grid routes-card-grid">
+<!-- Percorso 1 -->
+<article class="card route-card reveal" id="percorso-giro-borgo-galliciano">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-easy">Εύκολη</span>
+    <span class="route-stats">30-45 λεπτά · 1,3 χλμ</span>
+  </div>
+  <h3>Γύρος του χωριού Γκαλλιτσιανό</h3>
+  <p>Σύντομος περίπατος μέσα στο χωριό: σοκάκια, σημεία με θέα, Πηγή της Αγάπης, πολιτιστικοί χώροι και πρώτος προσανατολισμός για όσους φτάνουν στο Casa Giufà.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Κέντρο του Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Κέντρο του Γκαλλιτσιανό</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +21 m / -18 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Ιδανικό για τους επισκέπτες που μόλις έφτασαν. Δεν είναι τεχνική πεζοπορία: βοηθά στην κατανόηση του χωριού χωρίς να χαθείτε στα σοκάκια.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016607,15.886237&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/01-giro-borgo-galliciano.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/01-giro-borgo-galliciano.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="giro-borgo-galliciano" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+<!-- Percorso 2 -->
+<article class="card route-card reveal" id="percorso-pna-128-galliciano-bova">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Πεζοπορική</span>
+    <span class="route-stats">Περίπου 1ω45-2ω15 · 5,4 χλμ</span>
+  </div>
+  <h3>Μονοπάτι PNA 128 · Γκαλλιτσιανό / Μπόβα</h3>
+  <p>Πιο καθαρό και χρήσιμο ίχνος για την περιγραφή της πεζοπορικής σύνδεσης μεταξύ Γκαλλιτσιανό και της περιοχής της Μπόβα, χωρίς υπερβολικές υποσχέσεις από αυτοσχέδια τουριστικά πρακτορεία.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Κατεύθυνση Μπόβα / διαδρομή PNA 128</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +336 m / -311 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Sentiero PNA 128 Bova Gallicianò</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Είναι η διαδρομή που πρέπει να επισημανθεί για όσους θέλουν μια σοβαρή αλλά ακόμα διαχειρίσιμη πεζοπορία. Το τελικό σημείο πρέπει να επαληθευτεί με την πραγματική διαδρομή και τις συνθήκες του μονοπατιού.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016560,15.886718&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/02-pna-128-galliciano-bova.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/02-pna-128-galliciano-bova.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="pna-128-galliciano-bova" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+<!-- Percorso 3 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-wikiloc">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Μέτρια/Απαιτητική</span>
+    <span class="route-stats">Περίπου 3ω30-5ω · 11,9 χλμ</span>
+  </div>
+  <h3>Γκαλλιτσιανό / Μπόβα · μεγάλη παραλλαγή Wikiloc</h3>
+  <p>Μεγαλύτερη παραλλαγή προς τη Μπόβα. Ενδιαφέρουσα για πεζοπόρους με κίνητρο, όχι για όσους θέλουν να βγάλουν δύο φωτογραφίες και μετά να παραπονεθούν για τον ήλιο.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Μπόβα</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +160 m / -143 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Gallicianò - Bova</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Προτείνεται ως πραγματική πεζοπορική διαδρομή, όχι ως περίπατος για όλους. Πρέπει να ελεγχθεί η επιστροφή.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017500,15.886605&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/03-galliciano-bova-wikiloc.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/03-galliciano-bova-wikiloc.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-bova-wikiloc" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+<!-- Percorso 4 -->
+<article class="card route-card reveal" id="percorso-galliciano-amendolea">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-medium">Πεζοπορική</span>
+    <span class="route-stats">Περίπου 2ω30-3ω30 · 7,7 χλμ</span>
+  </div>
+  <h3>Γκαλλιτσιανό / Αμεντολέα</h3>
+  <p>Κατάβαση προς την Αμεντολέα και τον χείμαρρό της: είναι μια από τις πιο χρήσιμες συνδέσεις για να αφηγηθούμε το ασπρομοντανό και ελληνόφωνο τμήμα της εμπειρίας.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Αμεντολέα</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +20 m / -66 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Gallicianò - Amendolea</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Όμορφη διαδρομή αλλά πρέπει να ελεγχθεί με τον καιρό, το έδαφος και τις διελεύσεις. Δεν πρέπει να πωλείται ως συνοδευόμενη υπηρεσία.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016717,15.885992&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/04-galliciano-amendolea.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/04-galliciano-amendolea.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-amendolea" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+<!-- Percorso 5 -->
+<article class="card route-card reveal" id="percorso-galliciano-roghudi">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Πεζοπορική/Απαιτητική</span>
+    <span class="route-stats">Περίπου 3ω30-5ω · 9,8 χλμ</span>
+  </div>
+  <h3>Από το Γκαλλιτσιανό στο Ροχούτι</h3>
+  <p>Ίχνος για όσους θέλουν να προχωρήσουν προς ένα από τα πιο δυνατά και ευαίσθητα μέρη της ελληνόφωνης περιοχής. Όμορφη, σοβαρή, δεν πρέπει να υποτιμάται.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Ροχούτι</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +58 m / -71 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Da Gallicianò a Roghudi</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Να παρουσιάζεται ως επιλογή για προετοιμασμένους πεζοπόρους. Ελέγξτε τις προσβάσεις, τις συνθήκες, το σήμα και την επιστροφή.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.017698,15.886564&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/05-galliciano-roghudi.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/05-galliciano-roghudi.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-roghudi" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+<!-- Percorso 6 -->
+<article class="card route-card reveal" id="percorso-galliciano-bova-marina">
+  <div class="card-meta">
+    <span class="difficulty-badge difficulty-hard">Πολύ απαιτητική</span>
+    <span class="route-stats">Ολόκληρη ημέρα · 32,0 χλμ</span>
+  </div>
+  <h3>Γκαλλιτσιανό / Μπόβα Μαρίνα</h3>
+  <p>Μεγάλη διαδρομή προς τη θάλασσα, να διατηρηθεί ως προχωρημένο ίχνος. Δεν είναι πρόταση για τον μέσο επισκέπτη: είναι υλικό για πραγματικούς πεζοπόρους.</p>
+  <ul class="route-mini-facts">
+    <li><strong>Αφετηρία:</strong> Γκαλλιτσιανό</li>
+    <li><strong>Τερματισμός:</strong> Μπόβα Μαρίνα</li>
+    <li><strong>Υψομετρική διαφορά GPS:</strong> +170 m / -176 m</li>
+    <li><strong>Προέλευση αρχείου:</strong> Wikiloc - Gallicianò - Bova Marina</li>
+  </ul>
+  <p class="route-note"><strong>Σωστή χρήση:</strong> Να εμφανίζεται στο τέλος, ως επιλογή για ειδικούς. Απαιτεί προγραμματισμό της επιστροφής και σοβαρή αξιολόγηση των συνθηκών.</p>
+  <div class="card-actions route-card-actions">
+    <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=38.016535,15.886297&amp;travelmode=driving" target="_blank" rel="noopener noreferrer">Άνοιγμα στους Χάρτες Google</a>
+    <a class="btn route-gpx-button" download="" href="../downloads/data/06-galliciano-bova-marina.gpx">Λήψη GPX</a>
+    <a class="btn route-kml-button" download="" href="../downloads/data/06-galliciano-bova-marina.kml">KML για Google</a>
+    <a class="btn btn-outline show-on-map-btn" data-route="galliciano-bova-marina" href="#sezione-mappa">Προβολή στον χάρτη</a>
+  </div>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-dark">
+<div class="container reveal">
+<div style="display:flex; flex-wrap:wrap; gap:4rem; align-items:center;">
+<div style="flex:1; min-width:300px;">
+<img alt="Πανόραμα της Ελληνόφωνης Περιοχής από το Γκαλλιτσιανό" src="../assets/img/panoramica-galliciano-ampia.jpg" style="border-radius:8px; width:100%; object-fit:cover; height:320px;"/>
+</div>
+<div style="flex:1; min-width:280px;">
+<span class="label-tag label-tag-light">Προτεινόμενη Εμπειρία</span>
+<h2 class="title-medium" style="color:var(--color-bianco-caldo);">Ξεκινώντας από τους Amici Di Gallicianò Casa Giufà</h2>
+<div class="greek-divider" style="margin-left:0;"></div>
+<div class="greek-border-block">
+<p style="color:var(--color-pietra); line-height:1.8; margin-bottom:1.5rem;">Οι διαδρομές είναι προτάσεις ανακάλυψης της περιοχής που συνδέονται με τους Amici Di Gallicianò Casa Giufà. Δεν επικοινωνούμε υπηρεσίες ως επίσημη τουριστική υπηρεσία: όσοι ενδιαφέρονται επικοινωνούν μαζί μας και στη συνέχεια αξιολογούμε μαζί πληροφορίες, διαθεσιμότητα, συνθήκες της διαδρομής και τις πιο κατάλληλες μεθόδους.</p>
+<ul style="list-style:none; color:var(--color-pietra); display:flex; flex-direction:column; gap:0.75rem;">
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Πρακτικές πληροφορίες από αυτούς που ζουν στην περιοχή</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Σημείο αναφοράς: Amici Di Gallicianò Casa Giufà</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Ελληνόφωνος πολιτισμός που αφηγείται με σεβασμό</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Αυθεντική ασπρομοντανή φύση</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Παραδοσιακή κουζίνα λίγα βήματα μακριά με την <a href="trattoria.html">Nizio Paleò</a>: πλήρες μενού με 25 € αντί για 30 € για τους επισκέπτες του Casa Giufà, κατόπιν επιβεβαίωσης</li>
+<li style="display:flex; align-items:center; gap:0.75rem;">✦ Οδηγίες προς αξιολόγηση με βάση τα άτομα, τον καιρό και την εποχή</li>
+</ul>
+</div>
+<a class="btn btn-gold" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20pratiche%20per%20organizzare%20la%20visita%20a%20Gallician%C3%B2." style="margin-top:2rem;" target="_blank">Μιλήστε μαζί μας πριν την επίσκεψη</a>
+</div>
+</div>
+</div>
+</section>
+<!-- MAPPA INTERATTIVA PERCORSI -->
+<section class="section" id="sezione-mappa">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Χάρτης διαδρομών</span>
+<h2 class="title-medium text-center">Πραγματικός χάρτης με GPS</h2>
+<div class="greek-divider"></div>
+<p class="subtitle text-center" style="max-width: 860px; margin: 0 auto;">Επιλέξτε μια διαδρομή, ενεργοποιήστε την τοποθεσία και ο ιστότοπος σας δείχνει πόσο κοντά είστε στο ίχνος. Λειτουργεί καλύτερα από τηλέφωνο, με εξουσιοδοτημένο GPS και σύνδεση. Για σοβαρή χρήση εκτός σύνδεσης είναι προτιμότερο να εισαγάγετε το GPX στο Wikiloc ή σε μια εφαρμογή πεζοπορίας.</p>
+</div>
+
+
+<div style="text-align: center; margin-bottom: 1rem;"><button id="btn-geolocate" class="btn btn-gold">Εκκίνηση πλοήγησης εκτός σύνδεσης</button></div><div id="map-status-message" style="text-align: center; margin-bottom: 1rem; color: #B89B5E; font-size: 0.95rem;"></div>
+<div id="map" style="height: 540px; border-radius: 18px; border: 1px solid rgba(184,155,94,0.3); box-shadow: var(--shadow-md); z-index: 1;"></div>
+</div>
+</section>
+<div aria-hidden="true" class="greek-frieze">
+<svg preserveaspectratio="xMidYMid meet" viewbox="0 0 1200 24" xmlns="http://www.w3.org/2000/svg">
+<pattern height="24" id="meander2" patternunits="userSpaceOnUse" width="48" x="0" y="0">
+<path d="M0,12 L8,12 L8,4 L16,4 L16,20 L24,20 L24,4 L32,4 L32,20 L40,12 L48,12" fill="none" stroke="#B89B5E" stroke-width="1.5"></path>
+</pattern>
+<rect fill="url(#meander2)" height="24" opacity="0.15" width="1200"></rect>
+</svg>
+</div>
+<section class="section section-cream">
+<div class="container reveal">
+<div class="section-header" style="margin-bottom: 2rem;">
+<span class="label-tag">Προετοιμασία</span>
+<h2 class="title-medium">Συμβουλές πριν ξεκινήσετε</h2>
+<div class="greek-divider"></div>
+<div class="greek-border-block" style="max-width: 700px; margin: 0 auto; text-align: left;">
+<p class="subtitle" style="margin: 0; font-size: 1.05rem;">
+                        Για να ζήσετε καλύτερα τις διαδρομές, συνιστούμε κατάλληλα παπούτσια, νερό, καπέλο τις ζεστές μέρες, λήψη του GPX πριν ξεκινήσετε και έναν σύντομο έλεγχο των καιρικών συνθηκών. Για τα μεγαλύτερα τμήματα συνιστάται πάντα να μιλήσετε με τον Giuseppe ή την Elisa.
+                    </p>
+</div>
+</div>
+<div style="max-width: 800px; margin: 2rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: 0.95rem;">
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Συνιστώμενος εξοπλισμός</h3>
+<ul style="list-style: none; color: var(--color-nero-morbido); line-height: 1.7; padding-left: 0;">
+<li>• Παπούτσια πεζοπορίας με αντιολισθητική σόλα</li>
+<li>• Παγούρι με αρκετό νερό</li>
+<li>• Καπέλο και αντηλιακή προστασία</li>
+<li>• Άνετα ρούχα σε στρώσεις</li>
+</ul>
+</div>
+<div style="background: white; border-radius: 6px; padding: 1.5rem; border: 1px solid rgba(184,155,94,0.15); box-shadow: var(--shadow-sm);">
+<h3 style="color: var(--color-blu-profondo); margin-bottom: 0.75rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">Προσανατολισμός και Ασφάλεια</h3>
+<p style="color: var(--color-nero-morbido); line-height: 1.6; margin: 0;">
+                        Σας συμβουλεύουμε να συμβουλευτείτε την καρτέλα της διαδρομής πριν ξεκινήσετε και να γράψετε στον Giuseppe για να λάβετε πρακτικές πληροφορίες. Μην ξεκινήσετε χωρίς να ελέγξετε τον καιρό, το νερό, το έδαφος του μονοπατιού και την προσωπική σας κατάσταση.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="download-percorsi">
+<div class="container reveal">
+<div class="section-header">
+<span class="label-tag">Λήψεις</span>
+<h2 class="title-medium">Οδηγοί και ίχνη έτοιμα για τον επισκέπτη</h2>
+<div class="greek-divider"></div>
+<p class="subtitle">Τελικά και κατανοητά εργαλεία: οδηγός PDF, online οδηγός, ειδικός χάρτης και ίχνη για λήψη. Όλα πρέπει να οδηγούν σε κάτι πραγματικό.</p>
+<p class="subtitle" style="max-width:700px; margin:1rem auto 0;">Κατεβάστε τα ίχνη πριν ξεκινήσετε και ανοίξτε τα αρχεία ιχνών με μια συμβατή εφαρμογή outdoor. Τα ίχνη βοηθούν στον προσανατολισμό, αλλά δεν αντικαθιστούν τους πραγματικούς ελέγχους, τον καιρό, την προσοχή και τις ενημερωμένες πληροφορίες.</p>
+</div>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="btn btn-primary" download="" href="../downloads/guida-luoghi-galliciano.pdf">Λήψη πλήρους οδηγού PDF</a>
+<a class="btn btn-outline" href="../downloads/guida-luoghi-galliciano.html">Διαβάστε τον online οδηγό</a>
+<a class="btn btn-gold" href="../downloads/mappa-percorsi.html">Άνοιγμα χάρτη GPS</a>
+<a class="btn route-gpx-button" download="" href="../downloads/percorsi-galliciano-gpx.zip">Λήψη όλων των ιχνών GPX</a>
+<a class="btn route-kml-button" download="" href="../downloads/percorsi-google-maps-kml.zip">Λήψη KML για Google</a>
+<a class="btn btn-outline" href="../downloads/istruzioni-google-maps-gpx.html">Πώς να ανοίξετε τα ίχνη στους Χάρτες και τις εφαρμογές GPS</a>
+</div>
+</div>
+</section>
+<section class="section arrival-maps-section" id="arrivo-parcheggio">
+<div class="container reveal">
+<div class="arrival-premium-card">
+<div>
+<span class="label-tag">Προτεινόμενη άφιξη</span>
+<h2 class="title-medium">Φτάστε στο χώρο στάθμευσης, μετά 90-100 μέτρα με τα πόδια</h2>
+<p>Για να αποφύγετε τη σύγχυση μέσα στο χωριό, ρυθμίστε τον πλοηγό στο <strong>Parcheggio, 89030 Gallicianò RC</strong>: το πρώτο κουμπί χρησιμοποιεί αυτόματα την τρέχουσα τοποθεσία σας ως αφετηρία. Αφού αφήσετε το αυτοκίνητο, συνεχίστε με τα πόδια προς <strong>Via Anaghorio, 89030 Gallicianò RC</strong>: η απόσταση είναι μικρή, περίπου 90-100 μέτρα. Μην συνεχίσετε με το αυτοκίνητο μέχρι μπροστά στο σπίτι.</p>
+</div>
+<div class="arrival-premium-actions">
+<a aria-label="Ανοίξτε τους Χάρτες Google με οδηγίες οδήγησης από την τρέχουσα τοποθεσία σας προς τον χώρο στάθμευσης του Γκαλλιτσιανό (νέα καρτέλα)" class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=driving" rel="noopener noreferrer" target="_blank">Άνοιγμα του χώρου στάθμευσης από εκεί που βρίσκεστε</a>
+<a aria-label="Ανοίξτε τους Χάρτες Google με τη διαδρομή με τα πόδια από τον χώρο στάθμευσης του Γκαλλιτσιανό προς το Casa Giufà στη Via Anaghorio (νέα καρτέλα)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Parcheggio%2C%2089030%20Gallician%C3%B2%20RC&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Από τον χώρο στάθμευσης στο Casa Giufà με τα πόδια</a>
+<a aria-label="Ανοίξτε τους Χάρτες Google με τη διαδρομή με τα πόδια από την τρέχουσα τοποθεσία σας προς το Casa Giufà στη Via Anaghorio (νέα καρτέλα)" class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;origin=Current+Location&amp;destination=Via%20Anaghorio%2C%2089030%20Gallician%C3%B2%20RC&amp;travelmode=walking" rel="noopener noreferrer" target="_blank">Φτάστε στο Casa Giufà από εκεί που βρίσκεστε</a>
+<a class="btn btn-primary" download="" href="../downloads/guida-luoghi-galliciano.pdf">Λήψη οδηγού PDF</a>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Συνεχίστε την επίσκεψη" class="continue-visit"><div class="container continue-visit-inner"><div class="continue-visit-copy"><span>Πλοήγηση</span><h2>Συνεχίστε την επίσκεψη χωρίς να χαθείτε</h2><p>Μπορείτε να επιστρέψετε, να γυρίσετε στην Αρχική σελίδα ή να πάτε στην επόμενη σελίδα της προτεινόμενης διαδρομής.</p></div><div class="continue-visit-actions"><button class="btn btn-outline back-inline" data-history-back="" type="button">Επιστροφή</button><a class="btn btn-outline" href="camere.html">Δωμάτια</a><a class="btn btn-primary" href="index.html">Επιστροφή στην Αρχική</a><a class="btn btn-gold" href="guida.html">Οδηγός</a></div></div></section>
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<img alt="Amici Di Gallicianò Casa Giufà" class="footer-logo" src="../assets/img/casa-giufa-logo-192.png"/>
+<p>Αυθεντική φιλοξενία, πολιτιστική πεζοπορία και ζωή στο χωριό στην καρδιά της ελληνόφωνης Καλαβρίας.</p>
+<p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-oro-antico);">Calos Irthete · Καλώς ήρθατε</p>
+</div>
+<div>
+<h4>Επικοινωνία</h4>
+<ul>
+<li><a href="tel:+393296576114">Giuseppe: +39 329 657 6114</a></li>
+<li><a href="tel:+393463603118">Elisa: +39 346 360 3118</a></li>
+<li><a href="tel:+393465325400">Nizio Paleò: +39 346 532 5400</a></li>
+</ul>
+</div>
+<div>
+<h4>Εξερεύνηση</h4>
+<ul>
+<li><a href="camere.html">Τα Δωμάτια</a></li>
+<li><a href="percorsi.html">Οι Διαδρομές</a></li>
+<li><a href="storia.html">Η Ιστορία</a></li>
+<li><a href="rallentare.html">Επιβράδυνση</a></li>
+<li><a href="trattoria.html">Ταβέρνα Nizio Paleò</a></li>
+<li><a href="contatti.html">Πώς θα έρθετε</a></li>
+</ul>
+</div>
+<div>
+<h4>Ακολουθήστε μας</h4>
+<ul>
+<li>
+<a href="https://www.instagram.com/amicidigallicianocasagiufa/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @amicidigallicianocasagiufa
+                            </a>
+</li>
+<li>
+<a href="https://www.facebook.com/share/1UKeg6F9AN/?mibextid=wwXIfr" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                                amicidigalliciano
+                            </a>
+</li>
+<li>
+<a href="https://www.instagram.com/trattoria_nizio_paleo/" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="0.5"></circle></svg>
+                                @trattoria_nizio_paleo
+                            </a>
+</li>
+<li><a href="privacy.html">Πολιτική Απορρήτου</a></li>
+</ul>
+</div>
+</div>
+<div style="text-align:center; padding:1.5rem 0 0.5rem; border-top:1px solid rgba(255,255,255,0.08); margin-top:2rem;">
+<p style="font-size:0.85rem; color:var(--color-pietra); margin-bottom:0.75rem;">Κράτηση δωματίων: από 65 €.</p>
+<div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+<a class="platform-button platform-airbnb-link" href="https://www.airbnb.it/rooms/1667956458214678228" target="_blank" rel="noopener noreferrer">Airbnb · κράτηση</a>
+<a class="platform-button platform-booking-link" href="https://www.booking.com/hotel/it/amici-di-galliciano-casa-di-giufa.html" target="_blank" rel="noopener noreferrer">Booking.com · κράτηση</a>
+</div>
+</div>
+<div class="footer-bottom">
+                © 2026 Amici Di Gallicianò Casa Giufà. Με την επιφύλαξη παντός δικαιώματος. | Γκαλλιτσιανό, Ελληνόφωνη Καλαβρία.
+            </div>
+</div>
+</footer>
+<!-- Sticky Mobile Bar -->
+<div class="sticky-bar d-md-none" id="sticky-bar">
+<a class="btn btn-primary" href="tel:+393463603118">Καλέστε την Elisa</a>
+<a class="btn btn-whatsapp" data-contact="elisa" href="https://wa.me/393463603118?text=Ciao%20Elisa%2C%20vorrei%20informazioni%20su%20disponibilit%C3%A0%20e%20arrivo%20a%20Casa%20Giuf%C3%A0." target="_blank">WhatsApp Elisa</a>
+</div>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../assets/js/routes.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/nav-arrows.js"></script>
+
+
+<!-- WhatsApp Widget -->
+<div class="whatsapp-chat-widget" id="wa-widget">
+  <div class="wa-chat-panel">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar wa-brand-logo">
+        <svg viewBox="0 0 24 24" width="24" height="24" class="wa-logo-svg"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+      </div>
+      <div>
+        <div class="wa-chat-name">Elisa e Giuseppe</div>
+        <div class="wa-chat-status">Συνήθως απαντάμε σε λίγα λεπτά</div>
+      </div>
+      <button class="wa-chat-close" aria-label="Κλείσιμο συνομιλίας" onclick="document.getElementById('wa-widget').classList.remove('open')">&times;</button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-message">
+        Γεια σας! 👋 Είμαστε η Elisa και ο Giuseppe. Εάν χρειάζεστε πληροφορίες για τα δωμάτια ή θέλετε να κάνετε κράτηση, γράψτε μας εδώ.
+      </div>
+    </div>
+    <div class="wa-chat-footer" style="display: flex; flex-direction: column; gap: 0.6rem;">
+      <a href="https://wa.me/393463603118?text=Ciao%2C%20sono%20interessato%20a%20prenotare%20una%20camera.%20Quando%20sarebbe%20disponibile%3F" target="_blank" class="wa-chat-btn">
+        <span>Συνομιλία με την Elisa</span>
+      </a>
+      <a href="https://wa.me/393296576114?text=Ciao%2C%20sono%20interessato%20a%20prenotare%20una%20camera.%20Quando%20sarebbe%20disponibile%3F" target="_blank" class="wa-chat-btn" style="background: #128C7E;">
+        <span>Συνομιλία με τον Giuseppe</span>
+      </a>
+    </div>
+  </div>
+  <button class="wa-chat-toggle" aria-label="Συνομιλήστε μαζί μας" onclick="document.getElementById('wa-widget').classList.toggle('open')">
+    <div class="wa-chat-icon wa-brand-logo">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path class="wa-logo-mark" fill="#fff" d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.128.552 4.195 1.6 6.015L.146 23.4l5.485-1.44c1.782.946 3.771 1.446 5.8 1.446h.004c6.643 0 12.03-5.385 12.03-12.031C23.465 5.385 18.08 0 12.031 0zm6.534 17.15c-.276.776-1.593 1.47-2.193 1.543-.538.066-1.226.136-3.486-.801-3.233-1.34-5.274-4.66-5.434-4.873-.158-.214-1.298-1.727-1.298-3.292 0-1.566.814-2.339 1.104-2.651.29-.313.63-.393.84-.393.21 0 .42.003.599.01.188.008.441-.07.69.53.259.623.882 2.152.96 2.311.079.158.131.343.026.554-.105.211-.158.343-.316.529-.158.185-.332.404-.474.542-.158.156-.322.327-.14.643.181.315.808 1.336 1.737 2.164 1.203 1.07 2.203 1.4 2.518 1.554.316.155.502.13.69-.089.189-.219.808-.946 1.02-1.27.211-.323.421-.269.711-.164.29.105 1.836.866 2.152 1.025.316.158.526.237.604.368.079.132.079.764-.197 1.54z"/></svg>
+    </div>
+    <span class="wa-chat-label">Συνομιλήστε μαζί μας</span>
+  </button>
+</div>
+</body>
+</html>
