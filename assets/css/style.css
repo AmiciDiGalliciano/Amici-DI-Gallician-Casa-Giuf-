@@ -5129,3 +5129,15 @@ body { background: #FAF6EE; color: #211D18; }
         margin-top: 0.5rem !important;
     }
 }
+
+/* === OVERRIDE LANGUAGES CENTER AND LOGO MARGIN === */
+@media (max-width: 900px) {
+    .mobile-lang-row {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .logo img {
+        margin: 0 1rem 0 0 !important; /* Più spazio tra logo e titolo */
+    }
+}
