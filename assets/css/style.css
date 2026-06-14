@@ -5039,3 +5039,42 @@ body { background: #FAF6EE; color: #211D18; }
         object-position: center center !important;
     }
 }
+
+/* === FINAL MOBILE LAYOUT & HERO PROPORTIONS === */
+@media (max-width: 900px) {
+    /* Make the hero shorter on mobile so the image isn't cropped excessively */
+    .hero {
+        height: auto !important;
+        min-height: 55vh !important;
+        padding-top: 150px !important; /* give space for the header */
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Adjust background size/position so the panoramic image looks better on vertical screens */
+    .hero-small {
+        min-height: 45vh !important;
+        background-position: center 30% !important; 
+    }
+    .hero-bg {
+        object-position: center 30% !important; /* show more of the mountains, less sky */
+    }
+
+    /* Grid layout for header to accommodate the new language row */
+    .nav-container {
+        grid-template-rows: auto auto auto !important;
+        row-gap: 0.6rem !important;
+    }
+    
+    .mobile-lang-row {
+        grid-column: 1 / -1 !important;
+        grid-row: 3 !important;
+        justify-self: center !important;
+        margin: 0 !important;
+        padding: 0.5rem 0 !important;
+        font-size: 1rem !important;
+    }
+    
+    .mobile-lang-row a {
+        padding: 0.4rem 0.8rem;
+    }
+}
