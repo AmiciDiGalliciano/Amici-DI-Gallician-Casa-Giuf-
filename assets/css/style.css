@@ -4945,3 +4945,97 @@ body { background: #FAF6EE; color: #211D18; }
     justify-content: center;
   }
 }
+
+/* === MOBILE HEADER REDESIGN (USER REQUEST) === */
+@media (max-width: 900px) {
+    .header {
+        background: #FAF6EE !important; /* solid background so it doesn't overlap text */
+        position: relative !important; /* normal document flow so it pushes hero down! */
+        padding: 1rem 0 !important;
+    }
+    .nav-container {
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr !important;
+        grid-template-rows: auto auto !important;
+        align-items: center !important;
+        gap: 1rem 0 !important;
+    }
+    
+    .lang-switcher {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        margin: 0 !important;
+        justify-self: start !important;
+    }
+
+    .logo {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        justify-self: center !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .logo img {
+        margin: 0 auto 0.3rem auto !important;
+        display: block !important;
+    }
+    .logo-text {
+        display: block !important;
+    }
+
+    .mobile-menu-btn {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+        justify-self: end !important;
+        margin: 0 !important;
+        z-index: 9999 !important; /* keep above menu */
+    }
+
+    .mobile-quick-links {
+        grid-column: 1 / -1 !important;
+        grid-row: 2 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        background: #26352B !important;
+        border-radius: 8px !important;
+        padding: 0.8rem !important;
+        margin: 0 !important;
+    }
+    
+    .mobile-quick-links a {
+        font-size: 0.85rem !important; /* bigger text */
+        padding: 0.4rem 0.6rem !important;
+        color: #FFFDF8 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Fixed menu opened state */
+    .nav-links.active {
+        padding-top: 120px !important; /* push links down so CHIUDI doesn't cover them */
+    }
+    
+    .mobile-menu-btn.is-open {
+        position: fixed !important;
+        top: 20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        background: #FFFDF8 !important;
+        color: #26352B !important;
+        padding: 0.8rem 1.5rem !important;
+        border-radius: 30px !important;
+        font-size: 1.1rem !important;
+        font-weight: 800 !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+}
+
+/* === FIX HERO BG PIXELATION ON MOBILE === */
+@media (max-width: 900px) {
+    .hero-bg {
+        transform: none !important;
+        animation: none !important;
+        object-position: center center !important;
+    }
+}

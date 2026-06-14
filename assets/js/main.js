@@ -47,17 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('nav-links');
 
   if (menuBtn && navLinks) {
-    const closedHTML = menuBtn.innerHTML;
-    const openHTML = '<span class="menu-text">Chiudi</span> <span class="hamburger-icon">&times;</span>';
+    // Save original HTML on load so we can restore it exactly
+    const defaultHTML = menuBtn.innerHTML;
+    
     menuBtn.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('active');
-      menuBtn.innerHTML = isOpen ? openHTML : closedHTML;
+      if (isOpen) {
+        menuBtn.classList.add('is-open');
+        menuBtn.innerHTML = '<span style="font-weight: 800; letter-spacing: 0.1em; margin-right: 0.5rem;">CHIUDI</span> <span style="font-size: 1.4rem; line-height: 1;">&times;</span>';
+      } else {
+        menuBtn.classList.remove('is-open');
+        menuBtn.innerHTML = defaultHTML;
+      }
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
 
     const closeMenu = () => {
+      if (!navLinks.classList.contains('active')) return;
       navLinks.classList.remove('active');
-      menuBtn.innerHTML = closedHTML;
+      menuBtn.classList.remove('is-open');
+      menuBtn.innerHTML = defaultHTML;
       menuBtn.setAttribute('aria-expanded', 'false');
     };
 
@@ -68,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close on outside click
     document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+      if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains('active')) {
         closeMenu();
       }
     });
