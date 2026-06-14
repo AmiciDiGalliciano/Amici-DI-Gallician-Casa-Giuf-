@@ -4890,3 +4890,58 @@ body { background: #FAF6EE; color: #211D18; }
         min-height: 70vh !important; /* Give the panorama more vertical space on desktop so it's not cut off */
     }
 }
+
+/* === Cookie Banner === */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #26352B; /* Dark green */
+  color: #FFFDF8;
+  z-index: 9999;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.cookie-banner.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.cookie-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cookie-banner-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+.cookie-banner-content a {
+  color: #D8BC83; /* Gold */
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(216, 188, 131, 0.4);
+}
+.cookie-banner-content .btn-small {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .cookie-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .cookie-banner-content .btn-small {
+    width: 100%;
+    justify-content: center;
+  }
+}

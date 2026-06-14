@@ -210,4 +210,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Cookie Banner (Informativa Privacy) ─────────────────────────
+  const initCookieBanner = () => {
+    if (localStorage.getItem('cookie-accepted')) return;
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+      <div class="cookie-banner-content">
+        <p>Utilizziamo esclusivamente cookie tecnici necessari per il corretto funzionamento del sito. Non utilizziamo cookie di profilazione. Proseguendo, accetti la nostra <a href="privacy.html">Privacy Policy</a>.</p>
+        <button id="accept-cookies" class="btn btn-gold btn-small">Ho capito</button>
+      </div>
+    `;
+    document.body.appendChild(banner);
+
+    document.getElementById('accept-cookies').addEventListener('click', () => {
+      localStorage.setItem('cookie-accepted', '1');
+      banner.classList.add('hidden');
+      setTimeout(() => banner.remove(), 300);
+    });
+  };
+  initCookieBanner();
+
 });
