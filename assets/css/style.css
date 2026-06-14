@@ -5078,3 +5078,54 @@ body { background: #FAF6EE; color: #211D18; }
         padding: 0.4rem 0.8rem;
     }
 }
+
+/* === OVERRIDE LOGO AND QUICK LINKS ALIGNMENT === */
+@media (max-width: 900px) {
+    .nav-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .logo {
+        flex: 1 1 auto;
+        text-align: left !important;
+        justify-self: start !important;
+    }
+    
+    .logo img {
+        display: inline-block !important;
+        margin: 0 0.5rem 0 0 !important;
+        vertical-align: middle !important;
+        height: 38px !important; /* Slightly smaller to fit nicely */
+    }
+    
+    .logo-text {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        text-align: left !important;
+    }
+
+    .mobile-menu-btn {
+        flex: 0 0 auto;
+        margin-left: auto !important;
+    }
+
+    .mobile-quick-links {
+        flex: 1 1 100% !important;
+        order: 3 !important;
+        display: flex !important;
+        justify-content: center !important; /* CENTER THE LINKS */
+        gap: 1.5rem !important; /* Add space between centered links */
+        margin-top: 1rem !important;
+    }
+
+    .mobile-lang-row {
+        flex: 1 1 100% !important;
+        order: 4 !important;
+        text-align: center !important;
+        margin-top: 0.5rem !important;
+    }
+}
