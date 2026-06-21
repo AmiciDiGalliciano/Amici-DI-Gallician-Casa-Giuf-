@@ -55,9 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isOpen) {
         menuBtn.classList.add('is-open');
         menuBtn.innerHTML = '<span style="font-weight: 800; letter-spacing: 0.1em; margin-right: 0.5rem;">CHIUDI</span> <span style="font-size: 1.4rem; line-height: 1;">&times;</span>';
+        document.body.style.overflow = 'hidden';
       } else {
         menuBtn.classList.remove('is-open');
         menuBtn.innerHTML = defaultHTML;
+        document.body.style.overflow = '';
       }
       menuBtn.setAttribute('aria-expanded', isOpen);
     });
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.remove('active');
       menuBtn.classList.remove('is-open');
       menuBtn.innerHTML = defaultHTML;
+      document.body.style.overflow = '';
       menuBtn.setAttribute('aria-expanded', 'false');
     };
 
